@@ -50,6 +50,7 @@
             "drupal/core-project-message": true,
             "php-http/discovery": true
         },
+        "bin-dir": "./bin",
         "sort-packages": true,
         "optimize-autoloader": true
     },
