@@ -38,12 +38,12 @@ ddev drush cr
 4. To modify the theme, including tailwind.pcss and twig templates, move into the theme directory, install the necessary node modules, and run the watch command:
 
 ```
-cd docroot/themes/custom/`<themeName>`
+cd docroot/themes/custom/<themeName>
 ddev npm install
 ddev npm run watch
 ```
 
-Open https://E_and_U.ddev.site:3000 (note `https` and not `http`) to view live changes in the browser.
+Open https://E_and_U.ddev.site:3000 (note `https`) to view live changes in the browser.
 
 5. Composer updates: run `ddev composer update --dry-run` to see what updates are available. Ensure you're on an issue branch before running the command for real, i.e. without the `--dry-run` flag.
 
@@ -51,7 +51,7 @@ Open https://E_and_U.ddev.site:3000 (note `https` and not `http`) to view live c
 
 We use the Config Split module to separate configuration intended for
 specific environments. We have splits for local, dev, stage and live.
-In the docroot/sites/default/settings.ddev.php file we include the
+In web/sites/default/settings.ddev.php file we include the
 following:
 
 ```
@@ -63,6 +63,7 @@ $config['config_split.config_split.dev']['status'] = FALSE;
 $config['config_split.config_split.stage']['status'] = FALSE;
 $config['config_split.config_split.prod']['status'] = FALSE;
 ```
+*The* `settings.local.php` *file (in the same directory) needs to be modified accordingly for each hosting environment. Use* `sudo -u admin vi <filename>` *on the server to do this.*
 
 This set the 'local' split to active and the 'live' and 'dev' to inactive. With
 this setup, running `ddev drush cr` then `ddev drush cim` will import the local split configuration as well as the default configuration. In our case, this will enable other modules useful for developers like devel and stage_file_proxy.
