@@ -49,7 +49,7 @@ Open https://E_and_U.ddev.site:3000 (note `https`) to view live changes in the b
 
 6. Config split
 
-We use the Config Split module to separate configuration intended for
+We use the config_split module to separate configuration intended for
 specific environments. We have splits for local, dev, stage and live.
 In web/sites/default/settings.ddev.php file we include the
 following:
@@ -66,7 +66,7 @@ $config['config_split.config_split.prod']['status'] = FALSE;
 
 Running `ddev drush cr` then `ddev drush cim` will import the local split configuration, as well as the default configuration. This will enable modules locally for development (such as devel and stage_file_proxy), and other settings, such as password_expiry and scheduled backups, only on the production server.
 
-The `gitroot/web/sites/default/settings.local.php` file needs to be modified accordingly for each hosting environment. Use `sudo -u admin vi <filename>` on the server(s) to do this.
+The `<gitroot>/web/sites/default/settings.local.php` file needs to be modified accordingly for each hosting environment. Use `sudo -u admin vi <filename>` on the server(s) to do this.
 
 7. Common drush commands
 
