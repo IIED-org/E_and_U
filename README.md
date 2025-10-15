@@ -63,12 +63,12 @@ $config['config_split.config_split.dev']['status'] = FALSE;
 $config['config_split.config_split.stage']['status'] = FALSE;
 $config['config_split.config_split.prod']['status'] = FALSE;
 ```
-*The* `settings.local.php` *file (in the same directory) needs to be modified accordingly for each hosting environment. Use* `sudo -u admin vi <filename>` *on the server to do this.*
 
-This set the 'local' split to active and the 'live' and 'dev' to inactive. With
-this setup, running `ddev drush cr` then `ddev drush cim` will import the local split configuration as well as the default configuration. In our case, this will enable other modules useful for developers like devel and stage_file_proxy.
+Running `ddev drush cr` then `ddev drush cim` will import the local split configuration, as well as the default configuration. This will enable modules locally for development (such as devel and stage_file_proxy), and other settings, such as password_expiry and scheduled backups, only on the production server.
 
-7. Common drush commands.
+The `gitroot/web/sites/default/settings.local.php` file needs to be modified accordingly for each hosting environment. Use `sudo -u admin vi <filename>` on the server(s) to do this.
+
+7. Common drush commands
 
 Generate a one time login link:
 
