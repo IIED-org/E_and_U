@@ -1,4 +1,4 @@
-# Environment and Urbanization Drupal 11 site
+# Environment and Urbanization
 
 ## Issue management
 New issues should be associated with the [E_and_U project](https://github.com/orgs/IIED-org/projects/12/views/1). Status columns are as follows:
@@ -31,7 +31,7 @@ cd E_and_U
 3. Download a copy of last night's production database via Jenkins and save it to the project root. Import it using the following command:
 
 ```
-ddev import-db -f iied-prod-yyyymmdd.sql.gz
+ddev import-db -f <database-yyyymmdd>.sql.gz
 ddev drush cr
 ```
 
