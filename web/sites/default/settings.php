@@ -854,6 +854,16 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_public_path'] = '';
 # $settings['migrate_file_private_path'] = '';
 
+$databases['migrate']['default'] = [
+  'database' => 'acquia',
+  'username' => 'acquia',
+  'password' => 'acquia',
+  'host' => '127.0.0.1',  // Use IP instead of localhost
+  'port' => '3306',
+  'driver' => 'mysql',
+  'prefix' => '',
+];
+
 /**
  * Load local development override configuration, if available.
  *
