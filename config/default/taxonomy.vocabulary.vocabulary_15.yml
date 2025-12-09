@@ -1,0 +1,9 @@
+uuid: b2d7b011-3e21-41c4-9cd1-be4fdf309bb0
+langcode: en
+status: true
+dependencies: {  }
+name: Tag
+vid: vocabulary_15
+description: 'Globally used vocabulary to group content by tag'
+weight: 0
+new_revision: false

@@ -1,0 +1,22 @@
+uuid: 642ee059-6d67-465e-9db5-18f057aed453
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eandu
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: eandu_iied_system_main
+theme: eandu
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

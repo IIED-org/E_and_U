@@ -1,0 +1,22 @@
+uuid: 0e70e0d8-f67d-4f89-adf6-eae49c1555d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eandu
+_core:
+  default_config_hash: rUKMsaj4XvIHtU3kRiHIA6Rkn4IHzCkhTiUZudMkp14
+id: eandu_breadcrumbs
+theme: eandu
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

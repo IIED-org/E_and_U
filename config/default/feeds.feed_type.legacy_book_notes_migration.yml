@@ -1,0 +1,263 @@
+uuid: 900ebc35-cfe3-4462-ae44-76563fe89657
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book_note.body
+    - field.field.node.book_note.field_author
+    - field.field.node.book_note.field_available_from
+    - field.field.node.book_note.field_date_published
+    - field.field.node.book_note.field_flickr_tags
+    - field.field.node.book_note.field_focus_city
+    - field.field.node.book_note.field_focus_country
+    - field.field.node.book_note.field_image
+    - field.field.node.book_note.field_isbn
+    - field.field.node.book_note.field_links
+    - field.field.node.book_note.field_pages
+    - field.field.node.book_note.field_publisher
+    - field.field.node.book_note.field_tags
+    - node.type.book_note
+  module:
+    - feeds_ex
+    - node
+label: 'legacy book-notes migration'
+id: legacy_book_notes_migration
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: /nodes/node
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: book_note
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  author_s:
+    label: Author(s)
+    machine_name: author_s
+    value: Author-s-
+    raw: false
+    inner: false
+    type: xml
+  available_from:
+    label: 'Available from'
+    machine_name: available_from
+    value: Available-from
+    raw: false
+    inner: false
+    type: xml
+  body:
+    label: Body
+    machine_name: body
+    value: Body
+    raw: false
+    inner: false
+    type: xml
+  flickr_tags:
+    label: 'Flickr tags'
+    machine_name: flickr_tags
+    value: Flickr-tags
+    raw: false
+    inner: false
+    type: xml
+  focus_city:
+    label: 'Focus city'
+    machine_name: focus_city
+    value: Focus-city
+    raw: false
+    inner: false
+    type: xml
+  focus_country:
+    label: 'Focus country'
+    machine_name: focus_country
+    value: Focus-country
+    raw: false
+    inner: false
+    type: xml
+  pages:
+    label: Pages
+    machine_name: pages
+    value: Pages
+    raw: false
+    inner: false
+    type: xml
+  publisher:
+    label: Publisher
+    machine_name: publisher
+    value: Publisher
+    raw: false
+    inner: false
+    type: xml
+  title:
+    label: Title
+    machine_name: title
+    value: Title
+    raw: false
+    inner: false
+    type: xml
+  year:
+    label: Year
+    machine_name: year
+    value: Year
+    raw: false
+    inner: false
+    type: xml
+  isbn:
+    label: ISBN
+    machine_name: isbn
+    value: ISBN
+    raw: false
+    inner: false
+    type: xml
+  links:
+    label: Links
+    machine_name: links
+    value: Links
+    raw: false
+    inner: false
+    type: xml
+  tags:
+    label: Tags
+    machine_name: tags
+    value: Tags
+    raw: false
+    inner: false
+    type: xml
+  cover_image_fid:
+    label: 'Cover Image FID'
+    machine_name: cover_image_fid
+    value: Cover-image
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: field_author
+    map:
+      value: author_s
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_available_from
+    map:
+      value: available_from
+    settings:
+      language: null
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_flickr_tags
+    map:
+      target_id: flickr_tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: flickr_tags
+  -
+    target: field_focus_city
+    map:
+      value: focus_city
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_focus_country
+    map:
+      value: focus_country
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_pages
+    map:
+      value: pages
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_publisher
+    map:
+      value: publisher
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_date_published
+    map:
+      value: year
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_isbn
+    map:
+      value: isbn
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_links
+    map:
+      value: links
+    settings:
+      language: null
+      format: plain_text
+  -
+    target: field_tags
+    map:
+      target_id: tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: tags
+  -
+    target: field_image
+    map:
+      target_id: cover_image_fid
+      alt: ''
+      title: ''
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false

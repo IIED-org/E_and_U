@@ -1,0 +1,524 @@
+uuid: 3bc86dc1-ce92-4ce3-90b6-8595d838c250
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_page.default
+    - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_content
+    - field.field.node.page.field_description
+    - field.field.node.page.field_downloads
+    - field.field.node.page.field_featured_image
+    - field.field.node.page.field_flickr_tags
+    - field.field.node.page.field_glossary
+    - field.field.node.page.field_group
+    - field.field.node.page.field_links
+    - field.field.node.page.field_standfirst
+    - field.field.node.page.field_tagline
+    - field.field.node.page.field_tags
+    - field.field.node.page.layout_builder__layout
+    - field.field.node.page.taxonomy_vocabulary_15
+    - field.field.node.page.taxonomy_vocabulary_19
+    - field.field.node.page.taxonomy_vocabulary_4
+    - node.type.page
+  module:
+    - comment
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          541922dc-a8c8-4b74-9cdd-88a1f5d053dd:
+            uuid: 541922dc-a8c8-4b74-9cdd-88a1f5d053dd
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_content'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          b09072a1-7bd8-49c5-ac58-2da953562e12:
+            uuid: b09072a1-7bd8-49c5-ac58-2da953562e12
+            region: content
+            configuration:
+              id: 'extra_field_block:node:page:content_moderation_control'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 1
+            additional: {  }
+          bfcb27c2-a42f-4e71-bf84-1841a548d5a6:
+            uuid: bfcb27c2-a42f-4e71-bf84-1841a548d5a6
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_featured_image'
+              label: 'Featured image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: hero
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          6976105a-c13d-457c-a8ae-0dfd6f9a7903:
+            uuid: 6976105a-c13d-457c-a8ae-0dfd6f9a7903
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_tags'
+              label: Tags
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          2706600c-bf5a-4a2d-a860-556c464d8e81:
+            uuid: 2706600c-bf5a-4a2d-a860-556c464d8e81
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_standfirst'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          21d279a4-81e7-45a2-a2b9-9d1a05f9e0b5:
+            uuid: 21d279a4-81e7-45a2-a2b9-9d1a05f9e0b5
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_tagline'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          a6cf1d22-12d7-47c8-ba34-a798cc27153c:
+            uuid: a6cf1d22-12d7-47c8-ba34-a798cc27153c
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_glossary'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          1596d540-e236-4fc4-928f-09b4642bf69e:
+            uuid: 1596d540-e236-4fc4-928f-09b4642bf69e
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_4'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          254316cf-9ed6-4db6-bccd-efa1541d5d7f:
+            uuid: 254316cf-9ed6-4db6-bccd-efa1541d5d7f
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_group'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          c7f8df27-d7bc-41b0-8637-b591065382c8:
+            uuid: c7f8df27-d7bc-41b0-8637-b591065382c8
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_flickr_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          47d66962-0b40-4eab-9e23-75baf24b7711:
+            uuid: 47d66962-0b40-4eab-9e23-75baf24b7711
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          476fc670-01df-4e4a-a00e-f1e44c320377:
+            uuid: 476fc670-01df-4e4a-a00e-f1e44c320377
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_downloads'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
+          aea67e85-1b3f-418b-aaee-79385dc1576b:
+            uuid: aea67e85-1b3f-418b-aaee-79385dc1576b
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_15'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 13
+            additional: {  }
+          86a5a6c6-fdb5-43ed-bdfe-653fec788a6d:
+            uuid: 86a5a6c6-fdb5-43ed-bdfe-653fec788a6d
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_19'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+          11f16a54-ef31-4159-9df6-8928dfb80427:
+            uuid: 11f16a54-ef31-4159-9df6-8928dfb80427
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 15
+            additional: {  }
+          a376920f-d423-4395-a778-24598c81148d:
+            uuid: a376920f-d423-4395-a778-24598c81148d
+            region: content
+            configuration:
+              id: 'field_block:node:page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 16
+            additional: {  }
+          26e7abaf-24e6-48eb-88c5-f3f66e76c999:
+            uuid: 26e7abaf-24e6-48eb-88c5-f3f66e76c999
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_downloads'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 17
+            additional: {  }
+          fdd2533d-befb-4f97-8e32-835af3547665:
+            uuid: fdd2533d-befb-4f97-8e32-835af3547665
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_downloads'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 18
+            additional: {  }
+          92bf5256-e7e6-4d60-97d7-e2d4f5843374:
+            uuid: 92bf5256-e7e6-4d60-97d7-e2d4f5843374
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 19
+            additional: {  }
+          0c4b83ed-1cce-441e-b1d3-e387bd204c3a:
+            uuid: 0c4b83ed-1cce-441e-b1d3-e387bd204c3a
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_standfirst'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 20
+            additional: {  }
+          9b2e28a8-72f7-424f-b0d5-2e36cd22d0c6:
+            uuid: 9b2e28a8-72f7-424f-b0d5-2e36cd22d0c6
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_standfirst'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 21
+            additional: {  }
+          064bb5ab-e1bc-4e95-8347-4a0913524750:
+            uuid: 064bb5ab-e1bc-4e95-8347-4a0913524750
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_15'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 22
+            additional: {  }
+          3654c4e0-8790-4a32-8c28-712b79e18ca5:
+            uuid: 3654c4e0-8790-4a32-8c28-712b79e18ca5
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_19'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 23
+            additional: {  }
+          983013ba-974a-42b0-b81f-e8c53670d0e9:
+            uuid: 983013ba-974a-42b0-b81f-e8c53670d0e9
+            region: content
+            configuration:
+              id: 'field_block:node:page:taxonomy_vocabulary_4'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 24
+            additional: {  }
+          b03e4a47-b3ef-4c67-88d2-0109e787d22c:
+            uuid: b03e4a47-b3ef-4c67-88d2-0109e787d22c
+            region: content
+            configuration:
+              id: 'field_block:node:page:field_flickr_tags'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 25
+            additional: {  }
+          c1d4157a-572d-4f48-aa4e-32065ac3259c:
+            uuid: c1d4157a-572d-4f48-aa4e-32065ac3259c
+            region: content
+            configuration:
+              id: 'field_block:node:page:comment_node_page'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: comment_default
+                label: hidden
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 26
+            additional: {  }
+        third_party_settings: {  }
+_core:
+  default_config_hash: rVDjFcG7a9eUsRsMS1vdA6OQgJ77pZjEPmk1fIuADao
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  comment_node_page:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  field_downloads:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_flickr_tags:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_description: true
+  field_glossary: true
+  field_group: true
+  field_links: true
+  field_tagline: true
+  field_tags: true
+  layout_builder__layout: true
+  links: true
+  taxonomy_vocabulary_15: true
+  taxonomy_vocabulary_19: true
+  taxonomy_vocabulary_4: true

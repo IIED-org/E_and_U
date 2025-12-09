@@ -1,0 +1,25 @@
+uuid: 7e88b058-0287-48dd-a645-69c8986dd8aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eandu
+_core:
+  default_config_hash: MX2iS2rMC2lQ-sUFnOKksJ01S2lh0j5-80hKkdDmHkI
+id: eandu_site_branding
+theme: eandu
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

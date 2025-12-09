@@ -1,0 +1,19 @@
+uuid: 38212a31-7c47-457a-b21a-766218180d39
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_available_from
+    - node.type.booknotes
+id: node.booknotes.field_available_from
+field_name: field_available_from
+entity_type: node
+bundle: booknotes
+label: 'Available from'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

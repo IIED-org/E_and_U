@@ -1,0 +1,23 @@
+uuid: 23676849-f0b6-45cc-a64f-6035abc1bcda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_isbn
+    - node.type.book_note
+id: node.book_note.field_isbn
+field_name: field_isbn
+entity_type: node
+bundle: book_note
+label: ISBN
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

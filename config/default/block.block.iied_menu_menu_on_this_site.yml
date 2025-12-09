@@ -1,0 +1,29 @@
+uuid: 563f8f72-5839-4108-a7dd-b39705eb3880
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-on-this-site
+  module:
+    - system
+  theme:
+    - drupal_cms_olivero
+id: iied_menu_menu_on_this_site
+theme: drupal_cms_olivero
+region: sidebar
+weight: -23
+provider: null
+plugin: 'system_menu_block:menu-on-this-site'
+settings:
+  id: broken
+  label: 'Quick links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

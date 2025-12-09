@@ -1,0 +1,19 @@
+uuid: 27e777ac-c557-45d1-a39a-dd6af7419a55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_image_caption
+    - node.type.blog
+id: node.blog.field_main_image_caption
+field_name: field_main_image_caption
+entity_type: node
+bundle: blog
+label: 'Main image caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

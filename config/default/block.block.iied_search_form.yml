@@ -1,0 +1,26 @@
+uuid: ef4bb1a4-a553-488e-9369-47e879b11ee3
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+    - system
+  theme:
+    - drupal_cms_olivero
+id: iied_search_form
+theme: drupal_cms_olivero
+region: hero
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: broken
+  label: Broken/Missing
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

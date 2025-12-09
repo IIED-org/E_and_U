@@ -1,0 +1,22 @@
+uuid: 59fa0e89-2449-46a5-aef2-123f13d0ccb3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eandu
+_core:
+  default_config_hash: 5ra2HNIksWbp6AhPpTufTGSlgx2FR7RR_ssxdjgFg4I
+id: eandu_messages
+theme: eandu
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

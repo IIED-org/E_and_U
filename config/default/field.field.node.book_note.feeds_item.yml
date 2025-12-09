@@ -1,0 +1,23 @@
+uuid: a992e3e1-6561-4a2d-8d99-6f11801e9b97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.book_note
+  module:
+    - feeds
+id: node.book_note.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: book_note
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

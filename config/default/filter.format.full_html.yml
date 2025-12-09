@@ -1,0 +1,47 @@
+uuid: c073a57f-b71a-488f-a3ac-2df16509e5b3
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+name: 'Full HTML'
+format: full_html
+weight: 1
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 1
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_view_modes: {  }
+      allowed_media_types: {  }

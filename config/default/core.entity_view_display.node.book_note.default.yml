@@ -1,0 +1,150 @@
+uuid: 5b576181-7602-4c94-a75b-f6fead1cd4b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.book_note.body
+    - field.field.node.book_note.comment_node_book_note
+    - field.field.node.book_note.feeds_item
+    - field.field.node.book_note.field_author
+    - field.field.node.book_note.field_available_from
+    - field.field.node.book_note.field_book_note_prepared_by_name
+    - field.field.node.book_note.field_date_published
+    - field.field.node.book_note.field_flickr_tags
+    - field.field.node.book_note.field_focus_city
+    - field.field.node.book_note.field_focus_country
+    - field.field.node.book_note.field_image
+    - field.field.node.book_note.field_isbn
+    - field.field.node.book_note.field_links
+    - field.field.node.book_note.field_pages
+    - field.field.node.book_note.field_publisher
+    - field.field.node.book_note.field_tags
+    - node.type.book_note
+  module:
+    - svg_image
+    - text
+    - user
+id: node.book_note.default
+targetEntityType: node
+bundle: book_note
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_author:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_available_from:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_book_note_prepared_by_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_date_published:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_focus_city:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_focus_country:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_isbn:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ' '
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_links:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_pages:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_publisher:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_tags:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+hidden:
+  comment_node_book_note: true
+  feeds_item: true
+  field_flickr_tags: true

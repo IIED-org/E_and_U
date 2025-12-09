@@ -1,0 +1,22 @@
+uuid: 75d358de-91e5-421d-b32f-1d34d998f58c
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - eandu
+_core:
+  default_config_hash: 5VBXsyvJSTQNtrh86WK8GN_FCaRtK03D1fjfZQnUvtU
+id: eandu_powered
+theme: eandu
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

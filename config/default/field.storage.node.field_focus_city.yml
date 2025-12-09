@@ -1,0 +1,21 @@
+uuid: 0ae198b6-6156-40b7-9918-0b40ec5c0783
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_focus_city
+field_name: field_focus_city
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

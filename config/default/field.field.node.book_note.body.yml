@@ -1,0 +1,24 @@
+uuid: 4d69b38a-1d15-4212-9a0a-04289f3cfd18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.book_note
+  module:
+    - text
+id: node.book_note.body
+field_name: body
+entity_type: node
+bundle: book_note
+label: Body
+description: 'Abstract/Description of publication.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

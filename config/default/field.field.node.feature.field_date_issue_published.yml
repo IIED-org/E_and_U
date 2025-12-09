@@ -1,0 +1,21 @@
+uuid: 0ff8d2cf-64f1-4ff2-909f-6cb5526190f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_issue_published
+    - node.type.feature
+  module:
+    - datetime
+id: node.feature.field_date_issue_published
+field_name: field_date_issue_published
+entity_type: node
+bundle: feature
+label: 'Date issue published'
+description: 'This field is used to sort issues by date where they appear in lists'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

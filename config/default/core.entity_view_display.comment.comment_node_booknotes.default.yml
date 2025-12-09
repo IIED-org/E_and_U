@@ -1,0 +1,27 @@
+uuid: bdf51c9c-19a0-48f8-a5c9-c6103d118546
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_booknotes
+    - field.field.comment.comment_node_booknotes.comment_body
+  module:
+    - text
+id: comment.comment_node_booknotes.default
+targetEntityType: comment
+bundle: comment_node_booknotes
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

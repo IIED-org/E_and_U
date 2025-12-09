@@ -1,0 +1,18 @@
+uuid: a9ae0502-42ab-489e-8a2f-2b50e60a86f6
+langcode: en
+status: false
+dependencies:
+  theme:
+    - bartik
+id: bartik_search_form
+theme: bartik
+region: ''
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+visibility: {  }

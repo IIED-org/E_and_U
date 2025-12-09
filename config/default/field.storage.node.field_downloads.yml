@@ -1,0 +1,19 @@
+uuid: 7b059256-7af9-4483-b64f-510e2a140fa5
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_downloads
+field_name: field_downloads
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

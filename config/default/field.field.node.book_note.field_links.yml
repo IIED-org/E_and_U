@@ -1,0 +1,24 @@
+uuid: 3ada6764-1531-4cb0-8a11-7375982ae00c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - filter.format.full_html
+    - node.type.book_note
+  module:
+    - text
+id: node.book_note.field_links
+field_name: field_links
+entity_type: node
+bundle: book_note
+label: Links
+description: '<strong>Project related links to other sites</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

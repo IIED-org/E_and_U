@@ -1,0 +1,59 @@
+uuid: 11c9b682-5b0f-4cbb-a7fa-26fe4b7ad6e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.blog.body
+    - field.field.node.blog.comment_node_blog
+    - field.field.node.blog.feeds_item
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_featured_image
+    - field.field.node.blog.field_hmmm
+    - field.field.node.blog.field_main_image_caption
+    - field.field.node.blog.field_standfirst
+    - field.field.node.blog.field_tags
+    - field.field.node.blog.field_url
+    - field.field.node.blog.taxonomy_vocabulary_15
+    - field.field.node.blog.taxonomy_vocabulary_19
+    - node.type.blog
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: oUIfRdrJ7QphPDbQGMmgr6dn_ACCihsncyx-dVGn_do
+id: node.blog.card
+targetEntityType: node
+bundle: blog
+mode: card
+content:
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 16_9_medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  comment_node_blog: true
+  content_moderation_control: true
+  feeds_item: true
+  field_author: true
+  field_date: true
+  field_hmmm: true
+  field_main_image_caption: true
+  field_standfirst: true
+  field_tags: true
+  field_url: true
+  layout_builder__layout: true
+  links: true
+  taxonomy_vocabulary_15: true
+  taxonomy_vocabulary_19: true

@@ -1,0 +1,19 @@
+uuid: 991fd3b6-c86e-44ae-a6a2-fd589f803fe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_author_firstname
+    - node.type.booknotes
+id: node.booknotes.field_lead_author_firstname
+field_name: field_lead_author_firstname
+entity_type: node
+bundle: booknotes
+label: 'Lead author firstname'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

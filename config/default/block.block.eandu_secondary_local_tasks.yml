@@ -1,0 +1,22 @@
+uuid: db2bf06d-48f6-4218-9559-f81d28033ea5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - eandu
+_core:
+  default_config_hash: 3KAyDgB3FHENrBwroAUcCPvkfPHBMFcRDnsZFyFMuwc
+id: eandu_secondary_local_tasks
+theme: eandu
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

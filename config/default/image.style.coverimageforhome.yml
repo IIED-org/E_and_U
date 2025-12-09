@@ -1,0 +1,15 @@
+uuid: 79925be9-b4b0-4ba7-833a-5ee7ca7e1ee7
+langcode: en
+status: true
+dependencies: {  }
+name: coverimageforhome
+label: CoverImageForHome
+effects:
+  43c52b09-6cc9-44e1-a287-dcddd8aa118d:
+    uuid: 43c52b09-6cc9-44e1-a287-dcddd8aa118d
+    id: image_scale
+    weight: 1
+    data:
+      width: 240
+      height: null
+      upscale: false

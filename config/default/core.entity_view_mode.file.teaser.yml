@@ -1,0 +1,11 @@
+uuid: add38820-7a04-44b1-99e2-38a2e393253c
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.teaser
+label: Teaser
+description: null
+targetEntityType: file
+cache: true

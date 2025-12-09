@@ -1,0 +1,23 @@
+uuid: a5761495-387d-4266-bfa3-25b1b36d0061
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pages
+    - node.type.book_note
+id: node.book_note.field_pages
+field_name: field_pages
+entity_type: node
+bundle: book_note
+label: Pages
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

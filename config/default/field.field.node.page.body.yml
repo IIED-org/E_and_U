@@ -1,0 +1,24 @@
+uuid: 5bd29b14-bb86-4087-977b-0fd66692d923
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page
+  module:
+    - text
+id: node.page.body
+field_name: body
+entity_type: node
+bundle: page
+label: Body
+description: "Fixed pages such as a programme home page, contact page etc.\r\nWe use this for about and other non-research sections. Also used for 'short-life' content such as the GIR blogs."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

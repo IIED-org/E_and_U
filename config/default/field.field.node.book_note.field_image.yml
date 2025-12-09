@@ -1,0 +1,38 @@
+uuid: 88939416-8702-4a3d-88a7-2ff21bcc5452
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.book_note
+  module:
+    - image
+id: node.book_note.field_image
+field_name: field_image
+entity_type: node
+bundle: book_note
+label: 'Cover image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 150x214
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

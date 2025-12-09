@@ -1,0 +1,20 @@
+uuid: 4d68f077-ce8a-4715-afc1-9a9bec4a6bb7
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_booknotes
+field_name: comment_node_booknotes
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_booknotes
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

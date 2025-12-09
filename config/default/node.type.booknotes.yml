@@ -1,0 +1,32 @@
+uuid: cdaafbd1-80ee-4084-9b77-1589383d1e68
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    show_message_after_update: true
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: Booknotes
+type: booknotes
+description: "Do not create any new content of this type.\r\nLegacy format - Includes data imported from legacy Access database.\r\n"
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

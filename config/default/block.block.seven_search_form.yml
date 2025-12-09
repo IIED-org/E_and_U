@@ -1,0 +1,18 @@
+uuid: c8788580-3cbe-42f9-8c3f-a5c64437b950
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gin
+id: seven_search_form
+theme: gin
+region: content
+weight: -10
+provider: null
+plugin: search_form_block
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+visibility: {  }

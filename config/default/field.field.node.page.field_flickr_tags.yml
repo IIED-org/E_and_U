@@ -1,0 +1,26 @@
+uuid: a0de237d-8f75-418f-8600-e52b6e50850e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flickr_tags
+    - node.type.page
+    - taxonomy.vocabulary.flickr_tags
+id: node.page.field_flickr_tags
+field_name: field_flickr_tags
+entity_type: node
+bundle: page
+label: 'Flickr tags'
+description: 'Grab Flickr photos with these tags only. Comma separated.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      flickr_tags: flickr_tags
+    sort:
+      field: _none
+field_type: entity_reference

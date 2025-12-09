@@ -1,0 +1,26 @@
+uuid: 26ad182b-e06b-42bd-8516-9f9c705a1c00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.taxonomy_vocabulary_19
+    - node.type.page
+    - taxonomy.vocabulary.vocabulary_19
+id: node.page.taxonomy_vocabulary_19
+field_name: taxonomy_vocabulary_19
+entity_type: node
+bundle: page
+label: Themes
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vocabulary_19: vocabulary_19
+    sort:
+      field: _none
+field_type: entity_reference

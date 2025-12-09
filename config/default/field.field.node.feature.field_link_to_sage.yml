@@ -1,0 +1,25 @@
+uuid: 296dad6b-50b4-4375-a3f1-383bb7ceac7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link_to_sage
+    - node.type.feature
+  module:
+    - text
+id: node.feature.field_link_to_sage
+field_name: field_link_to_sage
+entity_type: node
+bundle: feature
+label: 'Link to SAGE'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '<p><strong>View full contents and access papers in this issue</strong></p>'
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,244 @@
+uuid: 4900e69c-79d4-42d5-a762-f543238e69e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.booknotes.body
+    - field.field.node.booknotes.comment_node_booknotes
+    - field.field.node.booknotes.feeds_item
+    - field.field.node.booknotes.field_available_from
+    - field.field.node.booknotes.field_description
+    - field.field.node.booknotes.field_flickr_tags
+    - field.field.node.booknotes.field_focus_city
+    - field.field.node.booknotes.field_focus_country
+    - field.field.node.booknotes.field_image
+    - field.field.node.booknotes.field_isbn
+    - field.field.node.booknotes.field_lead_author_firstname
+    - field.field.node.booknotes.field_lead_author_surname
+    - field.field.node.booknotes.field_other_authors
+    - field.field.node.booknotes.field_pages
+    - field.field.node.booknotes.field_published_by
+    - field.field.node.booknotes.field_publisher_town
+    - field.field.node.booknotes.field_year
+    - field.field.node.booknotes.taxonomy_vocabulary_15
+    - image.style.thumbnail
+    - node.type.booknotes
+  module:
+    - comment
+    - content_moderation
+    - focal_point
+    - path
+    - text
+id: node.booknotes.default
+targetEntityType: node
+bundle: booknotes
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_booknotes:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_available_from:
+    type: string_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_description:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_flickr_tags:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_focus_city:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_focus_country:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_image:
+    type: image_focal_point
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+      preview_link: true
+      offsets: '50,50'
+    third_party_settings: {  }
+  field_isbn:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_lead_author_firstname:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_lead_author_surname:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_other_authors:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 90
+      placeholder: ''
+    third_party_settings: {  }
+  field_pages:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_published_by:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_publisher_town:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_year:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 19
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 24
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  taxonomy_vocabulary_15:
+    type: entity_reference_autocomplete
+    weight: 16
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 17
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  publish_on: true
+  publish_state: true
+  unpublish_on: true
+  unpublish_state: true

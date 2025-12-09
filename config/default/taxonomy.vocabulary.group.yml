@@ -1,0 +1,9 @@
+uuid: 47b89412-e1af-4717-9642-5c38ab36739b
+langcode: en
+status: true
+dependencies: {  }
+name: Group
+vid: group
+description: 'Research group'
+weight: 0
+new_revision: false

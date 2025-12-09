@@ -1,0 +1,22 @@
+uuid: 30b593f5-a6bf-44d5-ac51-9f3e5a545e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_booknotes
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_booknotes.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_booknotes
+label: Comment
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

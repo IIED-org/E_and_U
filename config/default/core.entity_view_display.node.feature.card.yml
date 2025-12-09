@@ -1,0 +1,46 @@
+uuid: 448478a2-b40d-4e30-a4a9-74826400dc20
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.feature.body
+    - field.field.node.feature.comment_node_feature
+    - field.field.node.feature.field_date_issue_published
+    - field.field.node.feature.field_featured_image
+    - field.field.node.feature.field_glossary
+    - field.field.node.feature.field_link_to_sage
+    - field.field.node.feature.field_links
+    - field.field.node.feature.field_standfirst
+    - field.field.node.feature.taxonomy_vocabulary_15
+    - node.type.feature
+  module:
+    - user
+id: node.feature.card
+targetEntityType: node
+bundle: feature
+mode: card
+content:
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 16_9_medium
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  comment_node_feature: true
+  field_date_issue_published: true
+  field_glossary: true
+  field_link_to_sage: true
+  field_links: true
+  field_standfirst: true
+  taxonomy_vocabulary_15: true

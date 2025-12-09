@@ -1,0 +1,13 @@
+uuid: df9b4f9a-7e10-4834-afaf-cc5ea71db3b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node_export
+_core:
+  default_config_hash: dFWQNI8U0TCiP6sRrBUUa4TXbrgg5WgTpwEpu7Kc15Y
+id: bulk_node_export
+label: 'Node Export'
+type: node
+plugin: bulk_node_export
+configuration: {  }

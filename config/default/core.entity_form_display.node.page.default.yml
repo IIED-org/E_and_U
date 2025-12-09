@@ -1,0 +1,194 @@
+uuid: 413b4b26-30bb-49a0-9f96-7a00aafb1b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.body
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_content
+    - field.field.node.page.field_description
+    - field.field.node.page.field_downloads
+    - field.field.node.page.field_featured_image
+    - field.field.node.page.field_flickr_tags
+    - field.field.node.page.field_glossary
+    - field.field.node.page.field_group
+    - field.field.node.page.field_links
+    - field.field.node.page.field_standfirst
+    - field.field.node.page.field_tagline
+    - field.field.node.page.field_tags
+    - field.field.node.page.layout_builder__layout
+    - field.field.node.page.taxonomy_vocabulary_15
+    - field.field.node.page.taxonomy_vocabulary_19
+    - field.field.node.page.taxonomy_vocabulary_4
+    - node.type.page
+  module:
+    - comment
+    - media_library
+    - path
+    - text
+_core:
+  default_config_hash: cv3vrBO5FThyOybHSBKigkVK5IOoRQ0kMGg8hkQ7Cb4
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_page:
+    type: comment_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 9
+      placeholder: ''
+    third_party_settings: {  }
+  field_featured_image:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_flickr_tags:
+    type: entity_reference_autocomplete
+    weight: 7
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_group:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_links:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 15
+      placeholder: ''
+    third_party_settings: {  }
+  field_standfirst:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_status:
+    type: scheduler_moderation
+    weight: -4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 13
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  taxonomy_vocabulary_15:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  taxonomy_vocabulary_4:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 10
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  url_redirects:
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_description: true
+  field_downloads: true
+  field_glossary: true
+  field_tagline: true
+  field_tags: true
+  layout_builder__layout: true
+  moderation_state: true
+  publish_on: true
+  publish_state: true
+  taxonomy_vocabulary_19: true
+  unpublish_on: true
+  unpublish_state: true

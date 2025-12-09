@@ -1,0 +1,56 @@
+uuid: 1b146d22-07f6-4e8e-9fa8-218c1a9468a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.advanced_html
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.php_code
+    - node.type.article
+    - node.type.blog
+    - node.type.book_note
+    - node.type.feature
+    - node.type.page
+  module:
+    - filter
+    - node
+    - path
+    - pathauto
+    - system
+    - toolbar
+id: editor
+label: editor
+weight: 3
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'create blog content'
+  - 'create book_note content'
+  - 'create url aliases'
+  - 'delete any article content'
+  - 'delete any blog content'
+  - 'delete any book_note content'
+  - 'delete any page content'
+  - 'delete own article content'
+  - 'delete own blog content'
+  - 'delete own book_note content'
+  - 'delete own page content'
+  - 'edit any article content'
+  - 'edit any blog content'
+  - 'edit any book_note content'
+  - 'edit any feature content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own blog content'
+  - 'edit own book_note content'
+  - 'edit own page content'
+  - 'notify of path changes'
+  - 'use text format advanced_html'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
+  - 'use text format php_code'
+  - 'view own unpublished content'

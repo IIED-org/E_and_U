@@ -1,0 +1,33 @@
+uuid: 1db4db48-bdbf-43b8-96cb-100867eda8de
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_e_and_u_home_page
+    - field.field.block_content.about_e_and_u_home_page.body
+  module:
+    - text
+id: block_content.about_e_and_u_home_page.default
+targetEntityType: block_content
+bundle: about_e_and_u_home_page
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

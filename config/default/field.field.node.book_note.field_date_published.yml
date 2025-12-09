@@ -1,0 +1,19 @@
+uuid: c5edfe43-62e7-4596-b192-d7d05cfc8d71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_published
+    - node.type.book_note
+id: node.book_note.field_date_published
+field_name: field_date_published
+entity_type: node
+bundle: book_note
+label: Year
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

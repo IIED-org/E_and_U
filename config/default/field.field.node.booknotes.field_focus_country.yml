@@ -1,0 +1,19 @@
+uuid: 2963d7cc-838d-47e6-a25b-effc5a731fca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_focus_country
+    - node.type.booknotes
+id: node.booknotes.field_focus_country
+field_name: field_focus_country
+entity_type: node
+bundle: booknotes
+label: 'Focus country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 769b6e94-c132-4804-838e-bab5d0a6e3ac
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gin
+id: seven_user_online
+theme: gin
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:who_s_online-who_s_online_block'
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+  items_per_page: '10'
+visibility: {  }

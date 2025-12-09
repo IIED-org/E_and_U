@@ -1,0 +1,15 @@
+uuid: 64b9c3d9-41ce-4e48-bc57-1e6968675649
+langcode: en
+status: true
+dependencies: {  }
+name: home_page_lists
+label: 'Home page lists'
+effects:
+  9219f8f9-19b8-44df-8363-96f4fef4e5b1:
+    uuid: 9219f8f9-19b8-44df-8363-96f4fef4e5b1
+    id: image_scale
+    weight: 1
+    data:
+      width: null
+      height: 150
+      upscale: true

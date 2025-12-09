@@ -1,0 +1,24 @@
+uuid: fc813121-5a6f-4d1c-8be0-d32283224455
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - filter.format.full_html
+    - node.type.feature
+  module:
+    - text
+id: node.feature.field_links
+field_name: field_links
+entity_type: node
+bundle: feature
+label: Links
+description: '<strong>Project related links to other sites</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long
