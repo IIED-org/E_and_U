@@ -43,6 +43,10 @@
 }
 
 
+/* ===================================
+   GLOBAL TYPOGRAPHY STYLES
+   =================================== */
+
 /* Set base font for entire page */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -56,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: 600;
   line-height: 1.3;
-  color: #2c5f5d; /* Consistent teal color */
+  color: #2c5f5d;
   margin-bottom: 1rem;
 }
 
@@ -83,18 +87,23 @@ a:hover {
   color: #0d4f4d;
 }
 
-/* Quick links list */
+/* List styling */
 ul {
   font-size: 1rem;
   line-height: 1.8;
 }
 
 
-/* Force consistent section headings */
-.region-content h2,
+/* ===================================
+   GLOBAL BLOCK STYLES
+   =================================== */
+
+/* Global styling for all blocks - headings */
+.block h2,
 .field--name-body h2,
+.region-content h2,
 .view-content h2 {
-  font-family: inherit !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1.75rem !important;
   font-weight: 600 !important;
   color: #5a7c7a !important;
@@ -102,9 +111,10 @@ ul {
   margin-top: 2rem !important;
 }
 
-/* Consistent subheadings */
-.region-content h3,
-.field--name-body h3 {
+/* Global styling for all blocks - subheadings */
+.block h3,
+.field--name-body h3,
+.region-content h3 {
   font-family: inherit !important;
   font-size: 1.25rem !important;
   font-weight: 600 !important;
@@ -112,81 +122,68 @@ ul {
   margin-bottom: 1rem !important;
 }
 
-/* Standardize all body text */
-.region-content p,
+/* Global styling for all blocks - paragraphs */
+.block p,
 .field--name-body p,
-.view-content p {
-  font-family: inherit !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-  margin-bottom: 1rem !important;
-}
-
-/* Consistent link styling */
-.region-content a,
-.field--name-body a {
-  color: #16706d !important;
-  font-weight: 500 !important;
-  text-decoration: underline !important;
-}
-
-/* Quick links list */
-.quick-links ul,
-ul li {
-  font-size: 1rem !important;
-  line-height: 1.8 !important;
-}
-
-
-/* Fix the intro text block (right column) - "One of the most widely read..." */
-.region-sidebar-second p,
-.region-sidebar-second .block-content p,
-.sidebar p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Fix the text below the Current issue image */
-.view-id-current_issue .views-field-body p,
-.field--name-field-description p,
-.current-issue-description p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Fix Book notes column text (make it match Blogs column) */
-.view-book-notes .views-field-body p,
-.book-notes-description p,
-.view-id-book_notes p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Ensure all view content paragraphs are consistent */
+.field--name-body p span,
+.region-content p,
+.view-content p,
 .view-content .views-field p,
 .views-row p {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1rem !important;
   line-height: 1.6 !important;
   color: #333 !important;
+  margin-bottom: 1rem !important;
 }
 
-/* Fix the intro text block in right sidebar - "One of the most widely read..." */
-.block-block-content4954daaa-ef37-456e-a461-d0821af1373e .field--name-body p {
+/* Global styling for all blocks - lists */
+.block ul,
+.field--name-body ul {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
+  line-height: 1.8 !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.2em !important;
+  margin-left: 0 !important;
+  margin-bottom: 1rem !important;
 }
 
-/* Fix "Current issue:" heading to match other section headings */
+.block li,
+.field--name-body li,
+ul li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  margin-bottom: 0.5rem !important;
+  color: #333 !important;
+  padding-left: 0 !important;
+}
+
+/* Global styling for all blocks - links */
+.block a,
+.field--name-body a,
+.region-content a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #16706d !important;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+}
+
+/* Override any inline font-size styles */
+.block span[style*="font-size"],
+.field--name-body span[style*="font-size"],
+.view-content span[style*="font-size"] {
+  font-size: 1rem !important;
+}
+
+
+/* ===================================
+   SPECIFIC VIEW OVERRIDES
+   =================================== */
+
+/* Current issue view - ensure consistency */
 .view-current-issue-view .views-field-nothing h2 {
   font-family: inherit !important;
   font-size: 1.75rem !important;
@@ -195,31 +192,6 @@ ul li {
   margin-bottom: 1.5rem !important;
 }
 
-/* Fix text below Current issue image */
-.view-current-issue-view .views-field-body p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Fix Book notes descriptions to match Blogs column size */
-.view-latest.view-display-id-block_1 .views-field-body p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Ensure Blogs column text stays consistent (it's already correct but let's lock it in) */
-.view-latest.view-display-id-latest .views-field-body p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  font-size: 1rem !important;
-  line-height: 1.6 !important;
-  color: #333 !important;
-}
-
-/* Fix text below Current issue image - force it to be 1rem */
 .view-current-issue-view .views-field-body p,
 .view-current-issue-view .views-field-body p span {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -228,7 +200,7 @@ ul li {
   color: #333 !important;
 }
 
-/* Fix Book notes text - target all paragraphs and spans inside */
+/* Book notes and blogs views */
 .view-latest.view-display-id-block_1 .views-field-body p,
 .view-latest.view-display-id-block_1 .views-field-body p span,
 .view-latest.view-display-id-block_1 .views-field-body span {
@@ -238,7 +210,53 @@ ul li {
   color: #333 !important;
 }
 
-/* Override any inline font-size styles on spans */
-.view-content span[style*="font-size"] {
+.view-latest.view-display-id-latest .views-field-body p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
 }
+
+/* ===================================
+   OLIVERO MENU OVERRIDE FIX (Revised)
+   =================================== */
+
+/* Force horizontal menu when the 'is-always-mobile-nav' class is present (e.g., when logged in) */
+body.is-always-mobile-nav .primary-nav__button-toggle {
+  display: none !important; /* Hides the hamburger icon */
+}
+
+body.is-always-mobile-nav .primary-nav__menu {
+  display: flex !important;           /* Forces horizontal layout */
+  visibility: visible !important;
+  max-height: none !important;
+  opacity: 1 !important;
+  position: static !important;        /* Resets mobile positioning */
+  flex-direction: row !important;
+  padding: 0 !important;
+  /* Add specific spacing between items if needed */
+  gap: 1rem; 
+}
+
+/* Ensure individual menu items behave correctly in the forced horizontal view */
+body.is-always-mobile-nav .primary-nav__menu-item {
+  display: block !important;
+}
+
+/* Re-apply standard desktop styles if the window is genuinely wide enough */
+@media screen and (min-width: 62.5em) { 
+  .primary-nav__button-toggle {
+    display: none !important;
+  }
+  .primary-nav__menu {
+    display: flex !important;
+    visibility: visible !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    position: static !important;
+    flex-direction: row !important;
+    padding: 0 !important;
+    gap: 1rem;
+  }
+}
+
