@@ -1,47 +1,95 @@
-# Drupal CMS
+# Environment and Urbanization
 
-Drupal CMS is a fast-moving open source product that enables site builders to easily create new Drupal sites and extend them with smart defaults, all using their browser.
+## Issue management
+New issues should be associated with the [E_and_U project](https://github.com/orgs/IIED-org/projects/12/views/1). Status columns are as follows:
 
-## Getting started
+- **Backlog**: Issues go here when initially created. Assign the issue to the project and tag it with the relevant milestone.
+- **Todo**: Issues go into this column when prioritised and optionally assigned
+- **In progress**: When the issue has been assigned and work commenced it moves here.
+- **Ready for test**: Issued assigned to someone else to check work is complete
+- **Done**: Issue is closed
 
-If you want to use [DDEV](https://ddev.com) to run Drupal CMS locally, follow these instructions:
+## Local developer setup with ddev
 
-1. Install DDEV following the [documentation](https://ddev.com/get-started/)
-2. Open the command line and `cd` to the root directory of this project
-3. Run the following commands:
-```shell
-ddev config --project-type=drupal11 --docroot=web
-ddev start
-ddev composer install
-ddev launch
+This repository comes with a `.ddev/config.yaml` file which will help to set up locally using ddev and Docker.
+
+## Requirements
+
+To run locally, you will need [Docker](https://www.docker.com/products/docker-desktop/) (or OrbStack) and [ddev](https://ddev.com/get-started/).
+
+## Setup
+
+1. Clone this repo, move into the directory that contains the codebase:
+
+```
+git clone git@github.com:IIED-org/E_and_U.git
+cd E_and_U
 ```
 
-Drupal CMS has the same system requirements as Drupal core, so you can use your preferred setup to run it locally. [See the Drupal User Guide for more information](https://www.drupal.org/docs/user_guide/en/installation-chapter.html) on how to set up Drupal.
+2. Start Docker Desktop and run `ddev start` to build the docker containers. Note that if you have any Lando containers running you will need to stop them (`lando poweroff`).
 
-### Installation options
+3. Download a copy of last night's production database via Jenkins and save it to the project root. Import it using the following command:
 
-The Drupal CMS installer offers a list of features preconfigured with smart defaults. You will be able to customize whatever you choose, and add additional features, once you are logged in.
+```
+ddev import-db -f <database-yyyymmdd>.sql.gz
+ddev drush cr
+```
 
-After the installer is complete, you will land on the dashboard.
+4. To modify the theme, including tailwind.pcss and twig templates, move into the theme directory, install the necessary node modules, and run the watch command:
 
-## Documentation
+```
+cd docroot/themes/custom/<themeName>
+ddev npm install
+ddev npm run watch
+```
 
-Coming soon ... [We're working on Drupal CMS specific documentation](https://www.drupal.org/project/drupal_cms/issues/3454527).
+Open https://E_and_U.ddev.site:3000 (note `https`) to view live changes in the browser.
 
-In the meantime, learn more about managing a Drupal-based application in the [Drupal User Guide](https://www.drupal.org/docs/user_guide/en/index.html).
+5. Composer updates: run `ddev composer update --dry-run` to see what updates are available. Ensure you're on an issue branch before running the command for real, i.e. without the `--dry-run` flag.
 
-## Contributing
+6. Config split
 
-Drupal CMS is developed in the open on [Drupal.org](https://www.drupal.org). We are grateful to the community for reporting bugs and contributing fixes and improvements.
+We use the config_split module to separate configuration intended for
+specific environments. We have splits for local, dev, stage and live.
+In web/sites/default/settings.ddev.php file we include the
+following:
 
-[Report issues in the queue](https://drupal.org/node/add/project-issue/drupal_cms), providing as much detail as you can. You can also join the #drupal-cms-support channel in the [Drupal Slack community](https://www.drupal.org/slack).
+```
+/**
+ * Use "local" config split for development
+ */
+$config['config_split.config_split.local']['status'] = TRUE;
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.stage']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = FALSE;
+```
 
-Drupal CMS has adopted a [code of conduct](https://www.drupal.org/dcoc) that we expect all participants to adhere to.
+Running `ddev drush cr` then `ddev drush cim` will import the local split configuration, as well as the default configuration. This will enable modules locally for development (such as devel and stage_file_proxy), and other settings, such as password_expiry and scheduled backups, only on the production server.
 
-To contribute to Drupal CMS development, see the [drupal_cms project](https://www.drupal.org/project/drupal_cms).
+The `<gitroot>/web/sites/default/settings.local.php` file needs to be modified accordingly for each hosting environment. Use `sudo -u admin vi <filename>` on the server(s) to do this.
 
-## License
+7. Common drush commands
 
-Drupal CMS and all derivative works are licensed under the [GNU General Public License, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+Generate a one time login link:
 
-Learn about the [Drupal trademark and logo policy here](https://www.drupal.com/trademark).
+```
+ddev drush uli
+```
+
+Clear the cache:
+
+```
+ddev drush cr
+```
+
+Inspect the ddev configuration:
+
+```
+ddev describe
+```
+
+Show available commands:
+
+```
+ddev --help
+```
