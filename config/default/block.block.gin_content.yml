@@ -1,22 +1,22 @@
-uuid: abfcd3fb-5520-46a5-b5b0-cee546c12548
+uuid: 1f935980-82e4-46c0-acea-d8a4b601cba2
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - drupal_cms_olivero
+    - gin
 _core:
-  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
-id: iied_system_main
-theme: drupal_cms_olivero
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+id: gin_content
+theme: gin
 region: content
 weight: 0
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: ''
+  label: 'Main page content'
   label_display: '0'
   provider: system
 visibility: {  }
