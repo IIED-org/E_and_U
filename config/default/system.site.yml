@@ -6,7 +6,7 @@ name: 'Environment & Urbanization'
 mail: info@environmentandurbanization.org
 slogan: 'World leading environmental and urban studies journal'
 page:
-  403: ''
+  403: /user/login
   404: ''
   front: /node/2
 admin_compact_mode: false

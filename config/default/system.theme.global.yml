@@ -16,4 +16,4 @@ features:
 logo:
   path: 'sites/default/files/E&U_logo.png'
   url: null
-  use_default: false
+  use_default: true
