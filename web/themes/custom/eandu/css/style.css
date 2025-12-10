@@ -178,6 +178,11 @@ ul li {
   font-size: 1rem !important;
 }
 
+/* Site branding & menu fixes */
+.site-branding__text a {
+  color: #FFF !important;
+}
+
 
 /* ===================================
    SPECIFIC VIEW OVERRIDES
@@ -221,6 +226,7 @@ ul li {
    OLIVERO MENU OVERRIDE FIX (Revised)
    =================================== */
 
+   
 /* Force horizontal menu when the 'is-always-mobile-nav' class is present (e.g., when logged in) */
 body.is-always-mobile-nav .primary-nav__button-toggle {
   display: none !important; /* Hides the hamburger icon */
@@ -259,4 +265,3 @@ body.is-always-mobile-nav .primary-nav__menu-item {
     gap: 1rem;
   }
 }
-
