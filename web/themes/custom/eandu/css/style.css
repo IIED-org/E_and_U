@@ -93,7 +93,6 @@ ul {
   line-height: 1.8;
 }
 
-
 /* ===================================
    GLOBAL BLOCK STYLES
    =================================== */
@@ -166,7 +165,7 @@ ul li {
 .field--name-body a,
 .region-content a {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-  color: #16706d !important;
+  color: #16706d;
   font-weight: 500 !important;
   text-decoration: underline !important;
 }
@@ -179,8 +178,12 @@ ul li {
 }
 
 /* Site branding & menu fixes */
-.site-branding__text a {
-  color: #FFF !important;
+.site-branding__text a:link, .site-branding__text a:visited {
+  color: #FFF;
+}
+
+body:not(.is-always-mobile-nav) .primary-nav__menu-link-inner {
+  padding-block: var(--sp0-5);
 }
 
 
@@ -220,48 +223,4 @@ ul li {
   font-size: 1rem !important;
   line-height: 1.6 !important;
   color: #333 !important;
-}
-
-/* ===================================
-   OLIVERO MENU OVERRIDE FIX (Revised)
-   =================================== */
-
-   
-/* Force horizontal menu when the 'is-always-mobile-nav' class is present (e.g., when logged in) */
-body.is-always-mobile-nav .primary-nav__button-toggle {
-  display: none !important; /* Hides the hamburger icon */
-}
-
-body.is-always-mobile-nav .primary-nav__menu {
-  display: flex !important;           /* Forces horizontal layout */
-  visibility: visible !important;
-  max-height: none !important;
-  opacity: 1 !important;
-  position: static !important;        /* Resets mobile positioning */
-  flex-direction: row !important;
-  padding: 0 !important;
-  /* Add specific spacing between items if needed */
-  gap: 1rem; 
-}
-
-/* Ensure individual menu items behave correctly in the forced horizontal view */
-body.is-always-mobile-nav .primary-nav__menu-item {
-  display: block !important;
-}
-
-/* Re-apply standard desktop styles if the window is genuinely wide enough */
-@media screen and (min-width: 62.5em) { 
-  .primary-nav__button-toggle {
-    display: none !important;
-  }
-  .primary-nav__menu {
-    display: flex !important;
-    visibility: visible !important;
-    max-height: none !important;
-    opacity: 1 !important;
-    position: static !important;
-    flex-direction: row !important;
-    padding: 0 !important;
-    gap: 1rem;
-  }
 }
