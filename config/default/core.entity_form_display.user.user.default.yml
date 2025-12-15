@@ -2,7 +2,14 @@ uuid: 6d6b219a-d976-4835-9a4f-834ab5eb4496
 langcode: en
 status: true
 dependencies:
+  config:
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_flickr_tags
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
+    - svg_image
+    - text
     - user
 _core:
   default_config_hash: pojsLtV41YIYgWaeuqfl6yG8fsVXhC1iVB7XwKG0nMc
@@ -17,11 +24,37 @@ content:
   contact:
     weight: 5
     region: content
+  field_biography:
+    type: text_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_flickr_tags:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
   timezone:
     weight: 6
     region: content
+  user_picture:
+    type: image_image
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
 hidden:
   path: true

@@ -3,103 +3,29 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.blog.field_content
-    - field.field.node.blog.field_description
+    - field.field.node.blog.body
+    - field.field.node.blog.comment_node_blog
+    - field.field.node.blog.feeds_item
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
+    - field.field.node.blog.field_hmmm
+    - field.field.node.blog.field_main_image_caption
+    - field.field.node.blog.field_standfirst
     - field.field.node.blog.field_tags
+    - field.field.node.blog.field_url
+    - field.field.node.blog.taxonomy_vocabulary_15
+    - field.field.node.blog.taxonomy_vocabulary_19
     - node.type.blog
-    - views.view.blog
   module:
+    - datetime
     - layout_builder
-    - layout_discovery
-    - media
     - text
     - user
-    - views
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: layout_onecol
-        layout_settings:
-          label: ''
-        components:
-          5cde3553-47a9-4254-be42-b8b7ca2025c9:
-            uuid: 5cde3553-47a9-4254-be42-b8b7ca2025c9
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_tags'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: inline
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 5
-            additional: {  }
-          247faa8e-4645-40cb-9788-ff0e86ba8043:
-            uuid: 247faa8e-4645-40cb-9788-ff0e86ba8043
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_featured_image'
-              label: 'Featured image'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: hero
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          db8679dc-7b6d-4de3-98bd-ce1ea24a3fbe:
-            uuid: db8679dc-7b6d-4de3-98bd-ce1ea24a3fbe
-            region: content
-            configuration:
-              id: 'views_block:blog-related'
-              label: ''
-              label_display: visible
-              provider: views
-              context_mapping: {  }
-              views_label: ''
-              items_per_page: none
-            weight: 6
-            additional: {  }
-          774e5cfe-36b2-40ba-a5ff-13c821e3b9af:
-            uuid: 774e5cfe-36b2-40ba-a5ff-13c821e3b9af
-            region: content
-            configuration:
-              id: 'extra_field_block:node:blog:content_moderation_control'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-            weight: 3
-            additional: {  }
-          0e9be297-1812-4215-b940-a61b7e808025:
-            uuid: 0e9be297-1812-4215-b940-a61b7e808025
-            region: content
-            configuration:
-              id: 'field_block:node:blog:field_content'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
-        third_party_settings: {  }
 _core:
   default_config_hash: 4BNQOedphooBK_oiaQahC1NpnMd6Zdf5Os4UG6fNUDY
 id: node.blog.default
@@ -107,38 +33,78 @@ targetEntityType: node
 bundle: blog
 mode: default
 content:
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
-  field_content:
+  body:
     type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 5
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_author:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: olivero_medium
+    third_party_settings: {  }
     weight: 2
     region: content
   field_featured_image:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     label: hidden
     settings:
-      image_link: ''
-      image_style: ''
-      image_loading:
-        attribute: eager
+      view_mode: 16_9_medium
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_main_image_caption:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
   field_tags:
     type: entity_reference_label
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 1
+    weight: 8
+    region: content
+  field_url:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
     region: content
 hidden:
-  field_description: true
+  comment_node_blog: true
+  feeds_item: true
+  field_hmmm: true
   layout_builder__layout: true
   links: true
+  taxonomy_vocabulary_15: true
+  taxonomy_vocabulary_19: true

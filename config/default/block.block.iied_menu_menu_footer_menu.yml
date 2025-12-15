@@ -1,0 +1,29 @@
+uuid: eb1973c6-2c85-40c0-ab67-9b32aed3744a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-menu
+  module:
+    - system
+  theme:
+    - drupal_cms_olivero
+id: iied_menu_menu_footer_menu
+theme: drupal_cms_olivero
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-menu'
+settings:
+  id: broken
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

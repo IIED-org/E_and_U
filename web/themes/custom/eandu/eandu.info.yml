@@ -1,0 +1,11 @@
+name: eandu
+type: theme
+description: 'Custom Olivero subtheme'
+core_version_requirement: ^10 || ^11
+base theme: olivero
+libraries:
+  - eandu/global-styling
+libraries-override:
+  olivero/navigation-primary:
+    js:
+      js/nav-resize.js: {}

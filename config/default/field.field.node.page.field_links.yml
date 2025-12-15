@@ -1,0 +1,24 @@
+uuid: e9e1ff1d-4107-49e9-8fd4-cd37d6d96f78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_links
+    - node.type.page
+  module:
+    - text
+id: node.page.field_links
+field_name: field_links
+entity_type: node
+bundle: page
+label: Links
+description: '<strong>Project related links to other sites</strong>'
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

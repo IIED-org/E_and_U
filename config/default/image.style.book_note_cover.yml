@@ -1,0 +1,15 @@
+uuid: 431ad4af-311e-4d0c-b559-4fd94862ce11
+langcode: en
+status: true
+dependencies: {  }
+name: book_note_cover
+label: 'book note cover'
+effects:
+  07637fc2-629e-4bae-8c33-ae491f49b277:
+    uuid: 07637fc2-629e-4bae-8c33-ae491f49b277
+    id: image_scale
+    weight: 1
+    data:
+      width: 140
+      height: null
+      upscale: true

@@ -1,0 +1,29 @@
+uuid: 130ed312-3257-48d4-89d3-b49600f87436
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-footer-menu
+  module:
+    - system
+  theme:
+    - eandu
+id: eandu_iied_menu_menu_footer_menu
+theme: eandu
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:menu-footer-menu'
+settings:
+  id: broken
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

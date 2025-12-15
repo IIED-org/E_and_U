@@ -1,0 +1,21 @@
+uuid: 88db58ad-de27-46b4-b2fd-8f85e10f3f3f
+langcode: en
+status: true
+dependencies: {  }
+name: blogs_720_x_405
+label: 'Blogs 720 x 405'
+effects:
+  765f79fa-442c-4cff-b1bc-08df6bd556bc:
+    uuid: 765f79fa-442c-4cff-b1bc-08df6bd556bc
+    id: image_scale
+    weight: 1
+    data:
+      width: 720
+      height: 405
+      upscale: true
+  bdf46b8b-2f5a-417e-9f32-3865d6797f79:
+    uuid: bdf46b8b-2f5a-417e-9f32-3865d6797f79
+    id: image_convert
+    weight: 2
+    data:
+      extension: png

@@ -1,0 +1,29 @@
+uuid: 6f7633c1-ef69-45af-b603-faf85ca979e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-on-this-site
+  module:
+    - system
+  theme:
+    - eandu
+id: eandu_iied_menu_menu_on_this_site
+theme: eandu
+region: sidebar_second
+weight: -23
+provider: null
+plugin: 'system_menu_block:menu-on-this-site'
+settings:
+  id: broken
+  label: 'Quick links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

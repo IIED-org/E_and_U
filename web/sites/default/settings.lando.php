@@ -152,3 +152,9 @@ ini_set('display_startup_errors', TRUE);
  * domain (usually production, sometimes development) with the images.
  */
 // $config['stage_file_proxy.settings']['origin'] = 'http://example.com';
+
+// Clear any existing migrate settings first
+unset($settings['migrate_field_mapping']);
+
+// Set up proper field mapping
+$settings['migrate_field_mapping']['d7_node_complete']['blog']['body'] = 'body';

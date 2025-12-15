@@ -4,7 +4,11 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_content
+    - filter.format.advanced_html
     - filter.format.content_format
+    - filter.format.filtered_html
+    - filter.format.full_html
+    - filter.format.plain_text
     - node.type.page
   module:
     - text
@@ -14,7 +18,7 @@ id: node.page.field_content
 field_name: field_content
 entity_type: node
 bundle: page
-label: Content
+label: Body
 description: 'The content of this page.'
 required: false
 translatable: true
@@ -22,5 +26,9 @@ default_value: {  }
 default_value_callback: ''
 settings:
   allowed_formats:
+    - advanced_html
     - content_format
+    - filtered_html
+    - full_html
+    - plain_text
 field_type: text_long

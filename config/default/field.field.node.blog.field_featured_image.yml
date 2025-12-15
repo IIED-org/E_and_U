@@ -12,7 +12,7 @@ id: node.blog.field_featured_image
 field_name: field_featured_image
 entity_type: node
 bundle: blog
-label: 'Featured image'
+label: 'Main image'
 description: 'Include an image. This appears as the image in search engine results.'
 required: false
 translatable: false
@@ -26,6 +26,6 @@ settings:
     sort:
       field: _none
       direction: ASC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

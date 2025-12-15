@@ -1,0 +1,22 @@
+uuid: 717e1415-b3b2-4ce1-a750-10fe89c22dfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_e_and_u_home_page
+    - field.field.block_content.about_e_and_u_home_page.body
+  module:
+    - text
+id: block_content.about_e_and_u_home_page.default
+targetEntityType: block_content
+bundle: about_e_and_u_home_page
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

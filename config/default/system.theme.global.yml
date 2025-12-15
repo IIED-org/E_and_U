@@ -9,8 +9,11 @@ features:
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
+  logo: true
+  name: true
   node_user_picture: true
+  slogan: true
 logo:
-  path: ''
+  path: 'sites/default/files/E&U_logo.png'
   url: null
   use_default: true

@@ -12,7 +12,7 @@ id: node.page.field_tags
 field_name: field_tags
 entity_type: node
 bundle: page
-label: Tags
+label: z_Tags
 description: 'Include tags for relevant topics.'
 required: false
 translatable: false

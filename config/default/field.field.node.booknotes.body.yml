@@ -1,0 +1,24 @@
+uuid: e60522f6-ffac-402a-a1ff-5d3cc2218f65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.booknotes
+  module:
+    - text
+id: node.booknotes.body
+field_name: body
+entity_type: node
+bundle: booknotes
+label: 'Body text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,285 @@
+uuid: 27d8074d-dcff-4a38-a153-52d90a5f11c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.booknotes.body
+    - field.field.node.booknotes.field_description
+    - field.field.node.booknotes.field_flickr_tags
+    - field.field.node.booknotes.field_focus_city
+    - field.field.node.booknotes.field_focus_country
+    - field.field.node.booknotes.field_isbn
+    - field.field.node.booknotes.field_lead_author_firstname
+    - field.field.node.booknotes.field_lead_author_surname
+    - field.field.node.booknotes.field_other_authors
+    - field.field.node.booknotes.field_pages
+    - field.field.node.booknotes.field_published_by
+    - field.field.node.booknotes.field_publisher_town
+    - field.field.node.booknotes.field_year
+    - node.type.booknotes
+  module:
+    - node
+label: 'legacy booknotes migration'
+id: legacy_booknotes_migration
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: booknotes
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  title:
+    value: Title
+    label: Title
+    machine_name: title
+    type: csv
+  lead_author_firstname:
+    value: 'Lead author firstname'
+    label: 'Lead author firstname'
+    machine_name: lead_author_firstname
+    type: csv
+  '':
+    value: ''
+    label: ''
+    machine_name: ''
+    type: csv
+  lead_author_surname:
+    value: 'Lead author surname'
+    label: 'Lead author surname'
+    machine_name: lead_author_surname
+    type: csv
+  other_authors:
+    value: 'Other authors'
+    label: 'Other authors'
+    machine_name: other_authors
+    type: csv
+  description:
+    value: Description
+    label: Description
+    machine_name: description
+    type: csv
+  focus_country:
+    value: 'Focus country'
+    label: 'Focus country'
+    machine_name: focus_country
+    type: csv
+  focus_city:
+    value: 'Focus city'
+    label: 'Focus city'
+    machine_name: focus_city
+    type: csv
+  flickr_tags:
+    value: 'Flickr tags'
+    label: 'Flickr tags'
+    machine_name: flickr_tags
+    type: csv
+  published_by:
+    value: 'Published by'
+    label: 'Published by'
+    machine_name: published_by
+    type: csv
+  publisher_town:
+    value: 'Publisher town'
+    label: 'Publisher town'
+    machine_name: publisher_town
+    type: csv
+  year:
+    value: Year
+    label: Year
+    machine_name: year
+    type: csv
+  pages:
+    value: Pages
+    label: Pages
+    machine_name: pages
+    type: csv
+  isbn:
+    value: ISBN
+    label: ISBN
+    machine_name: isbn
+    type: csv
+  body:
+    value: Body
+    label: Body
+    machine_name: body
+    type: csv
+  available_from:
+    value: 'Available from'
+    label: 'Available from'
+    machine_name: available_from
+    type: csv
+  cover_image:
+    value: 'Cover image'
+    label: 'Cover image'
+    machine_name: cover_image
+    type: csv
+  cover_image_file_id:
+    value: 'Cover image'
+    label: 'Cover image'
+    machine_name: cover_image_file_id
+    type: csv
+  cover_image_alt_text:
+    value: 'Cover image'
+    label: 'Cover image'
+    machine_name: cover_image_alt_text
+    type: csv
+  cover_image_title:
+    value: 'Cover image'
+    label: 'Cover image'
+    machine_name: cover_image_title
+    type: csv
+  tags:
+    value: Tags
+    label: Tags
+    machine_name: tags
+    type: csv
+mappings:
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_lead_author_firstname
+    map:
+      value: lead_author_firstname
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_lead_author_surname
+    map:
+      value: lead_author_surname
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_other_authors
+    map:
+      value: other_authors
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_description
+    map:
+      value: description
+    settings:
+      language: null
+  -
+    target: field_focus_country
+    map:
+      value: focus_country
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_focus_city
+    map:
+      value: focus_city
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_flickr_tags
+    map:
+      target_id: flickr_tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: flickr_tags
+  -
+    target: field_published_by
+    map:
+      value: published_by
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_publisher_town
+    map:
+      value: publisher_town
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_year
+    map:
+      value: year
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_pages
+    map:
+      value: pages
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_isbn
+    map:
+      value: isbn
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: filtered_html
+  -
+    target: field_available_from
+    map:
+      value: available_from
+    settings:
+      language: null
+  -
+    target: field_image
+    map:
+      target_id: cover_image_file_id
+      alt: cover_image_alt_text
+      title: cover_image_title
+    settings:
+      existing: 2
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false
+  -
+    target: taxonomy_vocabulary_15
+    map:
+      target_id: tags
+    settings:
+      language: null
+      reference_by: name
+      autocreate: false
+      autocreate_bundle: vocabulary_15

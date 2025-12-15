@@ -1,0 +1,8 @@
+uuid: 9bf699ec-bb4a-4a16-b27a-c7a5eb241a7e
+langcode: en
+status: true
+dependencies: {  }
+id: menu-on-this-site
+label: 'Quick links'
+description: 'additional quick navigation to key pages'
+locked: false

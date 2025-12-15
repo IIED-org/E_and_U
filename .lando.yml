@@ -19,6 +19,7 @@ services:
         PHP_IDE_CONFIG: "serverName=appserver"
         LANDO_HOST_IP: "host.docker.internal"
         XDEBUG_CONFIG: "remote_enable=1 remote_host=host.docker.internal"
+        LANDO_WEBROOT: '/app/web'
     build:
       - composer install
   database:

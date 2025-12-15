@@ -11,9 +11,9 @@ id: node.page.field_description
 field_name: field_description
 entity_type: node
 bundle: page
-label: Description
+label: z_Description
 description: 'Describe the page content. This appears as the description in search engine results.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''

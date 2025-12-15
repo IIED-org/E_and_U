@@ -1,0 +1,226 @@
+/* Fix for Olivero two-column layout in Layout Builder */
+.layout--twocol-section,
+.layout--twocol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sp2, 2rem);
+  grid-template-areas: "first second";
+}
+
+.layout--twocol-section .layout__region--first,
+.layout--twocol .layout__region--first {
+  grid-area: first;
+}
+
+.layout--twocol-section .layout__region--second,
+.layout--twocol .layout__region--second {
+  grid-area: second;
+}
+
+/* Ensure blocks don't overflow */
+.layout--twocol-section .layout__region,
+.layout--twocol .layout__region {
+  min-width: 0;
+}
+
+/* Preserve heading sizes within layout builder columns */
+.layout--twocol-section h2,
+.layout--twocol h2,
+.layout--twocol-section .block__title,
+.layout--twocol .block__title {
+  font-size: var(--fs-xxl, 2.5rem);
+  font-weight: bold;
+}
+
+/* 67% / 33% two-column layout */
+.layout--twocol-section--67-33 {
+  grid-template-columns: 2fr 1fr;
+}
+
+/* 33% / 67% two-column layout (if needed) */
+.layout--twocol-section--33-67 {
+  grid-template-columns: 1fr 2fr;
+}
+
+
+/* ===================================
+   GLOBAL TYPOGRAPHY STYLES
+   =================================== */
+
+/* Set base font for entire page */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Standardize all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #2c5f5d;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+/* Consistent paragraph styling */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Standardize all links */
+a {
+  color: #16706d;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #0d4f4d;
+}
+
+/* List styling */
+ul {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ===================================
+   GLOBAL BLOCK STYLES
+   =================================== */
+
+/* Global styling for all blocks - headings */
+.block h2,
+.field--name-body h2,
+.region-content h2,
+.view-content h2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: #5a7c7a !important;
+  margin-bottom: 1.5rem !important;
+  margin-top: 2rem !important;
+}
+
+/* Global styling for all blocks - subheadings */
+.block h3,
+.field--name-body h3,
+.region-content h3 {
+  font-family: inherit !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  color: #2c5f5d !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Global styling for all blocks - paragraphs */
+.block p,
+.field--name-body p,
+.field--name-body p span,
+.region-content p,
+.view-content p,
+.view-content .views-field p,
+.views-row p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Global styling for all blocks - lists */
+.block ul,
+.field--name-body ul {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 1.2em !important;
+  margin-left: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+.block li,
+.field--name-body li,
+ul li {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.8 !important;
+  margin-bottom: 0.5rem !important;
+  color: #333 !important;
+  padding-left: 0 !important;
+}
+
+/* Global styling for all blocks - links */
+.block a,
+.field--name-body a,
+.region-content a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  color: #16706d;
+  font-weight: 500 !important;
+  text-decoration: underline !important;
+}
+
+/* Override any inline font-size styles */
+.block span[style*="font-size"],
+.field--name-body span[style*="font-size"],
+.view-content span[style*="font-size"] {
+  font-size: 1rem !important;
+}
+
+/* Site branding & menu fixes */
+.site-branding__text a:link, .site-branding__text a:visited {
+  color: #FFF;
+}
+
+body:not(.is-always-mobile-nav) .primary-nav__menu-link-inner {
+  padding-block: var(--sp0-5);
+}
+
+
+/* ===================================
+   SPECIFIC VIEW OVERRIDES
+   =================================== */
+
+/* Current issue view - ensure consistency */
+.view-current-issue-view .views-field-nothing h2 {
+  font-family: inherit !important;
+  font-size: 1.75rem !important;
+  font-weight: 600 !important;
+  color: #5a7c7a !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.view-current-issue-view .views-field-body p,
+.view-current-issue-view .views-field-body p span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+}
+
+/* Book notes and blogs views */
+.view-latest.view-display-id-block_1 .views-field-body p,
+.view-latest.view-display-id-block_1 .views-field-body p span,
+.view-latest.view-display-id-block_1 .views-field-body span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+}
+
+.view-latest.view-display-id-latest .views-field-body p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333 !important;
+}

@@ -1,0 +1,178 @@
+uuid: 0a6f9df9-f2ca-46bc-bed6-f545f1f224eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blog.body
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_date
+    - field.field.node.blog.field_standfirst
+    - field.field.node.blog.field_url
+    - node.type.blog
+  module:
+    - feeds_ex
+    - node
+label: 'legacy blogs migration'
+id: legacy_blogs_migration
+description: ''
+help: ''
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: xml
+parser_configuration:
+  context:
+    value: /nodes/node
+  source_encoding:
+    - auto
+  display_errors: false
+  line_limit: 100
+  use_tidy: false
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: blog
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: true
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  author:
+    label: Author
+    machine_name: author
+    value: Author-s-
+    raw: false
+    inner: false
+    type: xml
+  body:
+    label: Body
+    machine_name: body
+    value: Body
+    raw: false
+    inner: false
+    type: xml
+  carousel_or_highlight_text:
+    label: 'Carousel or highlight text'
+    machine_name: carousel_or_highlight_text
+    value: Carousel-text
+    raw: false
+    inner: false
+    type: xml
+  date:
+    label: Date
+    machine_name: date
+    value: Date
+    raw: true
+    inner: true
+    type: xml
+  flickr_tags:
+    label: 'Flickr tags'
+    machine_name: flickr_tags
+    value: Flickr-tags
+    raw: false
+    inner: false
+    type: xml
+  main_image:
+    label: 'Main image'
+    machine_name: main_image
+    value: Main-image
+    raw: false
+    inner: false
+    type: xml
+  standfirst:
+    label: Standfirst
+    machine_name: standfirst
+    value: Standfirst
+    raw: false
+    inner: false
+    type: xml
+  tags:
+    label: Tags
+    machine_name: tags
+    value: Tags
+    raw: false
+    inner: false
+    type: xml
+  blog_also_appears_on_iied_site:
+    label: 'Blog also appears on iied site'
+    machine_name: blog_also_appears_on_iied_site
+    value: This-blog-post-also-appears-on-www.iied.org.-Please-follow-this-link-to-view-and-post-comments
+    raw: false
+    inner: false
+    type: xml
+  title:
+    label: Title
+    machine_name: title
+    value: Title
+    raw: false
+    inner: false
+    type: xml
+  main_featured_image:
+    label: 'Main featured image'
+    machine_name: main_featured_image
+    value: Main-image
+    raw: false
+    inner: false
+    type: xml
+mappings:
+  -
+    target: field_author
+    map:
+      value: author
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: body
+    map:
+      value: body
+      summary: ''
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: field_date
+    map:
+      value: date
+    settings:
+      language: null
+      timezone: UTC
+  -
+    target: field_standfirst
+    map:
+      value: standfirst
+    settings:
+      language: null
+  -
+    target: field_url
+    map:
+      value: blog_also_appears_on_iied_site
+    settings:
+      language: ''
+      format: full_html
+  -
+    target: title
+    map:
+      value: title
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: field_hmmm
+    map:
+      target_id: main_featured_image
+    settings:
+      language: null
+      reference_by: filename
+      autocreate: false
+      autocreate_bundle: false

@@ -4,13 +4,23 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.blog.field_content
-    - field.field.node.blog.field_description
+    - field.field.node.blog.body
+    - field.field.node.blog.comment_node_blog
+    - field.field.node.blog.feeds_item
+    - field.field.node.blog.field_author
+    - field.field.node.blog.field_date
     - field.field.node.blog.field_featured_image
+    - field.field.node.blog.field_hmmm
+    - field.field.node.blog.field_main_image_caption
+    - field.field.node.blog.field_standfirst
     - field.field.node.blog.field_tags
+    - field.field.node.blog.field_url
+    - field.field.node.blog.taxonomy_vocabulary_15
+    - field.field.node.blog.taxonomy_vocabulary_19
     - node.type.blog
   module:
     - layout_builder
+    - text
     - user
 third_party_settings:
   layout_builder:
@@ -23,12 +33,13 @@ targetEntityType: node
 bundle: blog
 mode: teaser
 content:
-  field_description:
-    type: basic_string
+  body:
+    type: text_summary_or_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
   field_featured_image:
     type: entity_reference_entity_view
@@ -40,7 +51,16 @@ content:
     weight: 0
     region: content
 hidden:
+  comment_node_blog: true
   content_moderation_control: true
-  field_content: true
+  feeds_item: true
+  field_author: true
+  field_date: true
+  field_hmmm: true
+  field_main_image_caption: true
+  field_standfirst: true
   field_tags: true
+  field_url: true
   links: true
+  taxonomy_vocabulary_15: true
+  taxonomy_vocabulary_19: true

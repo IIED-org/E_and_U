@@ -1,0 +1,22 @@
+uuid: 0e388145-a17c-45c9-b956-848e1bd79216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_url
+    - node.type.blog
+  module:
+    - text
+id: node.blog.field_url
+field_name: field_url
+entity_type: node
+bundle: blog
+label: 'This blog post first appeared on www.iied.org. '
+description: 'The URL of the original item'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

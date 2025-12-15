@@ -1,0 +1,38 @@
+uuid: 3b0f4a74-7b4b-465d-bb20-b391571e4df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.vocabulary_19.field_main_image
+    - taxonomy.vocabulary.vocabulary_19
+  module:
+    - svg_image
+    - text
+id: taxonomy_term.vocabulary_19.default
+targetEntityType: taxonomy_term
+bundle: vocabulary_19
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_main_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: 8ef4d819-6b50-453b-8475-6667373e9949
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_glossary
+    - node.type.page
+  module:
+    - text
+id: node.page.field_glossary
+field_name: field_glossary
+entity_type: node
+bundle: page
+label: 'Admin notes'
+description: '<strong>Notes, source, missing or broken links, other useful notes</strong>'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

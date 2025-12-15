@@ -1,0 +1,19 @@
+uuid: dba4a3e9-20d6-4633-8363-005f5a774bda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.booknotes
+id: node.booknotes.field_description
+field_name: field_description
+entity_type: node
+bundle: booknotes
+label: Description
+description: 'E.g. source publication, organisation, project etc.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

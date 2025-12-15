@@ -1,0 +1,27 @@
+uuid: 1b3dade7-c8fd-4248-88b7-78c70e5d4048
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_flickr_tags
+    - taxonomy.vocabulary.flickr_tags
+  module:
+    - user
+id: user.user.field_flickr_tags
+field_name: field_flickr_tags
+entity_type: user
+bundle: user
+label: 'Flickr tags'
+description: "Limited the photos used from your Flickr account in Flickr blocks to those having a Flickr tag as indicated here (e.g. 'website' or 'blog'). Those have to be added to individual photos on Flickr as well. This is not necessary if the Flickr blocks themselves make use of the Flickr tags attached to a post, as the grabbed photos are filtered by those already.<br />NOTA BENE: Does NOT have any impact on the photos displayed in a user profile."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      flickr_tags: flickr_tags
+    sort:
+      field: _none
+field_type: entity_reference

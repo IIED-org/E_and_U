@@ -1,0 +1,29 @@
+uuid: 4e733893-5b94-4a14-9945-cea5f2d4aee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-in-this-section
+  module:
+    - system
+  theme:
+    - eandu
+id: eandu_iied_menu_menu_in_this_section
+theme: eandu
+region: content
+weight: -24
+provider: null
+plugin: 'system_menu_block:menu-in-this-section'
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /sample-papers-most-cited-and-downloaded

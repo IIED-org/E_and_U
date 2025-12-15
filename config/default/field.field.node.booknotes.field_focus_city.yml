@@ -1,0 +1,19 @@
+uuid: f6af261d-060a-40f4-97a6-805f4a9df63a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_focus_city
+    - node.type.booknotes
+id: node.booknotes.field_focus_city
+field_name: field_focus_city
+entity_type: node
+bundle: booknotes
+label: 'Focus city'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

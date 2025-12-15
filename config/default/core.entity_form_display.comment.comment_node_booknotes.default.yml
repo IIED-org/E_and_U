@@ -1,0 +1,36 @@
+uuid: 5279d485-8b97-46f7-b732-cacfe8fc7cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_booknotes
+    - field.field.comment.comment_node_booknotes.comment_body
+  module:
+    - text
+id: comment.comment_node_booknotes.default
+targetEntityType: comment
+bundle: comment_node_booknotes
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

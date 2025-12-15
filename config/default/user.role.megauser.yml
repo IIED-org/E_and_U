@@ -1,0 +1,39 @@
+uuid: b7ac98fb-4811-43f5-ae6f-c0a42cf69754
+langcode: en
+status: true
+dependencies:
+  module:
+    - block
+    - filter
+    - node
+    - system
+    - toolbar
+id: megauser
+label: megauser
+weight: 999
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer actions'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer themes'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'select account cancellation method'
+  - 'view own unpublished content'
+  - 'view the administration theme'

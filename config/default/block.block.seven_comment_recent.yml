@@ -1,0 +1,18 @@
+uuid: c6ebfa32-1077-4913-9e54-ac8c9056a887
+langcode: en
+status: false
+dependencies:
+  theme:
+    - gin
+id: seven_comment_recent
+theme: gin
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:comments_recent-block_1'
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+visibility: {  }

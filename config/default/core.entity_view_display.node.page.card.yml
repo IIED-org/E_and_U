@@ -4,11 +4,23 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
+    - field.field.node.page.body
+    - field.field.node.page.comment_node_page
     - field.field.node.page.field_content
     - field.field.node.page.field_description
+    - field.field.node.page.field_downloads
     - field.field.node.page.field_featured_image
+    - field.field.node.page.field_flickr_tags
+    - field.field.node.page.field_glossary
+    - field.field.node.page.field_group
+    - field.field.node.page.field_links
+    - field.field.node.page.field_standfirst
+    - field.field.node.page.field_tagline
     - field.field.node.page.field_tags
     - field.field.node.page.layout_builder__layout
+    - field.field.node.page.taxonomy_vocabulary_15
+    - field.field.node.page.taxonomy_vocabulary_19
+    - field.field.node.page.taxonomy_vocabulary_4
     - node.type.page
   module:
     - layout_builder
@@ -41,8 +53,20 @@ content:
     weight: 0
     region: content
 hidden:
+  body: true
+  comment_node_page: true
   content_moderation_control: true
   field_content: true
+  field_downloads: true
+  field_flickr_tags: true
+  field_glossary: true
+  field_group: true
+  field_links: true
+  field_standfirst: true
+  field_tagline: true
   field_tags: true
   layout_builder__layout: true
   links: true
+  taxonomy_vocabulary_15: true
+  taxonomy_vocabulary_19: true
+  taxonomy_vocabulary_4: true

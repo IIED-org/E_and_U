@@ -1,0 +1,22 @@
+uuid: a347dbed-2d99-4fd9-8549-7b1352d567c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads
+    - node.type.page
+  module:
+    - text
+id: node.page.field_downloads
+field_name: field_downloads
+entity_type: node
+bundle: page
+label: 'Right column'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

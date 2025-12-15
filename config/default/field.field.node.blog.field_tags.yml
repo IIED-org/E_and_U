@@ -12,7 +12,7 @@ id: node.blog.field_tags
 field_name: field_tags
 entity_type: node
 bundle: blog
-label: Tags
+label: z_Tags
 description: 'Include tags for relevant topics.'
 required: false
 translatable: false
@@ -25,5 +25,7 @@ settings:
       tags: tags
     sort:
       field: _none
+      direction: asc
     auto_create: true
+    auto_create_bundle: vocabulary_15
 field_type: entity_reference

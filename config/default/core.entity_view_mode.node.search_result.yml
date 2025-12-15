@@ -1,0 +1,11 @@
+uuid: 352bb6ef-7bce-45e8-b3e6-a63b24f4349c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.search_result
+label: 'Search result'
+description: null
+targetEntityType: node
+cache: true

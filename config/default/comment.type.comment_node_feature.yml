@@ -1,0 +1,8 @@
+uuid: bd883c3e-b2e3-464d-b87e-60696e19a99e
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_feature
+label: 'Feature comment'
+target_entity_type_id: node
+description: null

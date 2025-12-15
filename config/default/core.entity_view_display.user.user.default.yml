@@ -1,0 +1,46 @@
+uuid: c45c8474-ed06-4a1b-b3c3-9376dafe4b4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_biography
+    - field.field.user.user.field_flickr_tags
+    - field.field.user.user.user_picture
+  module:
+    - svg_image
+    - text
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_biography:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_flickr_tags: true
