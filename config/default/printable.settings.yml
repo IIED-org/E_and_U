@@ -1,0 +1,126 @@
+_core:
+  default_config_hash: EjzcL1x8n5Tab8DYsbgqaEcvI-aC-JUVWKFM6JBAY9g
+printable_entities:
+  node: node
+  block: '0'
+  block_content: '0'
+  comment: '0'
+  content_moderation_state: '0'
+  crop: '0'
+  easy_email: '0'
+  easy_email_type: '0'
+  easy_email_override: '0'
+  feeds_feed: '0'
+  feeds_subscription: '0'
+  file: '0'
+  media: '0'
+  menu_link_content: '0'
+  path_alias: '0'
+  redirect: '0'
+  taxonomy_term: '0'
+  user: '0'
+printable_entities_bundles:
+  node:
+    blog: true
+    book_note: true
+    booknotes: true
+    _all: false
+    article: false
+    feature: false
+    page: false
+  block:
+    _all: true
+    block: false
+  block_content:
+    _all: true
+    about_e_and_u_home_page: false
+  comment:
+    _all: true
+    comment_node_article: false
+    comment_node_blog: false
+    comment_node_book_note: false
+    comment_node_booknotes: false
+    comment_node_feature: false
+    comment_node_page: false
+  content_moderation_state:
+    _all: true
+    content_moderation_state: false
+  crop:
+    _all: true
+    focal_point: false
+  easy_email:
+    _all: true
+    default: false
+    user_activation: false
+    user_blocked: false
+    user_canceled: false
+    user_cancellation_confirmation: false
+    user_created_approval_admin: false
+    user_created_awaiting_approval: false
+    user_created_by_admin: false
+    user_created_no_approval: false
+    user_password_recovery: false
+  easy_email_type:
+    _all: true
+    easy_email_type: false
+  easy_email_override:
+    _all: true
+    easy_email_override: false
+  feeds_feed:
+    _all: true
+    legacy_blogs_migration: false
+    legacy_book_notes_migration: false
+    legacy_booknotes_migration: false
+  feeds_subscription:
+    _all: true
+    feeds_subscription: false
+  file:
+    _all: true
+    file: false
+  media:
+    _all: true
+    document: false
+    image: false
+    remote_video: false
+    svg_image: false
+  menu_link_content:
+    _all: true
+    menu_link_content: false
+  path_alias:
+    _all: true
+    path_alias: false
+  redirect:
+    _all: true
+    redirect: false
+  taxonomy_term:
+    _all: true
+    flickr_tags: false
+    group: false
+    tags: false
+    vocabulary_15: false
+    vocabulary_19: false
+    vocabulary_4: false
+  user:
+    _all: true
+    user: false
+open_target_blank: true
+css_include: ''
+extract_links: none
+link_canonical: true
+save_pdf: false
+pdf_tool: dompdf
+paper_size: A4
+path_to_binary: ''
+page_orientation: portrait
+pdf_location: ''
+send_to_printer: true
+close_window: false
+list_attribute: false
+printable_print_link_locations:
+  - node
+printable_pdf_link_locations:
+  - ''
+print_pdf_use_xvfb_run: false
+path_to_xvfb_run: ''
+ignore_warnings: false
+exclude_printable_links: true

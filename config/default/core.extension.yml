@@ -79,11 +79,16 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pdf_api: 0
   phpass: 0
+  printable: 0
   project_browser: 0
+  rabbit_hole: 0
   redirect: 0
   redirect_404: 0
   responsive_image: 0
+  rh_node: 0
+  rh_taxonomy: 0
   sam: 0
   scheduler: 0
   scheduler_content_moderation_integration: 0
@@ -106,6 +111,7 @@ module:
   pathauto: 1
   selective_better_exposed_filters: 1
   views: 10
+  publication_date: 99
 theme:
   claro: 0
   gin: 0
