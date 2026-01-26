@@ -82,7 +82,6 @@ module:
   pdf_api: 0
   phpass: 0
   printable: 0
-  printable_pdf: 0
   project_browser: 0
   rabbit_hole: 0
   redirect: 0
