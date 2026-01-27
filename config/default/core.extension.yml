@@ -16,9 +16,11 @@ module:
   breakpoint: 0
   captcha: 0
   ckeditor5: 0
+  clamav: 0
   coffee: 0
   comment: 0
   config: 0
+  config_split: 0
   content_moderation: 0
   contextual: 0
   crop: 0
@@ -40,6 +42,7 @@ module:
   eca_ui: 0
   eca_user: 0
   editor: 0
+  encrypt: 0
   feeds: 0
   feeds_ex: 0
   field: 0
@@ -54,6 +57,7 @@ module:
   inline_form_errors: 0
   jquery_ui: 0
   jquery_ui_resizable: 0
+  key: 0
   klaro: 0
   layout_builder: 0
   layout_discovery: 0
@@ -77,6 +81,10 @@ module:
   options: 0
   package_manager: 0
   page_cache: 0
+  password_policy_character_types: 0
+  password_policy_history: 0
+  password_policy_length: 0
+  password_policy_username: 0
   path: 0
   path_alias: 0
   pdf_api: 0
@@ -93,6 +101,8 @@ module:
   scheduler: 0
   scheduler_content_moderation_integration: 0
   search: 0
+  session_management: 0
+  stage_file_proxy: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0
@@ -100,6 +110,7 @@ module:
   tagify_user_list: 0
   taxonomy: 0
   text: 0
+  tfa: 0
   token: 0
   toolbar: 0
   trash: 0
@@ -110,7 +121,9 @@ module:
   eca_form: 1
   pathauto: 1
   selective_better_exposed_filters: 1
+  password_policy: 10
   views: 10
+  password_policy_extras: 20
   publication_date: 99
 theme:
   claro: 0
