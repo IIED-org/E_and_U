@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: YIFQePqJ5R_xhQaVs2DupU2SQq44xpQQ3JsNP6wyDFI
+enable_session_monitor: 0
+date_time_format: Y-m-d
+session_limit_count: '1'
+enable_session_limiter: 1
+autologout_enabled: 1
+autologout_timeout: '14400'
+autologout_response_time: '300'
+redirect_after_logout: ''
+mo_modal_width: '400'
+mo_modal_title: 'Environment & Urbanization Alert'
+mo_modal_message: "You've been inactive for a while. Would you like to continue your session?"
+mo_modal_yes_button_text: Continue
+mo_modal_no_button_text: 'End session'
