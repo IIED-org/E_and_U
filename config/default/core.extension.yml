@@ -26,7 +26,6 @@ module:
   crop: 0
   dashboard: 0
   datetime: 0
-  dblog: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   easy_email: 0
@@ -46,12 +45,12 @@ module:
   feeds: 0
   feeds_ex: 0
   field: 0
-  field_ui: 0
   file: 0
   filter: 0
   focal_point: 0
   friendlycaptcha: 0
   gin_toolbar: 0
+  google_tag: 0
   honeypot: 0
   image: 0
   inline_form_errors: 0
@@ -70,10 +69,6 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
-  migrate: 0
-  migrate_drupal: 0
-  migrate_drupal_ui: 0
-  migrate_tools: 0
   mysql: 0
   navigation: 0
   node: 0
@@ -102,7 +97,6 @@ module:
   scheduler_content_moderation_integration: 0
   search: 0
   session_management: 0
-  stage_file_proxy: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0
@@ -116,7 +110,6 @@ module:
   trash: 0
   update: 0
   user: 0
-  views_ui: 0
   workflows: 0
   eca_form: 1
   pathauto: 1

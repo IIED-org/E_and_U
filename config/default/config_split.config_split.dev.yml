@@ -1,0 +1,20 @@
+uuid: e0328915-d701-4154-9320-7b410747eb42
+langcode: en
+status: true
+dependencies: {  }
+id: dev
+label: Dev
+description: 'Hosting provider dev environment'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/splits/dev
+module:
+  dblog: 0
+  field_ui: 0
+  stage_file_proxy: 0
+  views_ui: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

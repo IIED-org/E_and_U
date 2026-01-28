@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - klaro
     - media
     - printable
     - system
@@ -10,9 +11,10 @@ _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
 id: anonymous
 label: 'anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'use klaro'
   - 'view media'
   - 'view printer friendly versions'

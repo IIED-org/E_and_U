@@ -1,0 +1,22 @@
+uuid: e03681a8-0b7e-4123-8ad4-fc0c233f347b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.booknotes
+id: node.booknotes.promote
+field_name: promote
+entity_type: node
+bundle: booknotes
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

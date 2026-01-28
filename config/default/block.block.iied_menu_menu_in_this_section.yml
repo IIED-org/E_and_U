@@ -2,6 +2,8 @@ uuid: f56124e3-39e8-439d-938c-d7143d8019fd
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.menu-in-this-section
   module:
     - system
   theme:
@@ -17,6 +19,9 @@ settings:
   label: ''
   label_display: '0'
   provider: core
+  level: 1
+  depth: null
+  expand_all_items: false
 visibility:
   request_path:
     id: request_path

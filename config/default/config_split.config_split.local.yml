@@ -1,0 +1,20 @@
+uuid: 8859384e-cf89-49bd-84f4-a2c26485bf88
+langcode: en
+status: true
+dependencies: {  }
+id: local
+label: Local
+description: 'Local development (e.g. lando)'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/splits/local
+module:
+  dblog: 0
+  field_ui: 0
+  stage_file_proxy: 0
+  views_ui: 0
+theme: {  }
+complete_list: {  }
+partial_list: {  }

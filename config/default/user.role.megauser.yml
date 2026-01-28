@@ -10,7 +10,7 @@ dependencies:
     - toolbar
 id: megauser
 label: megauser
-weight: 999
+weight: -6
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -34,6 +34,7 @@ permissions:
   - 'bypass node access'
   - 'cancel account'
   - 'change own username'
+  - 'rebuild node access permissions'
   - 'select account cancellation method'
   - 'view own unpublished content'
   - 'view the administration theme'

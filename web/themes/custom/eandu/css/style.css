@@ -157,7 +157,7 @@ ul li {
   line-height: 1.8 !important;
   margin-bottom: 0.5rem !important;
   color: #333 !important;
-  padding-left: 0 !important;
+  padding-left: 0;
 }
 
 /* Global styling for all blocks - links */
