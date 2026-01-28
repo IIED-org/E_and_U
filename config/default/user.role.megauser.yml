@@ -34,6 +34,7 @@ permissions:
   - 'bypass node access'
   - 'cancel account'
   - 'change own username'
+  - 'rebuild node access permissions'
   - 'select account cancellation method'
   - 'view own unpublished content'
   - 'view the administration theme'

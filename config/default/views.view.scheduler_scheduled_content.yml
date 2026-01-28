@@ -134,6 +134,7 @@ display:
               responsive: ''
           default: '-1'
           empty_table: true
+          class: ''
       row:
         type: fields
       fields:
@@ -641,10 +642,7 @@ display:
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             operator_limit_selection: false
             operator_list: {  }
           is_grouped: false
@@ -682,10 +680,7 @@ display:
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             placeholder: ''
             operator_limit_selection: false
             operator_list: {  }
@@ -725,10 +720,7 @@ display:
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             reduce: false
             operator_limit_selection: false
             operator_list: {  }
@@ -768,10 +760,7 @@ display:
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             operator_limit_selection: false
             operator_list: {  }
           is_grouped: true
@@ -818,10 +807,7 @@ display:
             required: false
             remember: false
             multiple: false
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             reduce: false
             operator_limit_selection: false
             operator_list: {  }
@@ -868,10 +854,7 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             operator_limit_selection: false
             operator_list: {  }
           is_grouped: false
@@ -917,10 +900,7 @@ display:
             placeholder: ''
             min_placeholder: ''
             max_placeholder: ''
-            remember_roles:
-              anonymous: '0'
-              authenticated: '0'
-              administrator: '0'
+            remember_roles: {  }
             operator_limit_selection: false
             operator_list: {  }
           is_grouped: false
