@@ -10,7 +10,7 @@ dependencies:
     - toolbar
 id: megauser
 label: megauser
-weight: 999
+weight: -6
 is_admin: false
 permissions:
   - 'access administration pages'

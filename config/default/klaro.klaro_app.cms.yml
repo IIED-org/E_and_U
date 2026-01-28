@@ -5,7 +5,7 @@ dependencies: {  }
 _core:
   default_config_hash: HBeBrdoMQ8HHvIcge46zv21fgnD6c8V6FjQ_h1eiQkY
 id: cms
-label: 'Drupal CMS'
+label: Functional
 description: 'Store data (e.g. cookie for user session) in your browser (required to use this website).'
 default: true
 purposes:
@@ -20,8 +20,8 @@ opt_out: false
 only_once: false
 contextual_consent_only: null
 contextual_consent_text: null
-info_url: 'https://www.drupal.org'
-privacy_policy_url: ''
+info_url: 'https://www.iied.org/website-terms-conditions'
+privacy_policy_url: 'internal:/privacy-policy'
 javascripts: {  }
 callback_code: ''
 wrapper_identifier: {  }
