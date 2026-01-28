@@ -69,6 +69,10 @@ module:
   menu_link_attributes: 0
   menu_link_content: 0
   menu_ui: 0
+  metatag: 0
+  metatag_dc: 0
+  metatag_open_graph: 0
+  metatag_views: 0
   mysql: 0
   navigation: 0
   node: 0
@@ -97,6 +101,10 @@ module:
   scheduler_content_moderation_integration: 0
   search: 0
   session_management: 0
+  simple_sitemap: 0
+  simple_sitemap_engines: 0
+  sitemap: 0
+  sitemap_metatag: 0
   svg_image: 0
   symfony_mailer_lite: 0
   system: 0

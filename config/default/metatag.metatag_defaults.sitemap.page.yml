@@ -1,0 +1,11 @@
+uuid: 2ae4e1c0-0706-4f52-852f-394237be9bea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: YYjvANFjpyX8InClBj1Uc6Zb5BTduPTofYdaHiY2vAk
+id: sitemap.page
+label: 'Sitemap page'
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'
