@@ -6,6 +6,7 @@ dependencies:
     - klaro
     - media
     - printable
+    - sitemap
     - system
 _core:
   default_config_hash: j5zLMOdJBqC0bMvSdth5UebkprJB8g_2FXHqhfpJzow
@@ -15,6 +16,7 @@ weight: -10
 is_admin: false
 permissions:
   - 'access content'
+  - 'access sitemap'
   - 'use klaro'
   - 'view media'
   - 'view printer friendly versions'
