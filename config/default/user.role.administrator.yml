@@ -23,7 +23,6 @@ dependencies:
     - system
     - taxonomy
     - toolbar
-    - views_ui
 _core:
   default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
 id: administrator
@@ -57,7 +56,6 @@ permissions:
   - 'administer themes'
   - 'administer url aliases'
   - 'administer users'
-  - 'administer views'
   - 'bypass node access'
   - 'cancel account'
   - 'change own username'

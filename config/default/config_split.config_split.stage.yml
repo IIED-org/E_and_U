@@ -1,0 +1,16 @@
+uuid: 9b46bb9d-f313-402f-8502-8bdd440cdba8
+langcode: en
+status: true
+dependencies: {  }
+id: stage
+label: Stage
+description: 'Hosting provider stage environment'
+weight: 0
+stackable: false
+no_patching: false
+storage: folder
+folder: ../config/splits/stage
+module: {  }
+theme: {  }
+complete_list: {  }
+partial_list: {  }
