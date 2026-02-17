@@ -13,6 +13,11 @@ use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
 corepack_enable: true
+hooks:
+  post-start:
+    - composer: install
+    - exec: drush updb
+    - exec: drush cr
 
 # Key features of DDEV's config.yaml:
 
