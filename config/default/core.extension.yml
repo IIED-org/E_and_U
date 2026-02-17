@@ -45,6 +45,7 @@ module:
   feeds: 0
   feeds_ex: 0
   field: 0
+  field_token_value: 0
   file: 0
   filter: 0
   focal_point: 0

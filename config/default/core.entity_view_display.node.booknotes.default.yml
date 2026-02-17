@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_booknotes.default
     - field.field.node.booknotes.body
     - field.field.node.booknotes.comment_node_booknotes
     - field.field.node.booknotes.feeds_item
@@ -16,141 +15,310 @@ dependencies:
     - field.field.node.booknotes.field_isbn
     - field.field.node.booknotes.field_lead_author_firstname
     - field.field.node.booknotes.field_lead_author_surname
+    - field.field.node.booknotes.field_legacy_booknotes_author_fu
     - field.field.node.booknotes.field_other_authors
     - field.field.node.booknotes.field_pages
     - field.field.node.booknotes.field_published_by
     - field.field.node.booknotes.field_publisher_town
     - field.field.node.booknotes.field_year
+    - field.field.node.booknotes.layout_builder__layout
     - field.field.node.booknotes.taxonomy_vocabulary_15
     - node.type.booknotes
   module:
-    - comment
-    - text
+    - field_token_value
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Author
+          context_mapping: {  }
+        components:
+          9d677ddf-b569-46b4-a1b5-12636b839fb7:
+            uuid: 9d677ddf-b569-46b4-a1b5-12636b839fb7
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_legacy_booknotes_author_fu'
+              label: Author
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: field_token_value_text
+                label: inline
+                settings:
+                  wrapper: ''
+                  link: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5dcb3d46-0ec7-45de-9807-e7d3162cd8af:
+            uuid: 5dcb3d46-0ec7-45de-9807-e7d3162cd8af
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_other_authors'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          a1c82d73-637b-42cb-980f-539bf77b1e53:
+            uuid: a1c82d73-637b-42cb-980f-539bf77b1e53
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_description'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          c0047541-fd74-4d1f-a92b-0a2105fb4b9a:
+            uuid: c0047541-fd74-4d1f-a92b-0a2105fb4b9a
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_focus_country'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          13aa3a3e-eb0e-4f51-bed2-3fbf3a8116d6:
+            uuid: 13aa3a3e-eb0e-4f51-bed2-3fbf3a8116d6
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_focus_city'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          b5b4e097-11db-4b89-8e29-31f178ae7c15:
+            uuid: b5b4e097-11db-4b89-8e29-31f178ae7c15
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_published_by'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          6e691b80-4bb2-45c5-b450-4575d3098607:
+            uuid: 6e691b80-4bb2-45c5-b450-4575d3098607
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_publisher_town'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          6dd097fc-f072-4338-a1f0-b35b210c1865:
+            uuid: 6dd097fc-f072-4338-a1f0-b35b210c1865
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_year'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: inline
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          b67fbe97-13ad-4590-9cc6-bf751e5ff85c:
+            uuid: b67fbe97-13ad-4590-9cc6-bf751e5ff85c
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_pages'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: inline
+                settings:
+                  thousand_separator: ' '
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          8c8e531b-3765-49b8-ba67-e64153610c53:
+            uuid: 8c8e531b-3765-49b8-ba67-e64153610c53
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_isbn'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: above
+                settings:
+                  thousand_separator: ' '
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          aea265c6-453d-4d58-9d33-80b8cd44c0b7:
+            uuid: aea265c6-453d-4d58-9d33-80b8cd44c0b7
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:comment_node_booknotes'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: comment_default
+                label: hidden
+                settings:
+                  view_mode: default
+                  pager_id: 0
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+          550ce78f-37ee-4dbf-899a-f3aabd938d88:
+            uuid: 550ce78f-37ee-4dbf-899a-f3aabd938d88
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 12
+            additional: {  }
+          0d608731-85d9-4539-a365-a45466b9ffb0:
+            uuid: 0d608731-85d9-4539-a365-a45466b9ffb0
+            region: content
+            configuration:
+              id: 'extra_field_block:node:booknotes:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 13
+            additional: {  }
+          f5582c29-e416-4846-ab8c-d69567cf8752:
+            uuid: f5582c29-e416-4846-ab8c-d69567cf8752
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_available_from'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+          c36835d8-1824-4976-9353-7c06bad7b2e3:
+            uuid: c36835d8-1824-4976-9353-7c06bad7b2e3
+            region: content
+            configuration:
+              id: 'field_block:node:booknotes:field_legacy_booknotes_author_fu'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: field_token_value_text
+                label: above
+                settings:
+                  wrapper: ''
+                  link: false
+                third_party_settings: {  }
+            weight: 15
+            additional: {  }
+        third_party_settings: {  }
 id: node.booknotes.default
 targetEntityType: node
 bundle: booknotes
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 12
-    region: content
-  comment_node_booknotes:
-    type: comment_default
-    label: hidden
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 11
-    region: content
-  field_available_from:
-    type: basic_string
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 14
-    region: content
-  field_description:
-    type: basic_string
-    label: inline
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_focus_city:
-    type: string
+  field_legacy_booknotes_author_fu:
+    type: field_token_value_text
     label: above
     settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_focus_country:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_isbn:
-    type: number_integer
-    label: above
-    settings:
-      thousand_separator: ' '
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  field_lead_author_firstname:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  field_lead_author_surname:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
+      wrapper: ''
+      link: false
     third_party_settings: {  }
     weight: 1
     region: content
-  field_other_authors:
-    type: string
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_pages:
-    type: number_integer
-    label: inline
-    settings:
-      thousand_separator: ' '
-      prefix_suffix: true
-    third_party_settings: {  }
-    weight: 9
-    region: content
-  field_published_by:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 6
-    region: content
-  field_publisher_town:
-    type: string
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 7
-    region: content
-  field_year:
-    type: string
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 13
-    region: content
 hidden:
+  body: true
+  comment_node_booknotes: true
   feeds_item: true
+  field_available_from: true
+  field_description: true
   field_flickr_tags: true
+  field_focus_city: true
+  field_focus_country: true
   field_image: true
+  field_isbn: true
+  field_lead_author_firstname: true
+  field_lead_author_surname: true
+  field_other_authors: true
+  field_pages: true
+  field_published_by: true
+  field_publisher_town: true
+  field_year: true
+  layout_builder__layout: true
+  links: true
+  published_at: true
   taxonomy_vocabulary_15: true

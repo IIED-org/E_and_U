@@ -1,0 +1,23 @@
+uuid: ca160873-aa55-4f2d-a635-de0243b50bb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_booknotes_author_fu
+    - node.type.booknotes
+  module:
+    - field_token_value
+id: node.booknotes.field_legacy_booknotes_author_fu
+field_name: field_legacy_booknotes_author_fu
+entity_type: node
+bundle: booknotes
+label: Author
+description: 'Field using Tokens to display Authoe firstname and surname on same line'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  field_value: '[node:field_lead_author_firstname] [node:field_lead_author_surname]'
+  remove_empty: 1
+field_type: field_token_value

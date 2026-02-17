@@ -7,15 +7,14 @@ dependencies:
     - field.field.node.blog.comment_node_blog
     - field.field.node.blog.feeds_item
     - field.field.node.blog.field_author
+    - field.field.node.blog.field_content
     - field.field.node.blog.field_date
+    - field.field.node.blog.field_description
     - field.field.node.blog.field_featured_image
-    - field.field.node.blog.field_hmmm
     - field.field.node.blog.field_main_image_caption
     - field.field.node.blog.field_standfirst
-    - field.field.node.blog.field_tags
     - field.field.node.blog.field_url
     - field.field.node.blog.taxonomy_vocabulary_15
-    - field.field.node.blog.taxonomy_vocabulary_19
     - node.type.blog
     - workflows.workflow.basic_editorial
   module:
@@ -24,8 +23,8 @@ dependencies:
     - datetime
     - media_library
     - path
+    - publication_date
     - scheduler
-    - tagify
     - text
 _core:
   default_config_hash: hoGNoqblKw8LUx_T31z44Fd7fbcEawNacomx7uZ73jU
@@ -77,15 +76,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_hmmm:
-    type: tagify_select_widget
-    weight: 23
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      placeholder: ''
-    third_party_settings: {  }
   field_main_image_caption:
     type: string_textarea
     weight: 5
@@ -101,19 +91,6 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  field_tags:
-    type: tagify_entity_reference_autocomplete_widget
-    weight: 14
-    region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      placeholder: ''
-      suggestions_dropdown: 1
-      show_entity_id: 0
-      show_info_label: 0
-      info_label: ''
     third_party_settings: {  }
   field_url:
     type: text_textfield
@@ -154,8 +131,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  published_at:
+    type: publication_date_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   scheduler_settings:
     weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap_index_now:
+    weight: 130
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -182,12 +175,6 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  taxonomy_vocabulary_19:
-    type: options_select
-    weight: 8
-    region: content
-    settings: {  }
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -225,5 +212,7 @@ content:
     third_party_settings: {  }
 hidden:
   feeds_item: true
+  field_content: true
+  field_description: true
   publish_state: true
   unpublish_state: true

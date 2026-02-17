@@ -16,11 +16,13 @@ dependencies:
     - field.field.node.booknotes.field_isbn
     - field.field.node.booknotes.field_lead_author_firstname
     - field.field.node.booknotes.field_lead_author_surname
+    - field.field.node.booknotes.field_legacy_booknotes_author_fu
     - field.field.node.booknotes.field_other_authors
     - field.field.node.booknotes.field_pages
     - field.field.node.booknotes.field_published_by
     - field.field.node.booknotes.field_publisher_town
     - field.field.node.booknotes.field_year
+    - field.field.node.booknotes.layout_builder__layout
     - field.field.node.booknotes.taxonomy_vocabulary_15
     - node.type.booknotes
   module:
@@ -62,9 +64,12 @@ hidden:
   field_isbn: true
   field_lead_author_firstname: true
   field_lead_author_surname: true
+  field_legacy_booknotes_author_fu: true
   field_other_authors: true
   field_pages: true
   field_published_by: true
   field_publisher_town: true
   field_year: true
+  layout_builder__layout: true
+  published_at: true
   taxonomy_vocabulary_15: true

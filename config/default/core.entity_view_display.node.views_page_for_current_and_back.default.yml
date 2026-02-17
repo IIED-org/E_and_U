@@ -1,0 +1,99 @@
+uuid: 8a8bff90-f895-48d3-b1b1-1ef9d90fb9c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.views_page_for_current_and_back.layout_builder__layout
+    - node.type.views_page_for_current_and_back
+    - views.view.current_issue_view
+  content:
+    - 'block_content:about_e_and_u_home_page:b0830c27-387a-4bba-b91c-91c69ed81f33'
+  module:
+    - block_content
+    - layout_builder
+    - layout_discovery
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Current issue views block'
+          context_mapping: {  }
+        components:
+          4893f684-5439-445e-b450-ea5295b83903:
+            uuid: 4893f684-5439-445e-b450-ea5295b83903
+            region: content
+            configuration:
+              id: 'views_block:current_issue_view-block_1'
+              label: ''
+              label_display: '0'
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Back issue blocks'
+          context_mapping: {  }
+          column_widths: 67-33
+        components:
+          3b997abd-be9e-498a-b971-4ff871cc6f10:
+            uuid: 3b997abd-be9e-498a-b971-4ff871cc6f10
+            region: first
+            configuration:
+              id: 'views_block:current_issue_view-block_2'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: null
+            weight: 0
+            additional: {  }
+          1e066f6c-29c1-45a5-892d-6a424ac69ee1:
+            uuid: 1e066f6c-29c1-45a5-892d-6a424ac69ee1
+            region: second
+            configuration:
+              id: 'block_content:b0830c27-387a-4bba-b91c-91c69ed81f33'
+              label: 'By year'
+              label_display: visible
+              provider: block_content
+              context_mapping: {  }
+              view_mode: full
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          aa31f3b8-69a5-49c5-af92-a23efead39cc:
+            uuid: aa31f3b8-69a5-49c5-af92-a23efead39cc
+            region: content
+            configuration:
+              id: 'extra_field_block:node:views_page_for_current_and_back:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.views_page_for_current_and_back.default
+targetEntityType: node
+bundle: views_page_for_current_and_back
+mode: default
+content: {  }
+hidden:
+  layout_builder__layout: true
+  links: true
+  published_at: true

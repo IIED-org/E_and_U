@@ -11,7 +11,7 @@ dependencies:
 id: eandu_iied_menu_menu_in_this_section
 theme: eandu
 region: content
-weight: -24
+weight: -7
 provider: null
 plugin: 'system_menu_block:menu-in-this-section'
 settings:

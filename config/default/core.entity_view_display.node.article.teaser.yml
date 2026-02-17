@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_flickr_tags
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.layout_builder__layout
     - image.style.medium
     - node.type.article
   module:
@@ -59,3 +60,5 @@ content:
 hidden:
   comment_node_article: true
   field_flickr_tags: true
+  layout_builder__layout: true
+  published_at: true

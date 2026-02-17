@@ -1,0 +1,14 @@
+uuid: 056cdc03-d918-4e2b-ac32-3736765c6328
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.booknotes
+id: node_type_booknotes
+entity_type_id: node_type
+entity_id: booknotes
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

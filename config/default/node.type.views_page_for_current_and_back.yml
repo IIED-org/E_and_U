@@ -1,4 +1,4 @@
-uuid: cdaafbd1-80ee-4084-9b77-1589383d1e68
+uuid: b7b42df9-8d41-462f-8272-670903b6f934
 langcode: en
 status: true
 dependencies:
@@ -23,10 +23,10 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Booknotes - legacy content from old site'
-type: booknotes
-description: "Do not create any new content of this type.\r\nLegacy format - Includes data imported from legacy Access database.\r\n"
+name: 'Views page for current and back issue - do not edit'
+type: views_page_for_current_and_back
+description: null
 help: null
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false

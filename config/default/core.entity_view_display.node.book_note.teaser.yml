@@ -20,6 +20,7 @@ dependencies:
     - field.field.node.book_note.field_pages
     - field.field.node.book_note.field_publisher
     - field.field.node.book_note.field_tags
+    - field.field.node.book_note.layout_builder__layout
     - node.type.book_note
   module:
     - text
@@ -65,3 +66,5 @@ hidden:
   field_links: true
   field_pages: true
   field_publisher: true
+  layout_builder__layout: true
+  published_at: true
