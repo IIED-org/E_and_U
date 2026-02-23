@@ -41,6 +41,8 @@
         "drupal/feeds_ex": "^1.0@beta",
         "drupal/field_group": "^3.6",
         "drupal/field_token_value": "^3.1",
+        "drupal/layout_builder_block_headings": "^1.0",
+        "drupal/layout_builder_component_attributes": "^2.2",
         "drupal/migrate_tools": "^6.1",
         "drupal/node_export": "^1.4",
         "drupal/password_policy": "^4.0",
@@ -55,6 +57,7 @@
         "drupal/session_management": "^1.0",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/tfa": "^1.12",
+        "drupal/token_filter": "^2.2",
         "drupal/webform": "@beta",
         "drush/drush": "^13.7"
     },
