@@ -1,0 +1,21 @@
+uuid: f5a2ad41-9af7-4020-ac06-620b3f3f4191
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.booknotes
+  module:
+    - layout_builder
+id: node.booknotes.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: booknotes
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

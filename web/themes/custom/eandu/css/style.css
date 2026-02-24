@@ -248,3 +248,144 @@ body:not(.is-always-mobile-nav) .primary-nav__menu-link-inner {
 .pre_links li a::before {
   content: "🖨️ ";
 }
+
+/* ============================================================
+   ULTRA-SPECIFIC FIX FOR PREVIOUS ISSUES VIEW - SPACING
+   ============================================================ */
+/* ============================================================
+   GRID-SPECIFIC FIX FOR OLIVERO
+   ============================================================ */
+
+/* 1. Kill the Grid Gap that Olivero is forcing on the container */
+.custom-previous-issue-list .view-content {
+    display: block !important; /* Switch from grid to block to stop 'gap' from working */
+    gap: 0 !important;
+}
+
+/* 2. Fix the Year Header Spacing */
+.custom-previous-issue-list h3[id^="year-"] {
+    margin-top: 2rem !important;   /* Space above the year */
+    margin-bottom: 0.5rem !important; /* Tight space below the year */
+    padding: 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* 3. Collapse the Drupal Grouping Wrappers */
+.custom-previous-issue-list .views-group-title,
+.custom-previous-issue-list .views-group-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 4. Add space ONLY between individual issues */
+.custom-previous-issue-list .views-row {
+    margin-bottom: 3rem !important; /* Keeps issues from overlapping */
+    padding-top: 0 !important;
+}
+
+/* ============================================================
+   ULTRA-SPECIFIC FIX FOR All blogs - SPACING
+   ============================================================ */
+/* ============================================================
+   GRID-SPECIFIC FIX FOR OLIVERO
+   ============================================================ */
+
+/* 1. Kill the Grid Gap that Olivero is forcing on the container */
+.custom-all-blogs-list .view-content {
+    display: block !important; /* Switch from grid to block to stop 'gap' from working */
+    gap: 0 !important;
+}
+
+/* 2. Fix the Year Header Spacing */
+.custom-all-blogs-list h3[id^="year-"] {
+    margin-top: 2rem !important;   /* Space above the year */
+    margin-bottom: 0.5rem !important; /* Tight space below the year */
+    padding: 0 !important;
+    line-height: 1.2 !important;
+}
+
+/* 3. Collapse the Drupal Grouping Wrappers */
+.custom-all-blogs-list .views-group-title,
+.custom-all-blogs-list .views-group-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 4. Add space ONLY between individual issues */
+.custom-all-blogs-list .views-row {
+    margin-bottom: 3rem !important; /* Keeps issues from overlapping */
+    padding-top: 0 !important;
+}
+
+/* ============================================================
+   LAYOUT BUILDER: STICKY PREV ISSUES "BY YEAR" NAV
+   ============================================================ */
+
+/* ============================================================
+   FORCED STICKY FOR LAYOUT BUILDER
+   ============================================================ */
+
+/* 1. Target the block ID and ensure it is not 'stretched' */
+#block-block-contentb0830c27-387a-4bba-b91c-91c69ed81f33 {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 50px !important;    /* Increased gap to clear any potential header */
+    z-index: 100 !important;
+    align-self: start !important; /* Prevents the block from filling the sidebar height */
+    height: auto !important;
+}
+
+/* 2. Neutralize the 'Sticky Traps' in the parent containers */
+/* We must ensure no parent container is clipping the content */
+.layout__region--second,
+.layout__region,
+.layout-builder__region,
+.layout--twocol-section,
+.node__content,
+article.node {
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/*LEGACY BOOKNOTES AUTHOR FIELD BOTTOM SPACING*/
+.block-field-blocknodebooknotesfield-legacy-booknotes-author-fu .field__item p {
+  margin: 0 !important;
+}
+
+/*CURRENT ISSUE PAGE FORMATTING FIX*/
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-row {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 1rem 2rem;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-title {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-field-standfirst {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-field-featured-image {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-field-featured-image img {
+  width: 100%;
+  height: auto;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-body {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.node--type-views-page-for-current-and-back .view-current-issue-view.view-display-id-block_1 .views-field-field-link-to-sage {
+  grid-column: 2;
+  grid-row: 4;
+}

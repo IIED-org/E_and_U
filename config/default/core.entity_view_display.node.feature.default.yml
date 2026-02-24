@@ -11,61 +11,146 @@ dependencies:
     - field.field.node.feature.field_link_to_sage
     - field.field.node.feature.field_links
     - field.field.node.feature.field_standfirst
+    - field.field.node.feature.layout_builder__layout
     - field.field.node.feature.taxonomy_vocabulary_15
-    - image.style.2_3_200x300_focal_point_webp
     - node.type.feature
   module:
-    - media
-    - text
+    - layout_builder
+    - layout_discovery
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Standfirst
+          context_mapping: {  }
+        components:
+          6524f6dc-1333-42ca-8ce9-9642738a3716:
+            uuid: 6524f6dc-1333-42ca-8ce9-9642738a3716
+            region: content
+            configuration:
+              id: 'field_block:node:feature:field_standfirst'
+              label: Standfirst
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Cover and summary'
+          context_mapping: {  }
+          column_widths: 33-67
+        components:
+          e7316c03-d1e6-4259-b98b-031ced027e65:
+            uuid: e7316c03-d1e6-4259-b98b-031ced027e65
+            region: first
+            configuration:
+              id: 'field_block:node:feature:field_featured_image'
+              label: 'Main image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: 2_3_500x750_focal_point_webp
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9a7c474a-2774-4cf3-86f3-fb5c808c4c85:
+            uuid: 9a7c474a-2774-4cf3-86f3-fb5c808c4c85
+            region: second
+            configuration:
+              id: 'field_block:node:feature:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a1e15fe1-cceb-43b4-ace4-59540ca36a08:
+            uuid: a1e15fe1-cceb-43b4-ace4-59540ca36a08
+            region: second
+            configuration:
+              id: 'field_block:node:feature:field_link_to_sage'
+              label: 'Link to SAGE'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          2bb7a9d1-a3d6-456c-969d-2763c1210a33:
+            uuid: 2bb7a9d1-a3d6-456c-969d-2763c1210a33
+            region: second
+            configuration:
+              id: 'field_block:node:feature:taxonomy_vocabulary_15'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
 id: node.feature.default
 targetEntityType: node
 bundle: feature
 mode: default
-content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 2
-    region: content
-  field_featured_image:
-    type: media_thumbnail
-    label: hidden
-    settings:
-      image_link: ''
-      image_style: 2_3_200x300_focal_point_webp
-      image_loading:
-        attribute: eager
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_link_to_sage:
-    type: text_default
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_standfirst:
-    type: basic_string
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 0
-    region: content
-  taxonomy_vocabulary_15:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
+content: {  }
 hidden:
+  body: true
   comment_node_feature: true
   field_date_issue_published: true
+  field_featured_image: true
   field_glossary: true
+  field_link_to_sage: true
   field_links: true
+  field_standfirst: true
+  layout_builder__layout: true
   links: true
+  published_at: true
+  taxonomy_vocabulary_15: true

@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - media
+    - token_filter
 name: 'Advanced HTML'
 format: advanced_html
 weight: -8
@@ -39,3 +40,10 @@ filters:
       default_view_mode: default
       allowed_view_modes: {  }
       allowed_media_types: {  }
+  token_filter:
+    id: token_filter
+    provider: token_filter
+    status: true
+    weight: 0
+    settings:
+      replace_empty: false
