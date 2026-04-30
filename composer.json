@@ -17,6 +17,7 @@
     },
     "require": {
         "composer/installers": "^2.3",
+        "drupal/autologout": "^2.0",
         "drupal/backup_migrate": "^5.1",
         "drupal/clamav": "^2.1",
         "drupal/computed_field": "^4.0",
