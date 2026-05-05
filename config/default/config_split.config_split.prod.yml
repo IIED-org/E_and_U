@@ -13,6 +13,6 @@ folder: ../config/splits/prod
 module: {  }
 theme: {  }
 complete_list:
-  - tfa.settings
   - password_policy.password_policy.password_expiry
-partial_list: {  }
+partial_list:
+  - tfa.settings

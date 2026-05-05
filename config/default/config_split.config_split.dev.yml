@@ -11,10 +11,11 @@ no_patching: false
 storage: folder
 folder: ../config/splits/dev
 module:
+  stage_file_proxy: 0
   dblog: 0
   field_ui: 0
-  stage_file_proxy: 0
   views_ui: 0
 theme: {  }
 complete_list: {  }
-partial_list: {  }
+partial_list:
+  - tfa.settings

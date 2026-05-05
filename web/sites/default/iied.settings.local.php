@@ -151,3 +151,16 @@ $settings['skip_permissions_hardening'] = TRUE;
  * the language or field module.
  */
 # $settings['config_exclude_modules'] = ['devel', 'stage_file_proxy'];
+
+$settings['testing_package_manager'] = TRUE;
+
+// Adjust the following line after the site goes live
+$config['stage_file_proxy.settings']['origin']  = 'https://stage2.environmentandurbanization.org';
+
+/**
+ * Use "local" config split for development
+ */
+$config['config_split.config_split.local']['status'] = TRUE;
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.stage']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = FALSE;
