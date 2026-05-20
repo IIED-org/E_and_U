@@ -74,6 +74,9 @@
             "drupal/core-project-message": true,
             "php-http/discovery": true
         },
+        "audit": {
+            "block-insecure": false
+        },
         "bin-dir": "./bin",
         "sort-packages": true,
         "optimize-autoloader": true
