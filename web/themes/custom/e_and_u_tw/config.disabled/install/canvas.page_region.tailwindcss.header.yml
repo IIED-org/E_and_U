@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tailwindcss
+id: tailwindcss.header
+theme: tailwindcss
+region: header
+component_tree:
+  - component_id: block.system_branding_block
+    component_version: b168140fdcaebae5
+    inputs:
+      label: 'Site branding'
+      label_display: '0'
+      use_site_logo: true
+      use_site_name: true
+      use_site_slogan: true
+    uuid: 0c27dfd2-fc02-4452-b60d-96a436ae8004

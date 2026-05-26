@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&family=Noto+Serif:ital,wght@0,400;1,700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@source "../templates/**/*.twig";
+@source "../components/**/*.twig";
+@source "../*.theme";
+@source "../src/**/*.js";
+@source "../js/**/*.js";
+
+@use main-menu;
+
+@theme {
+  /*
+   * - 50–200: warm/cool light surfaces, backgrounds, borders
+   * - 300: soft sage-teal tint
+   * - 500–900: progressively darker greens for UI, headings, text, and dark surfaces
+   */
+
+  --color-evergreen-50: oklch(96.26% 0.0131 82.4);
+  /* #F7F2E9
+   * Main warm off-white page background.
+   * Use for: body background, large warm sections.
+   */
+
+  --color-evergreen-100: oklch(97.28% 0.0061 137.8);
+  /* #F4F7F3
+   * Very pale cool green surface.
+   * Use for: alternate section backgrounds, subtle cards, light callout panels.
+   */
+
+  --color-evergreen-200: oklch(90.80% 0.0169 151.1);
+  /* #D9E4DB
+   * Pale sage border colour.
+   * Use for: borders, dividers, table lines, form field borders, subtle outlines.
+   */
+
+  --color-evergreen-300: oklch(70% 0.0450 175);
+  /* approx #82A89D
+   * Soft sage-teal tint.
+   * Use for: muted badges, hover backgrounds, secondary decorative blocks, pale active states.
+   */
+
+  --color-evergreen-500: oklch(49.70% 0.0517 150.3);
+  /* #4D6B53
+   * Medium muted sage green.
+   * Use for: secondary buttons, muted icons, decorative rules, subdued headings, hover states.
+   */
+
+  --color-evergreen-600: oklch(40.93% 0.0364 150.6);
+  /* #3C5040
+   * Warm forest green.
+   * Use for: primary brand colour, headings, primary buttons, important UI panels.
+   */
+
+  --color-evergreen-700: oklch(38.05% 0.0501 191.4);
+  /* #1D4B49
+   * Deep cool green-teal.
+   * Use for: button hover states, darker headings, strong accents, navigation backgrounds.
+   */
+
+  --color-evergreen-900: oklch(32.01% 0.0516 192.9);
+  /* #063B3A
+   * Darkest evergreen ink.
+   * Use for: primary text, dark backgrounds, footer background, high-contrast headings.
+   */
+
+  --color-teal-600: oklch(51.50% 0.0896 179.6);
+  /* #117869
+   * Strong teal accent.
+   * Use for: links, active states, accent buttons, focus highlights, selected navigation items.
+   */
+
+  --color-peach-200: oklch(90.57% 0.0535 47.5);
+  /* #FFD6C2
+   * Soft peach highlight.
+   * Use for: announcement backgrounds, decorative highlights, labels, gentle warning/info accents.
+   */
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold mt-8 mb-4;
+  }
+  h2 {
+    @apply text-3xl font-bold mt-8 mb-4;
+  }
+  h3 {
+    @apply text-2xl font-bold mt-6 mb-3;
+  }
+  h4 {
+    @apply text-xl font-bold mt-6 mb-2;
+  }
+  h5 {
+    @apply text-lg font-bold mt-4 mb-2;
+  }
+  h6 {
+    @apply text-base font-bold mt-4 mb-2;
+  }
+  p {
+    @apply mb-4 leading-relaxed;
+  }
+  a {
+    @apply text-neutral-600 hover:text-neutral-500 underline;
+  }
+  ul {
+    @apply list-disc list-outside mb-4 ml-6;
+  }
+  ol {
+    @apply list-decimal list-outside mb-4 ml-6;
+  }
+  li {
+    @apply mb-1;
+  }
+  li > ul,
+  li > ol {
+    @apply mb-0 mt-1;
+  }
+  blockquote {
+    @apply border-l-4 border-neutral-300 pl-4 italic text-neutral-700 my-4;
+  }
+
+  input {
+    @apply border border-neutral-500;
+  }
+}
+
+@layer components {
+  .block,
+  .node {
+    @apply mb-4;
+  }
+
+  .tabs li a {
+    @apply border rounded no-underline bg-black/10 text-black;
+    @apply block m-0 px-3 py-4;
+
+    &.is-active {
+      @apply bg-black/60 text-white;
+    }
+  }
+}
