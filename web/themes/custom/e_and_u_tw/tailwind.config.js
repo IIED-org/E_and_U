@@ -1,3 +1,5 @@
+
+// Only relavent for Tailwind v3. If you are using Tailwind v4, you can ignore this file and the content within it.
 const colors = require("tailwindcss/colors");
 
 module.exports = {

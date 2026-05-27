@@ -1,73 +1,68 @@
 {#
 /**
  * @file
- * Theme override to display a menu.
+ * Theme override for the main menu.
  *
- * Available variables:
- * - menu_name: The machine name of the menu.
- * - items: A nested list of menu items. Each menu item contains:
- *   - attributes: HTML attributes for the menu item.
- *   - below: The menu item child items.
- *   - title: The menu link title.
- *   - url: The menu link url, instance of \Drupal\Core\Url
- *   - localized_options: Menu link localized options.
- *   - is_expanded: TRUE if the link has visible children within the current
- *     menu tree.
- *   - is_collapsed: TRUE if the link has children within the current menu tree
- *     that are not currently visible.
- *   - in_active_trail: TRUE if the link is in the active trail.
+ * This template assumes a single-level menu.
+ * The responsive open/closed mobile state is handled in page.html.twig with Alpine.
  */
 #}
-{% import _self as menus %}
 
-{#
-  We call a macro which calls itself to render the full tree.
-  @see https://twig.symfony.com/doc/1.x/tags/macro.html
-#}
-{{ attach_library('tailwindcss/menu-toggle') }}
+{% if items %}
+  {% set menu_classes = [
+    'flex',
+    'flex-col',
+    'gap-2',
+    'p-0',
+    'm-0',
+    'list-none',
+    'lg:flex-row',
+    'lg:items-center',
+    'lg:gap-8'
+  ] %}
 
-{% set level_1 = [
-  'p-0 m-0 list-none',
-  'md:flex md:flex-row gap-3',
-  'bg-neutral-100 md:bg-transparent'
-] %}
-{% set level_1_item = 'm-0 relative group px-3 md:py-2 pb-1 md:pb-3 rounded hover:bg-gray-100' %}
-{% set level_1_link = ['hover:text-black no-underline'] %}
-{% set level_2 = [
-  'list-none !m-0 md:hidden',
-  'group-hover:flex',
-  'flex-col gap-2',
-  'md:absolute z-[12] left-0 top-full',
-  '!ml-2 md:!ml-0 mt-0',
-  'bg-gray-200 md:bg-gray-100 px-2 py-1 md:p-4 ml-1 md:ml-0 rounded md:shadow-md',
-  'md:min-w-[150px]',
-  'transition-all duration-200',
-  'pointer-events-auto'
-] %}
-{% set level_2_link = ['hover:text-black no-underline'] %}
-
-{{ menus.menu_links(items, attributes, 0, level_1, level_1_item, level_1_link, level_2, level_2_link) }}
-
-{% macro menu_links(items, attributes, menu_level, level_1, level_1_item, level_1_link, level_2, level_2_link) %}
-  {% import _self as menus %}
-  {% if items %}
-    {% if menu_level == 0 %}
-      <ul id="main-menu" {{ create_attribute().addClass(level_1) }}>
-    {% else %}
-      <ul{{ create_attribute().addClass(level_2) }}>
-    {% endif %}
+  <ul{{ attributes.addClass(menu_classes) }}>
     {% for item in items %}
-      <li{{ item.attributes.addClass(menu_level == 0 ? level_1_item : 'level-2-item') }}>
-        {% set link_attributes = create_attribute().addClass(
-          menu_level == 0 ? level_1_link : level_2_link
-        ) %}
+      {% set item_classes = [
+        'm-0',
+        'p-0'
+      ] %}
 
-        {{ link(item.title, item.url, link_attributes) }}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1, level_1, level_1_item, level_1_link, level_2, level_2_link) }}
-        {% endif %}
+      {% set link_classes = [
+        'inline-block',
+        'rounded-xl',
+        'px-4',
+        'py-3',
+        'text-lg',
+        'font-bold',
+        'no-underline',
+        'transition-colors',
+        'duration-200',
+        'text-evergreen-900',
+        'hover:bg-white',
+        'hover:text-teal-600',
+        'focus:outline-none',
+        'focus:ring-2',
+        'focus:ring-teal-600',
+        'focus:ring-offset-2',
+        'focus:ring-offset-evergreen-50',
+        'lg:px-0',
+        'lg:py-2',
+        'lg:text-base',
+        'lg:hover:bg-transparent',
+        item.in_active_trail ? 'text-teal-600' : ''
+      ] %}
+
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a
+          href="{{ item.url }}"
+          class="{{ link_classes|join(' ') }}"
+          {% if item.in_active_trail %}aria-current="page"{% endif %}
+          @click="open = false"
+        >
+          {{ item.title }}
+        </a>
       </li>
     {% endfor %}
-    </ul>
-  {% endif %}
-{% endmacro %}
+  </ul>
+{% endif %}
