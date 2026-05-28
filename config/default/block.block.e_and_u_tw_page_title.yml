@@ -1,0 +1,26 @@
+uuid: d28ad08c-32a4-4747-8fc6-bee346181ae1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - e_and_u_tw
+_core:
+  default_config_hash: dY7_Wihz9ohfBPKP554_brUfc9nPaecShShmC_VTGRM
+id: e_and_u_tw_page_title
+theme: e_and_u_tw
+region: content
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

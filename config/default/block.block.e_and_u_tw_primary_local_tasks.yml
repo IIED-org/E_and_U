@@ -1,0 +1,22 @@
+uuid: 3d9d93c2-53f9-4aff-a210-8e0f37b021db
+langcode: en
+status: true
+dependencies:
+  theme:
+    - e_and_u_tw
+_core:
+  default_config_hash: A_KsAw1fyIvdBubmxkvtCtoSuV62cVV-p0RSPnvqc9U
+id: e_and_u_tw_primary_local_tasks
+theme: e_and_u_tw
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

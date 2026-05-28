@@ -1,0 +1,29 @@
+uuid: 6c1976ff-bb38-4837-bc8e-f0f83355279e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-in-this-section
+  module:
+    - system
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_iied_menu_menu_in_this_section
+theme: e_and_u_tw
+region: content
+weight: -3
+provider: null
+plugin: 'system_menu_block:menu-in-this-section'
+settings:
+  id: broken
+  label: ''
+  label_display: '0'
+  provider: core
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /sample-papers-most-cited-and-downloaded

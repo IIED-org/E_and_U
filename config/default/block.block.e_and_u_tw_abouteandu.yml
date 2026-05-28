@@ -1,0 +1,28 @@
+uuid: 44213296-8790-48d5-a040-13217351eda3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_e_and_u_home_page:4954daaa-ef37-456e-a461-d0821af1373e'
+  module:
+    - block_content
+    - system
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_abouteandu
+theme: e_and_u_tw
+region: content
+weight: -8
+provider: null
+plugin: 'block_content:4954daaa-ef37-456e-a461-d0821af1373e'
+settings:
+  id: 'block_content:4954daaa-ef37-456e-a461-d0821af1373e'
+  label: 'About eandu'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

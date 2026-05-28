@@ -1,0 +1,22 @@
+uuid: dedf617f-6386-4999-ba7b-48254a162c24
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - e_and_u_tw
+_core:
+  default_config_hash: 5ra2HNIksWbp6AhPpTufTGSlgx2FR7RR_ssxdjgFg4I
+id: e_and_u_tw_messages
+theme: e_and_u_tw
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }
