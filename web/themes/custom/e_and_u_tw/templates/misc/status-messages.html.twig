@@ -17,7 +17,7 @@
   {% set border_class = type == 'error' ? 'border-rose-500' : (type == 'warning' ? 'border-amber-400' : (type == 'status' ? 'border-green-400' : 'border-blue-500')) %}
   {% set bg_class = type == 'error' ? 'bg-rose-50' : (type == 'warning' ? 'bg-amber-50' : (type == 'status' ? 'bg-green-50' : 'bg-blue-50')) %}
 
-  <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }} class="status-message-container transition-all duration-500 ease-in-out overflow-hidden">
+  <div role="contentinfo" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }} class="p-4 overflow-hidden transition-all duration-500 ease-in-out status-message-container">
     <div{{ type == 'error' ? ' role="alert"' : '' }} class="w-full border-l-4 {{ border_class }} {{ bg_class }} p-5 status-message">
       <div class="flex items-center justify-between gap-4">
         <div class="flex-1">

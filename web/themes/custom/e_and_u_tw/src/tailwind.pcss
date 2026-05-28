@@ -11,6 +11,8 @@
 @use main-menu;
 
 @theme {
+    --font-display: "Noto Serif", serif; 
+    --font-body: "Noto Sans", sans-serif;
   /*
    * - 50–200: warm/cool light surfaces, backgrounds, borders
    * - 300: soft sage-teal tint
@@ -79,6 +81,22 @@
 }
 
 @layer base {
+  :root {
+    --font-display: 'Noto Serif', serif;
+    --font-body: 'Noto Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body); 
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  p, span, a, li, ol, strong, em, b, i {
+    font-family: var(--font-body);
+  }
   h1 {
     @apply text-4xl font-bold mt-8 mb-4;
   }
@@ -126,6 +144,17 @@
 }
 
 @layer components {
+  .prose {
+    font-family: var(--font-body);
+  }
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    font-family: var(--font-display);
+  }
   .block,
   .node {
     @apply mb-4;

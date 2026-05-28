@@ -1,0 +1,23 @@
+
+{# /**
+Homepage
+ */ #}
+{% extends '@e_and_u_tw/templates/layout/page.html.twig' %} 
+{% block main %}
+
+<main id="main" role="main" class="min-h-screen">
+  <a id="main-content" tabindex="-1"></a>
+
+        {% if page.sidebar_first %}
+            {{ page.sidebar_first }}
+        {% endif %}
+
+          {{ page.content }}
+
+        {% if page.sidebar_second %}
+            {{ page.sidebar_second }}
+        {% endif %}
+
+</main>
+
+{% endblock %}
