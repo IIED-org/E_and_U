@@ -11,7 +11,7 @@ dependencies:
 id: e_and_u_tw_iied_menu_menu_footer_menu
 theme: e_and_u_tw
 region: footer
-weight: -5
+weight: -6
 provider: null
 plugin: 'system_menu_block:menu-footer-menu'
 settings:

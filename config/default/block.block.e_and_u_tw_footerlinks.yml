@@ -1,0 +1,23 @@
+uuid: 550e475b-40d6-4637-b6dc-3a1430a45e6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_e_and_u_home_page:e24d4cf7-e4d5-4494-830e-0d337e89a5c8'
+  module:
+    - block_content
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_footerlinks
+theme: e_and_u_tw
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:e24d4cf7-e4d5-4494-830e-0d337e89a5c8'
+settings:
+  id: 'block_content:e24d4cf7-e4d5-4494-830e-0d337e89a5c8'
+  label: 'Footer links'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

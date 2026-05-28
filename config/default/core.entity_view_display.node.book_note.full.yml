@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.book_note.field_links
     - field.field.node.book_note.field_pages
     - field.field.node.book_note.field_publisher
+    - field.field.node.book_note.field_standfirst
     - field.field.node.book_note.field_tags
     - field.field.node.book_note.layout_builder__layout
     - node.type.book_note
@@ -41,7 +42,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 8
+    weight: 9
     region: content
   field_author:
     type: string
@@ -49,14 +50,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_available_from:
     type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 9
+    weight: 10
     region: content
   field_book_note_prepared_by_name:
     type: string
@@ -64,7 +65,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 10
+    weight: 11
     region: content
   field_date_published:
     type: string
@@ -72,7 +73,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_focus_city:
     type: string
@@ -80,7 +81,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 6
     region: content
   field_focus_country:
     type: string
@@ -88,7 +89,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
+    weight: 7
     region: content
   field_image:
     type: image
@@ -103,7 +104,7 @@ content:
         height: null
       svg_render_as_image: true
     third_party_settings: {  }
-    weight: 7
+    weight: 8
     region: content
   field_isbn:
     type: number_integer
@@ -112,14 +113,14 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
   field_links:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 12
+    weight: 13
     region: content
   field_pages:
     type: number_integer
@@ -128,7 +129,7 @@ content:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_publisher:
     type: string
@@ -136,7 +137,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 1
+    weight: 2
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
   field_tags:
     type: entity_reference_label
@@ -144,7 +152,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 11
+    weight: 12
     region: content
 hidden:
   comment_node_book_note: true
