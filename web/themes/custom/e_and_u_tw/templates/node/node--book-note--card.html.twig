@@ -1,0 +1,66 @@
+{%
+  set classes = [
+    'h-full',
+  ]
+%}
+
+{% set standfirst = content.field_standfirst|render %}
+{% set date_published = content.field_date_published|render %}
+{% set publisher = content.field_publisher|render %}
+
+<article{{ attributes.addClass(classes) }}>
+  <a
+    href="{{ url }}"
+    class="block h-full text-current no-underline rounded-2xl hover:no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-evergreen-500 focus-visible:ring-offset-2"
+  >
+    <div class="flex h-full gap-8 min-h-[275px] flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm transition-all hover:border-evergreen-500 hover:shadow-md sm:p-6">
+
+      <div class="grid grid-cols-[90px_minmax(0,1fr)] items-start gap-5">
+
+        {% if node.field_image is not empty %}
+          <div class="self-start overflow-hidden rounded-lg [&_img]:block [&_img]:h-auto [&_img]:max-w-[90px] [&_img]:w-[90px]">
+            {{ content.field_image }}
+          </div>
+        {% else %}
+          <div class="w-[90px]" aria-hidden="true"></div>
+        {% endif %}
+
+        <div class="min-w-0">
+          <h2{{ title_attributes.addClass('mt-0', 'text-xl', 'font-bold', 'leading-tight') }}>
+            {{ label }}
+          </h2>
+
+          {% if standfirst|striptags|trim %}
+            <div class="text-base leading-relaxed text-evergreen-500">
+              {{ standfirst }}
+            </div>
+          {% endif %}
+        </div>
+
+      </div>
+
+      {% if date_published|striptags|trim or publisher|striptags|trim %}
+        <div class="mt-auto text-base text-evergreen-500 [&_*]:inline">
+          {{ date_published }}
+          {{ publisher }}
+        </div>
+      {% endif %}
+
+    </div>
+  </a>
+</article>
+
+
+{# 
+<div class="flex flex-col gap-6 mb-8 md:flex-row md:items-start md:justify-between">
+<div class="prose prose-lg">
+<h2>Latest book notes</h2>
+<p class="mb-6">An archive of notes on books shaping debates in urban studies and development practice.</p>
+</div>
+
+<a href="/booknotes" class="inline-flex items-center gap-2 px-6 py-4 mt-6 text-lg font-bold no-underline transition-all bg-white rounded-full shadow-sm cursor-pointer hover:no-underline hover:bg-evergreen-100 text-ervergreen-700 hover:text-ervergreen-900">
+    Browse all book notes
+</a>
+</div>
+#}
+
