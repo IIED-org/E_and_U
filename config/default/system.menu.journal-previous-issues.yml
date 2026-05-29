@@ -1,0 +1,8 @@
+uuid: e6e8c029-8462-4c2f-a5b7-2918f26cbd1e
+langcode: en
+status: true
+dependencies: {  }
+id: journal-previous-issues
+label: 'Journal previous issues'
+description: ''
+locked: false

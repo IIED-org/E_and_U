@@ -817,7 +817,7 @@ display:
         - 'config:field.storage.node.field_standfirst'
   block_2:
     id: block_2
-    display_title: 'Previous issues block'
+    display_title: 'Previous journal issues'
     display_plugin: block
     position: 2
     display_options:
@@ -898,7 +898,7 @@ display:
           entity_field: title
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -961,7 +961,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: "<p align=\"right\">\r\n        {{ field_featured_image }}\r\n    </p>"
@@ -1027,7 +1027,7 @@ display:
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1156,6 +1156,7 @@ display:
               rendered_strip: false
           row_class: ''
           default_row_class: true
+          uses_fields: true
       row:
         type: 'entity:node'
         options:
