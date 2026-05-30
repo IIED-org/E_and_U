@@ -50,171 +50,174 @@
  */
 #}
 {{ attach_library('e_and_u_tw/alpine') }}
+<div class="flex flex-col min-h-screen">
 
-<header
-  x-data="{ open: false }"
-  @keydown.escape.window="open = false"
-  x-effect="document.body.classList.toggle('overflow-hidden', open)"
-  role="banner"
-  class="top-0 z-50 border-b sm:sticky bg-evergreen-50 border-evergreen-200"
->
-  <div class="container relative z-50 flex items-center justify-between h-20 gap-6 px-4 mx-auto sm:px-0">
-
-    {# Site branding / header region #}
-    <div class="flex items-center gap-6 shrink-0">
-      {{ page.header }}
-    </div>
-
-    {# Desktop menu + mobile menu panel, one render of page.primary_menu #}
-    {% if page.primary_menu %}
-      <nav
-        id="primary-navigation"
-        aria-label="Main navigation"
-        :aria-hidden="open ? 'false' : 'true'"
-        class="fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto transition duration-300 ease-out border-t shadow-xl top-20 bg-evergreen-50 border-evergreen-200 lg:static lg:z-auto lg:w-auto lg:overflow-visible lg:border-0 lg:shadow-none lg:bg-transparent"
-        :class="open
-          ? 'translate-x-0 opacity-100 pointer-events-auto'
-          : 'translate-x-full opacity-0 pointer-events-none lg:translate-x-0 lg:opacity-100 lg:pointer-events-auto'"
-        x-cloak
-      >
-        <div class="container px-6 py-8 mx-auto lg:p-0">
-          {{ page.primary_menu }}
-        </div>
-      </nav>
-    {% endif %}
-
-    {# Mobile menu button #}
-    {% if page.primary_menu %}
-<button
-  type="button"
-  class="relative z-50 grid w-12 h-12 rounded-full place-items-center text-evergreen-900 lg:hidden hover:bg-evergreen-100 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 focus:ring-offset-evergreen-50"
-  aria-controls="primary-navigation"
-  :aria-expanded="open ? 'true' : 'false'"
-  aria-label="Toggle main menu"
-  @click="open = !open"
->
-  <span class="sr-only">Toggle main menu</span>
-
-  <span
-    aria-hidden="true"
-    class="relative inline-block w-8 h-8"
+  <header
+    x-data="{ open: false }"
+    @keydown.escape.window="open = false"
+    x-effect="document.body.classList.toggle('overflow-hidden', open)"
+    role="banner"
+    class="top-0 z-50 border-b sm:sticky bg-evergreen-50 border-evergreen-200"
   >
-    <span
-      class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 origin-center rounded-full bg-current transition-all duration-200 ease-out"
-      :class="open ? '-translate-y-1/2 rotate-45' : '-translate-y-[9px] rotate-0'"
-    ></span>
+    <div class="container relative z-50 flex items-center justify-between h-20 gap-6 px-4 mx-auto sm:px-0">
+
+      {# Site branding / header region #}
+      <div class="flex items-center gap-6 shrink-0">
+        {{ page.header }}
+      </div>
+
+      {# Desktop menu + mobile menu panel, one render of page.primary_menu #}
+      {% if page.primary_menu %}
+        <nav
+          id="primary-navigation"
+          aria-label="Main navigation"
+          :aria-hidden="open ? 'false' : 'true'"
+          class="fixed bottom-0 left-0 right-0 z-40 w-full overflow-y-auto transition duration-300 ease-out border-t shadow-xl top-20 bg-evergreen-50 border-evergreen-200 lg:static lg:z-auto lg:w-auto lg:overflow-visible lg:border-0 lg:shadow-none lg:bg-transparent"
+          :class="open
+            ? 'translate-x-0 opacity-100 pointer-events-auto'
+            : 'translate-x-full opacity-0 pointer-events-none lg:translate-x-0 lg:opacity-100 lg:pointer-events-auto'"
+          x-cloak
+        >
+          <div class="container px-6 py-8 mx-auto lg:p-0">
+            {{ page.primary_menu }}
+          </div>
+        </nav>
+      {% endif %}
+
+      {# Mobile menu button #}
+      {% if page.primary_menu %}
+  <button
+    type="button"
+    class="relative z-50 grid w-12 h-12 rounded-full place-items-center text-evergreen-900 lg:hidden hover:bg-evergreen-100 focus:outline-none focus:ring-2 focus:ring-teal-600 focus:ring-offset-2 focus:ring-offset-evergreen-50"
+    aria-controls="primary-navigation"
+    :aria-expanded="open ? 'true' : 'false'"
+    aria-label="Toggle main menu"
+    @click="open = !open"
+  >
+    <span class="sr-only">Toggle main menu</span>
 
     <span
-      class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 -translate-y-1/2 origin-center rounded-full bg-current transition-all duration-150 ease-out"
-      :class="open ? 'scale-x-0 opacity-0' : 'scale-x-100 opacity-100'"
-    ></span>
-
-    <span
-      class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 origin-center rounded-full bg-current transition-all duration-200 ease-out"
-      :class="open ? '-translate-y-1/2 -rotate-45' : 'translate-y-[7px] rotate-0'"
-    ></span>
-  </span>
-</button>
-
-
-    {% endif %}
-  </div>
-
-  {# Mobile overlay #}
-  {% if page.primary_menu %}
-    <div
-      x-show="open"
-      x-transition.opacity.duration.200ms
-      x-cloak
-      @click="open = false"
-      class="fixed inset-0 z-30 bg-evergreen-900/30 lg:hidden"
       aria-hidden="true"
-    ></div>
+      class="relative inline-block w-8 h-8"
+    >
+      <span
+        class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 origin-center rounded-full bg-current transition-all duration-200 ease-out"
+        :class="open ? '-translate-y-1/2 rotate-45' : '-translate-y-[9px] rotate-0'"
+      ></span>
+
+      <span
+        class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 -translate-y-1/2 origin-center rounded-full bg-current transition-all duration-150 ease-out"
+        :class="open ? 'scale-x-0 opacity-0' : 'scale-x-100 opacity-100'"
+      ></span>
+
+      <span
+        class="absolute left-1/2 top-1/2 block h-[3px] w-7 -translate-x-1/2 origin-center rounded-full bg-current transition-all duration-200 ease-out"
+        :class="open ? '-translate-y-1/2 -rotate-45' : 'translate-y-[7px] rotate-0'"
+      ></span>
+    </span>
+  </button>
+
+
+      {% endif %}
+    </div>
+
+    {# Mobile overlay #}
+    {% if page.primary_menu %}
+      <div
+        x-show="open"
+        x-transition.opacity.duration.200ms
+        x-cloak
+        @click="open = false"
+        class="fixed inset-0 z-30 bg-evergreen-900/30 lg:hidden"
+        aria-hidden="true"
+      ></div>
+    {% endif %}
+  </header>
+
+
+  {% if page.highlighted %}
+          {{ page.highlighted }}
   {% endif %}
-</header>
 
+  {% if page.help %}
+          {{ page.help }}
+  {% endif %}
 
-{% if page.highlighted %}
-        {{ page.highlighted }}
-{% endif %}
-
-{% if page.help %}
-        {{ page.help }}
-{% endif %}
-
-{% if page.breadcrumb %}
-  <div class="container px-6 py-4 mx-auto">
-        {{ page.breadcrumb }}
-  </div>
-{% endif %}
-
-{# It is suggested to keep the default theme behaviour and not use sidebar regions in Canvas.
-{% set main_content %}
-  <div class="flex gap-6">
-
-    {% if page.sidebar_first %}
-      <aside class="w-64 shrink-0" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    <div class="flex-1 min-w-0">
-      {{ page.content }}
+  {% if page.breadcrumb %}
+    <div class="container px-6 py-4 mx-auto">
+          {{ page.breadcrumb }}
     </div>
+  {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="w-64 shrink-0" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+  {# It is suggested to keep the default theme behaviour and not use sidebar regions in Canvas.
+  {% set main_content %}
+    <div class="flex gap-6">
 
-  </div>
-{% endset %}
+      {% if page.sidebar_first %}
+        <aside class="w-64 shrink-0" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
 
-Skip theme wrappers so Canvas can handle full-width edge-to-edge layouts natively. 
-{% if not rendered_by_canvas %}
-  {% embed 'e_and_u_tw:section' with {
-    tag: 'main',
-    container: 'normal',
-    padding: 'compact',
-    class: 'min-h-screen',
-  } %}
-    {% block children %}
-      {{ main_content }}
-    {% endblock %}
-  {% endembed %}
-{% else %}
-  {{ main_content }}
-{% endif %}  *#}
+      <div class="flex-1 min-w-0">
+        {{ page.content }}
+      </div>
 
-{% block main %}
-<main id="main" role="main" class="min-h-screen">
-  <a id="main-content" tabindex="-1"></a>
-
-  <div class="py-12 sm:px-4 sm:mx-2 md:mx-4">
-    <div class="container px-4 mx-auto sm:px-0">
-
-        {% if page.sidebar_first %}
-            {{ page.sidebar_first }}
-        {% endif %}
-
-          {{ page.content }}
-
-        {% if page.sidebar_second %}
-            {{ page.sidebar_second }}
-        {% endif %}
+      {% if page.sidebar_second %}
+        <aside class="w-64 shrink-0" role="complementary">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
 
     </div>
-  </div>
-</main>
-{% endblock %}
+  {% endset %}
 
+  Skip theme wrappers so Canvas can handle full-width edge-to-edge layouts natively. 
+  {% if not rendered_by_canvas %}
+    {% embed 'e_and_u_tw:section' with {
+      tag: 'main',
+      container: 'normal',
+      padding: 'compact',
+      class: 'min-h-screen',
+    } %}
+      {% block children %}
+        {{ main_content }}
+      {% endblock %}
+    {% endembed %}
+  {% else %}
+    {{ main_content }}
+  {% endif %}  *#}
 
-{% if page.footer %}
-  <footer role="contentinfo" class="px-0 py-12 mx-0 my-4 bg-evergreen-600 sm:px-4 rounded-b-3xl sm:rounded-3xl sm:mx-2 md:mx-4 min-h-56">
-    <div class="container px-4 mx-auto text-white">
-      {{ page.footer }}
+  {% block main %}
+  <main id="main" role="main" class="flex-1">
+    <a id="main-content" tabindex="-1"></a>
+
+    <div class="py-12 sm:px-4 sm:mx-2 md:mx-4">
+      <div class="container px-4 mx-auto sm:px-0">
+
+          {% if page.sidebar_first %}
+              {{ page.sidebar_first }}
+          {% endif %}
+
+            {{ page.content }}
+
+          {% if page.sidebar_second %}
+              {{ page.sidebar_second }}
+          {% endif %}
+
+      </div>
     </div>
-    <div class="container px-4 py-6 mx-auto text-white border-t border-evergreen-300">© {{ 'now' | date('Y') }} International Institute for Environment and Development (IIED)</div>
-  </footer>
-{% endif %}
+  </main>
+  {% endblock %}
+
+
+  {% if page.footer %}
+    <footer role="contentinfo" class="px-0 py-12 mx-0 my-4 bg-evergreen-600 sm:px-4 rounded-b-3xl sm:rounded-3xl sm:mx-2 md:mx-4 min-h-56">
+      <div class="container px-4 mx-auto text-white">
+        {{ page.footer }}
+      </div>
+      <div class="container px-4 py-6 mx-auto text-white border-t border-evergreen-300">© {{ 'now' | date('Y') }} International Institute for Environment and Development (IIED)</div>
+    </footer>
+  {% endif %}
+
+</div>
