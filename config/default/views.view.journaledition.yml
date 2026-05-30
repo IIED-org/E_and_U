@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.card
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.current
     - core.entity_view_mode.node.teaser
     - field.storage.node.body
     - field.storage.node.field_date_issue_published
@@ -792,7 +792,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: full
+          view_mode: current
       defaults:
         style: false
         row: false
@@ -1147,16 +1147,18 @@ display:
         options:
           offset: 1
       style:
-        type: default
+        type: grid_responsive
         options:
           grouping:
             -
               field: field_date_issue_published
               rendered: true
               rendered_strip: false
-          row_class: ''
-          default_row_class: true
           uses_fields: true
+          columns: 2
+          cell_min_width: 300
+          grid_gutter: 20
+          alignment: horizontal
       row:
         type: 'entity:node'
         options:

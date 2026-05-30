@@ -1,0 +1,11 @@
+uuid: 1a27ebb0-1d74-4ae1-8763-6946864fa587
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.current
+label: current
+description: 'View mode for current journal issue'
+targetEntityType: node
+cache: true
