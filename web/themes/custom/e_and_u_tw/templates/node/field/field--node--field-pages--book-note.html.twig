@@ -1,0 +1,25 @@
+{#
+/**
+ * Inline metadata field for Book note fields.
+ */
+#}
+
+{% if label_hidden %}
+  {% for item in items %}
+    <span{{ attributes.addClass('inline') }}>
+      {{ item.content }}
+    </span>
+  {% endfor %}
+{% else %}
+  <div{{ attributes.addClass('mb-2 text-base leading-relaxed') }}>
+    <span{{ title_attributes.addClass('font-bold') }}>
+      {{ label }}:
+    </span>
+
+    {% for item in items %}
+      <span{{ item.attributes.addClass('inline') }}>
+        {{ item.content }}
+      </span>{% if not loop.last %}, {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

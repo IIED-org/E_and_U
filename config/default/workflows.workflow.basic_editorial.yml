@@ -2,9 +2,6 @@ uuid: 0fbc99f9-cade-48c1-a28d-45fcca94b9fb
 langcode: en
 status: true
 dependencies:
-  config:
-    - node.type.blog
-    - node.type.page
   module:
     - content_moderation
 _core:
@@ -52,8 +49,5 @@ type_settings:
         - published
       to: unpublished
       weight: 1
-  entity_types:
-    node:
-      - blog
-      - page
-  default_moderation_state: draft
+  entity_types: {  }
+  default_moderation_state: unpublished
