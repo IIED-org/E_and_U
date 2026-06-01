@@ -105,6 +105,19 @@ display:
         options: {  }
       empty: {  }
       sorts:
+        field_date_published_value:
+          id: field_date_published_value
+          table: node__field_date_published
+          field: field_date_published_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
         created:
           id: created
           table: node_field_data
@@ -146,9 +159,10 @@ display:
       style:
         type: grid_responsive
         options:
+          grouping: {  }
           uses_fields: true
           columns: 4
-          cell_min_width: 300
+          cell_min_width: 360
           grid_gutter: 20
           alignment: horizontal
       row:
@@ -177,7 +191,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<div class=\"flex flex-col gap-6 md:flex-row md:items-start md:justify-between mb-8\">\r\n<div class=\"prose prose-lg\">\r\n<h2>Latest book notes</h2>\r\n<p class=\"mb-6\">An archive of notes on books shaping debates in urban studies and development practice.</p>\r\n</div>\r\n\r\n<a href=\"/booknotes\" class=\"inline-flex items-center gap-2 px-6 py-4 mt-6 text-lg font-bold no-underline transition-all bg-white rounded-full shadow-sm cursor-pointer hover:no-underline hover:bg-evergreen-100 text-ervergreen-700 hover:text-ervergreen-900\">\r\n    Browse all book notes\r\n</a>\r\n</div>"
+            value: "<div class=\"flex flex-col gap-6 md:flex-row md:items-start md:justify-between mb-8\">\r\n<div class=\"prose prose-lg\">\r\n<h2>Latest book notes</h2>\r\n<p class=\"mb-6\">An archive of notes on books shaping debates in urban studies and development practice.</p>\r\n</div>\r\n\r\n<a href=\"/book-notes\" class=\"inline-flex items-center gap-2 px-6 py-4 mt-6 text-lg font-bold no-underline transition-all bg-white rounded-full shadow-sm cursor-pointer hover:no-underline hover:bg-evergreen-100 text-ervergreen-700 hover:text-ervergreen-900\">\r\n    Browse all book notes\r\n</a>\r\n</div>"
             format: advanced_html
           tokenize: false
       footer: {  }
