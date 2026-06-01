@@ -3,7 +3,7 @@
 /node_modules/
 
 # Ignore compiled assets - remove this line if you prefer to commit compiled CSS into git
-/dist/
+# /dist/
 
 # Ignore lock files.
 /package-lock.json
