@@ -1,97 +1,166 @@
 {#
 /**
- * @file
- * Theme override to display a node.
- *
- * Available variables:
- * - node: The node entity with limited access to object properties and methods.
- *   Only method names starting with "get", "has", or "is" and a few common
- *   methods such as "id", "label", and "bundle" are available. For example:
- *   - node.getCreatedTime() will return the node creation timestamp.
- *   - node.hasField('field_example') returns TRUE if the node bundle includes
- *     field_example. (This does not indicate the presence of a value in this
- *     field.)
- *   - node.isPublished() will return whether the node is published or not.
- *   Calling other methods, such as node.delete(), will result in an exception.
- *   See \Drupal\node\Entity\Node for a full list of public properties and
- *   methods for the node object.
- * - label: The title of the node.
- * - content: All node items. Use {{ content }} to print them all,
- *   or print a subset such as {{ content.field_example }}. Use
- *   {{ content|without('field_example') }} to temporarily suppress the printing
- *   of a given child element.
- * - author_picture: The node author user entity, rendered using the "compact"
- *   view mode.
- * - metadata: Metadata for this node.
- * - date: Themed creation date field.
- * - author_name: Themed author name field.
- * - url: Direct URL of the current node.
- * - display_submitted: Whether submission information should be displayed.
- * - attributes: HTML attributes for the containing element.
- *   The attributes.class element may contain one or more of the following
- *   classes:
- *   - node: The current template type (also known as a "theming hook").
- *   - node--type-[type]: The current node type. For example, if the node is an
- *     "Article" it would result in "node--type-article". Note that the machine
- *     name will often be in a short form of the human readable label.
- *   - node--view-mode-[view_mode]: The View Mode of the node; for example, a
- *     teaser would result in: "node--view-mode-teaser", and
- *     full: "node--view-mode-full".
- *   The following are controlled through the node publishing options.
- *   - node--promoted: Appears on nodes promoted to the front page.
- *   - node--sticky: Appears on nodes ordered above other non-sticky nodes in
- *     teaser listings.
- *   - node--unpublished: Appears on unpublished nodes visible only to site
- *     admins.
- * - title_attributes: Same as attributes, except applied to the main title
- *   tag that appears in the template.
- * - content_attributes: Same as attributes, except applied to the main
- *   content tag that appears in the template.
- * - author_attributes: Same as attributes, except applied to the author of
- *   the node tag that appears in the template.
- * - title_prefix: Additional output populated by modules, intended to be
- *   displayed in front of the main title tag that appears in the template.
- * - title_suffix: Additional output populated by modules, intended to be
- *   displayed after the main title tag that appears in the template.
- * - view_mode: View mode; for example, "teaser" or "full".
- * - teaser: Flag for the teaser state. Will be true if view_mode is 'teaser'.
- * - page: Flag for the full page state. Will be true if view_mode is 'full'.
- * - readmore: Flag for more state. Will be true if the teaser content of the
- *   node cannot hold the main body content.
- * - logged_in: Flag for authenticated user status. Will be true when the
- *   current user is a logged-in member.
- * - is_admin: Flag for admin user status. Will be true when the current user
- *   is an administrator.
- *
- * @see template_preprocess_node()
- *
- * @todo Remove the id attribute (or make it a class), because if that gets
- *   rendered twice on a page this is invalid CSS for example: two lists
- *   in different view modes.
+ * Theme override to display a node book_note
  */
 #}
-<article{{ attributes.addClass('node') }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+{%
+  set classes = [
+    'node',
+    'node--book-note',
+  ]
+%}
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
+{% set author = content.field_author|render %}
+{% set publisher = content.field_publisher|render %}
+{% set date_published = content.field_date_published|render %}
+{% set pages = content.field_pages|render %}
+{% set isbn = content.field_isbn|render %}
+{% set focus_city = content.field_focus_city|render %}
+{% set focus_country = content.field_focus_country|render %}
+{% set image = content.field_image|render %}
+{% set body = content.body|render %}
+{% set tags = content.field_tags|render %}
+{% set links = content.field_links|render %}
+{% set standfirst = content.field_standfirst|render %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  <header class="max-w-4xl px-4 mx-auto mb-8">
+
+    <nav class="mb-6 not-prose" role="navigation" aria-labelledby="system-breadcrumb">
+      <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+
+      <ol class="flex flex-wrap items-center p-0 m-0 text-sm list-none">
+        <li class="flex items-center">
+          <a href="/" class="text-inherit hover:underline">Home</a>
+        </li>
+
+        <li class="flex items-center">
+          <span class="inline-block px-2" aria-hidden="true">/</span>
+          <a href="/book-notes" class="text-inherit hover:underline">Book notes</a>
+        </li>
+
+        <li class="flex items-center">
+          <span class="inline-block px-2" aria-hidden="true">/</span>
+          <span class="font-medium" aria-current="page">{{ label }}</span>
+        </li>
+      </ol>
+    </nav>
+
+    {{ title_prefix }}
+
+    <h1{{ title_attributes.addClass('page-title', 'mb-6', 'lg:mb-12') }}>
+      {{ label }}
+    </h1>
+
+    {{ title_suffix }}
+
+      {% if standfirst|striptags|trim %}
+        <div class="mb-6 textlg lg:text-xl">
+          {{ standfirst }}
+        </div>
+      {% endif %}
+  </header>
+
+  <div class="grid items-start max-w-4xl gap-8 px-4 mx-auto mb-12 md:grid-cols-2">
+
+    <div class="prose prose-lg max-w-none">
+      {% if author|striptags|trim %}
+        {{ author }}
+      {% endif %}
+
+      {% if publisher|striptags|trim %}
+        {{ publisher }}
+      {% endif %}
+
+      {% if date_published|striptags|trim %}
+        {{ date_published }}
+      {% endif %}
+
+      {% if pages|striptags|trim %}
+        {{ pages }}
+      {% endif %}
+
+      {% if isbn|striptags|trim %}
+        {{ isbn }}
+      {% endif %}
+
+      {% if focus_city|striptags|trim %}
+        {{ focus_city }}
+      {% endif %}
+
+      {% if focus_country|striptags|trim %}
+        {{ focus_country }}
+      {% endif %}
+    </div>
+
+    {% if image|trim %}
+      <div class="not-prose self-start justify-self-center [&_img]:mx-auto [&_img]:h-auto [&_img]:max-w-full">
+        {{ image }}
       </div>
-    </footer>
-  {% endif %}
+    {% endif %}
 
-  <div{{ content_attributes.addClass('node-content') }}>
-    {% include 'e_and_u_tw:rich-text' with { content: content } only %}
+  </div>
+
+  <div class="max-w-4xl px-4 mx-auto">
+
+
+    {% if not node.field_available_from.isEmpty %}
+      {% set available_from_text = node.field_available_from.value|trim %}
+      {% set available_from_url = available_from_text %}
+      {% set is_external_url = available_from_text matches '/^https?:\\/\\/[^\\s]+$/i' %}
+      {% set is_relative_url = available_from_text matches '/^\\/[^\\s]*$/i' %}
+      {% set is_www_url = available_from_text matches '/^www\\.[^\\s]+$/i' %}
+
+      {% if is_www_url %}
+        {% set available_from_url = 'https://' ~ available_from_text %}
+      {% endif %}
+
+      <div class="mb-8 text-lg lg:text-xl">
+        <span class="font-bold">Available from:</span>
+
+        {% if is_external_url or is_relative_url or is_www_url %}
+          <a
+            href="{{ available_from_url }}"
+            class="font-semibold underline text-evergreen-600 hover:text-evergreen-800"
+            {% if is_external_url or is_www_url %}
+            {% endif %}
+          >
+            {{ available_from_text }}
+          </a>
+        {% else %}
+          <span>{{ available_from_text }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+
+
+    {% if body|striptags|trim %}
+      <div class="prose prose-lg max-w-none">
+        {{ body }}
+      </div>
+    {% endif %}
+
+    {% if tags|striptags|trim or links|striptags|trim %}
+      <footer class="mt-10 space-y-4 not-prose">
+        {% if tags|striptags|trim %}
+          <div>
+            {{ tags }}
+          </div>
+        {% endif %}
+
+        {% if links|striptags|trim %}
+          <div>
+            {{ links }}
+          </div>
+        {% endif %}
+      </footer>
+    {% endif %}
+
   </div>
 
 </article>
+
+
