@@ -11,7 +11,7 @@ _core:
 id: e_and_u_tw_iied_system_main
 theme: e_and_u_tw
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: system_main_block
 settings:

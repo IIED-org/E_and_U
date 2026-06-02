@@ -1,0 +1,23 @@
+uuid: fecf5fa4-adaf-4783-a283-f83299436613
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.call_out
+  module:
+    - link
+id: node.call_out.field_link
+field_name: field_link
+entity_type: node
+bundle: call_out
+label: Link
+description: 'Internal link'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 1
+field_type: link
