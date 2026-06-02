@@ -12,7 +12,7 @@ dependencies:
 id: e_and_u_tw_views_block__booknotes_block_1
 theme: e_and_u_tw
 region: content
-weight: -5
+weight: -4
 provider: null
 plugin: 'views_block:booknotes-block_1'
 settings:

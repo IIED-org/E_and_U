@@ -1,0 +1,46 @@
+uuid: 5d0dea6c-aa58-476f-a057-2e8ee3e929ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.call_out.field_call_out
+    - field.field.node.call_out.field_link
+    - field.field.node.call_out.field_show_on_home_page
+    - node.type.call_out
+  module:
+    - layout_builder
+    - link
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.call_out.card
+targetEntityType: node
+bundle: call_out
+mode: card
+content:
+  field_call_out:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_show_on_home_page: true
+  links: true
+  published_at: true

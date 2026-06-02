@@ -12,7 +12,7 @@ _core:
 id: e_and_u_tw_page_title
 theme: e_and_u_tw
 region: content
-weight: -2
+weight: -1
 provider: null
 plugin: page_title_block
 settings:

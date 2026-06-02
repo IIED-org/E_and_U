@@ -11,7 +11,7 @@ dependencies:
 id: e_and_u_tw_iied_menu_menu_in_this_section
 theme: e_and_u_tw
 region: content
-weight: -3
+weight: -2
 provider: null
 plugin: 'system_menu_block:menu-in-this-section'
 settings:

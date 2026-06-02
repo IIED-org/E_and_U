@@ -1,4 +1,4 @@
-uuid: 640cb803-9e4c-468c-b780-0bfdda7c99a2
+uuid: 26b38b63-df19-4edf-905e-3c37f8561ab1
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,7 @@ dependencies:
     - system
   theme:
     - e_and_u_tw
-_core:
-  default_config_hash: MC8XOKrs3rCERlWettoqU7VEy_VkW-z01IeUO7PBtvI
-id: e_and_u_tw_footer_menu
+id: e_and_u_tw_footer
 theme: e_and_u_tw
 region: footer
 weight: -7

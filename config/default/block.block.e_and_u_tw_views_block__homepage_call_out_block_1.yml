@@ -1,22 +1,22 @@
-uuid: 18dbba4c-ed38-49f6-ae4b-04ac29cf8952
+uuid: 0d071ced-d3c8-4e8b-8fd9-6f84824f3c02
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.journaledition
+    - views.view.homepage_call_out
   module:
     - system
     - views
   theme:
     - e_and_u_tw
-id: e_and_u_tw_views_block__journaledition_block_3
+id: e_and_u_tw_views_block__homepage_call_out_block_1
 theme: e_and_u_tw
 region: content
-weight: -6
+weight: -7
 provider: null
-plugin: 'views_block:journaledition-block_3'
+plugin: 'views_block:homepage_call_out-block_1'
 settings:
-  id: 'views_block:journaledition-block_3'
+  id: 'views_block:homepage_call_out-block_1'
   label: ''
   label_display: '0'
   provider: views
