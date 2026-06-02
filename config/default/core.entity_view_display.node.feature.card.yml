@@ -16,6 +16,8 @@ dependencies:
     - field.field.node.feature.taxonomy_vocabulary_15
     - node.type.feature
   module:
+    - media
+    - text
     - user
 id: node.feature.card
 targetEntityType: node
@@ -23,27 +25,37 @@ bundle: feature
 mode: card
 content:
   field_featured_image:
-    type: entity_reference_entity_view
+    type: media_thumbnail
     label: hidden
     settings:
-      view_mode: 16_9_medium
-      link: false
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
-  links:
+  field_link_to_sage:
+    type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 2
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   body: true
   comment_node_feature: true
   field_date_issue_published: true
   field_glossary: true
-  field_link_to_sage: true
   field_links: true
-  field_standfirst: true
   layout_builder__layout: true
+  links: true
   published_at: true
   taxonomy_vocabulary_15: true

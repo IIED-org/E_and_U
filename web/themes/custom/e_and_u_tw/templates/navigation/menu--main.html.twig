@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Theme override for the main menu.
+ *
+ * This template assumes a single-level menu.
+ * The responsive open/closed mobile state is handled in page.html.twig with Alpine.
+ */
+#}
+
+{% if items %}
+  {% set menu_classes = [
+    'flex',
+    'flex-col',
+    'gap-2',
+    'p-0',
+    'm-0',
+    'list-none',
+    'lg:flex-row',
+    'lg:items-center',
+    'lg:gap-8'
+  ] %}
+
+  <ul{{ attributes.addClass(menu_classes) }}>
+    {% for item in items %}
+      {% set item_classes = [
+        'm-0',
+        'p-0'
+      ] %}
+
+      {% set link_classes = [
+        'inline-block',
+        'rounded-xl',
+        'px-4',
+        'py-3',
+        'text-lg',
+        'font-bold',
+        'no-underline',
+        'transition-colors',
+        'duration-200',
+        'text-evergreen-900',
+        'hover:bg-white',
+        'hover:text-teal-600',
+        'focus:outline-none',
+        'focus:ring-2',
+        'focus:ring-teal-600',
+        'focus:ring-offset-2',
+        'focus:ring-offset-evergreen-50',
+        'lg:px-0',
+        'lg:py-2',
+        'lg:text-lg',
+        'lg:hover:bg-transparent',
+        item.in_active_trail ? 'text-teal-600' : ''
+      ] %}
+
+      <li{{ item.attributes.addClass(item_classes) }}>
+        <a
+          href="{{ item.url }}"
+          class="{{ link_classes|join(' ') }}"
+          {% if item.in_active_trail %}aria-current="page"{% endif %}
+          @click="open = false"
+        >
+          {{ item.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

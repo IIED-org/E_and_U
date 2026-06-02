@@ -1,0 +1,94 @@
+uuid: a019f57e-5fea-418c-9335-66b56929ca83
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.book_note.body
+    - field.field.node.book_note.comment_node_book_note
+    - field.field.node.book_note.feeds_item
+    - field.field.node.book_note.field_author
+    - field.field.node.book_note.field_available_from
+    - field.field.node.book_note.field_book_note_prepared_by_name
+    - field.field.node.book_note.field_date_published
+    - field.field.node.book_note.field_flickr_tags
+    - field.field.node.book_note.field_focus_city
+    - field.field.node.book_note.field_focus_country
+    - field.field.node.book_note.field_image
+    - field.field.node.book_note.field_isbn
+    - field.field.node.book_note.field_links
+    - field.field.node.book_note.field_pages
+    - field.field.node.book_note.field_publisher
+    - field.field.node.book_note.field_standfirst
+    - field.field.node.book_note.field_tags
+    - field.field.node.book_note.layout_builder__layout
+    - image.style.coverimageforhome
+    - node.type.book_note
+  module:
+    - layout_builder
+    - svg_image
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.book_note.card
+targetEntityType: node
+bundle: book_note
+mode: card
+content:
+  field_date_published:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: coverimageforhome
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_publisher:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  comment_node_book_note: true
+  feeds_item: true
+  field_author: true
+  field_available_from: true
+  field_book_note_prepared_by_name: true
+  field_flickr_tags: true
+  field_focus_city: true
+  field_focus_country: true
+  field_isbn: true
+  field_links: true
+  field_pages: true
+  field_tags: true
+  layout_builder__layout: true
+  links: true
+  published_at: true

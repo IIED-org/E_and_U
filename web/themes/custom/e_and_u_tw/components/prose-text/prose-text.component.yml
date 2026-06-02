@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Prose Text
+status: stable
+group: Content
+description: "Prose wrapper for rich text / node body content"
+props:
+  type: object
+  required:
+    - content
+  properties:
+    content:
+      type: string
+      title: "Rendered content (e.g. node body)"
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples: ['<p>Sample content</p>']

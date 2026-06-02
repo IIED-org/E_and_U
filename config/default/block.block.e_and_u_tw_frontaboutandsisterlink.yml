@@ -1,0 +1,28 @@
+uuid: 3460f8fc-20ed-4ca4-94ee-73de3cb239c9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_e_and_u_home_page:089da229-a66e-4277-b538-30299c084576'
+  module:
+    - block_content
+    - system
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_frontaboutandsisterlink
+theme: e_and_u_tw
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:089da229-a66e-4277-b538-30299c084576'
+settings:
+  id: 'block_content:089da229-a66e-4277-b538-30299c084576'
+  label: 'Front about and sister link'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

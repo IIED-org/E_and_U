@@ -1,0 +1,29 @@
+uuid: 18dbba4c-ed38-49f6-ae4b-04ac29cf8952
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.journaledition
+  module:
+    - system
+    - views
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_views_block__journaledition_block_3
+theme: e_and_u_tw
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:journaledition-block_3'
+settings:
+  id: 'views_block:journaledition-block_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: null
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,25 @@
+uuid: 26b38b63-df19-4edf-905e-3c37f8561ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_footer
+theme: e_and_u_tw
+region: footer
+weight: -7
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }

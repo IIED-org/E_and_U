@@ -1,0 +1,166 @@
+{#
+/**
+ * Theme override to display a node book_note
+ */
+#}
+
+{%
+  set classes = [
+    'node',
+    'node--book-note',
+  ]
+%}
+
+{% set author = content.field_author|render %}
+{% set publisher = content.field_publisher|render %}
+{% set date_published = content.field_date_published|render %}
+{% set pages = content.field_pages|render %}
+{% set isbn = content.field_isbn|render %}
+{% set focus_city = content.field_focus_city|render %}
+{% set focus_country = content.field_focus_country|render %}
+{% set image = content.field_image|render %}
+{% set body = content.body|render %}
+{% set tags = content.field_tags|render %}
+{% set links = content.field_links|render %}
+{% set standfirst = content.field_standfirst|render %}
+
+<article{{ attributes.addClass(classes) }}>
+
+  <header class="max-w-4xl px-4 mx-auto mb-8">
+
+    <nav class="mb-6 not-prose" role="navigation" aria-labelledby="system-breadcrumb">
+      <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+
+      <ol class="flex flex-wrap items-center p-0 m-0 text-sm list-none">
+        <li class="flex items-center">
+          <a href="/" class="text-inherit hover:underline">Home</a>
+        </li>
+
+        <li class="flex items-center">
+          <span class="inline-block px-2" aria-hidden="true">/</span>
+          <a href="/book-notes" class="text-inherit hover:underline">Book notes</a>
+        </li>
+
+        <li class="flex items-center">
+          <span class="inline-block px-2" aria-hidden="true">/</span>
+          <span class="font-medium" aria-current="page">{{ label }}</span>
+        </li>
+      </ol>
+    </nav>
+
+    {{ title_prefix }}
+
+    <h1{{ title_attributes.addClass('page-title', 'mb-6', 'lg:mb-12') }}>
+      {{ label }}
+    </h1>
+
+    {{ title_suffix }}
+
+      {% if standfirst|striptags|trim %}
+        <div class="mb-6 textlg lg:text-xl">
+          {{ standfirst }}
+        </div>
+      {% endif %}
+  </header>
+
+  <div class="grid items-start max-w-4xl gap-8 px-4 mx-auto mb-12 md:grid-cols-2">
+
+    <div class="prose prose-lg max-w-none">
+      {% if author|striptags|trim %}
+        {{ author }}
+      {% endif %}
+
+      {% if publisher|striptags|trim %}
+        {{ publisher }}
+      {% endif %}
+
+      {% if date_published|striptags|trim %}
+        {{ date_published }}
+      {% endif %}
+
+      {% if pages|striptags|trim %}
+        {{ pages }}
+      {% endif %}
+
+      {% if isbn|striptags|trim %}
+        {{ isbn }}
+      {% endif %}
+
+      {% if focus_city|striptags|trim %}
+        {{ focus_city }}
+      {% endif %}
+
+      {% if focus_country|striptags|trim %}
+        {{ focus_country }}
+      {% endif %}
+    </div>
+
+    {% if image|trim %}
+      <div class="not-prose self-start justify-self-center [&_img]:mx-auto [&_img]:h-auto [&_img]:max-w-full">
+        {{ image }}
+      </div>
+    {% endif %}
+
+  </div>
+
+  <div class="max-w-4xl px-4 mx-auto">
+
+
+    {% if not node.field_available_from.isEmpty %}
+      {% set available_from_text = node.field_available_from.value|trim %}
+      {% set available_from_url = available_from_text %}
+      {% set is_external_url = available_from_text matches '/^https?:\\/\\/[^\\s]+$/i' %}
+      {% set is_relative_url = available_from_text matches '/^\\/[^\\s]*$/i' %}
+      {% set is_www_url = available_from_text matches '/^www\\.[^\\s]+$/i' %}
+
+      {% if is_www_url %}
+        {% set available_from_url = 'https://' ~ available_from_text %}
+      {% endif %}
+
+      <div class="mb-8 text-lg lg:text-xl">
+        <span class="font-bold">Available from:</span>
+
+        {% if is_external_url or is_relative_url or is_www_url %}
+          <a
+            href="{{ available_from_url }}"
+            class="font-semibold underline text-evergreen-600 hover:text-evergreen-800"
+            {% if is_external_url or is_www_url %}
+            {% endif %}
+          >
+            {{ available_from_text }}
+          </a>
+        {% else %}
+          <span>{{ available_from_text }}</span>
+        {% endif %}
+      </div>
+    {% endif %}
+
+
+
+    {% if body|striptags|trim %}
+      <div class="prose prose-lg max-w-none">
+        {{ body }}
+      </div>
+    {% endif %}
+
+    {% if tags|striptags|trim or links|striptags|trim %}
+      <footer class="mt-10 space-y-4 not-prose">
+        {% if tags|striptags|trim %}
+          <div>
+            {{ tags }}
+          </div>
+        {% endif %}
+
+        {% if links|striptags|trim %}
+          <div>
+            {{ links }}
+          </div>
+        {% endif %}
+      </footer>
+    {% endif %}
+
+  </div>
+
+</article>
+
+

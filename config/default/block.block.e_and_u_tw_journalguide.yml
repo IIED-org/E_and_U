@@ -1,0 +1,28 @@
+uuid: 0f25edd1-e5c5-4e7d-9f99-fb6530f54155
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_e_and_u_home_page:b8e62f40-93b6-41df-a1ac-1f24f6922add'
+  module:
+    - block_content
+    - system
+  theme:
+    - e_and_u_tw
+id: e_and_u_tw_journalguide
+theme: e_and_u_tw
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:b8e62f40-93b6-41df-a1ac-1f24f6922add'
+settings:
+  id: 'block_content:b8e62f40-93b6-41df-a1ac-1f24f6922add'
+  label: 'Journal guide'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

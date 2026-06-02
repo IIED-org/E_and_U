@@ -6,8 +6,11 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.comment_node_article
+    - field.field.node.article.field_featured_image
     - field.field.node.article.field_flickr_tags
     - field.field.node.article.field_image
+    - field.field.node.article.field_main_image_caption
+    - field.field.node.article.field_standfirst
     - field.field.node.article.field_tags
     - field.field.node.article.layout_builder__layout
     - image.style.medium
@@ -26,6 +29,15 @@ content:
     label: hidden
     settings:
       trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: 4_3_medium
+      link: false
     third_party_settings: {  }
     weight: 0
     region: content
@@ -60,5 +72,7 @@ content:
 hidden:
   comment_node_article: true
   field_flickr_tags: true
+  field_main_image_caption: true
+  field_standfirst: true
   layout_builder__layout: true
   published_at: true

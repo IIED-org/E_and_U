@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tailwindcss
+id: tailwindcss.primary_menu
+theme: tailwindcss
+region: primary_menu
+component_tree:
+  - component_id: block.system_menu_block.main
+    component_version: 023ff7ba63f80798
+    inputs:
+      label: 'Main navigation'
+      label_display: '0'
+      level: 1
+      depth: 2
+      expand_all_items: true
+    uuid: de3366bd-0b9b-49e4-a555-cb0e5c2c40f1

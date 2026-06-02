@@ -1,0 +1,32 @@
+{% set size_classes = {
+  'small': 'px-3 py-1.5 text-sm',
+  'medium': 'px-4 py-2 text-base',
+  'large': 'px-6 py-3 text-lg'
+} %}
+
+{% set variant_classes = {
+  'default': 'bg-neutral-200 hover:bg-neutral-300 text-neutral-900 border-transparent shadow-sm',
+  'primary': 'bg-primary-500 hover:bg-primary-400 text-zinc-950 border-transparent shadow-lg hover:shadow-xl',
+  'outline': 'bg-transparent text-primary-500 hover:text-primary-400 border-primary-500',
+  'bare': 'bg-transparent text-primary-500 hover:text-primary-400 border-transparent'
+} %}
+
+{% set base_classes = 'inline-flex items-center justify-center font-medium rounded-md border transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 no-underline' %}
+{% set resolved_size = size|default('medium') %}
+{% set resolved_variant = variant|default('default') %}
+{% set resolved_url = url|default('#') %}
+{% set resolved_text = text is not empty ? text : 'Button' %}
+
+{% set class_list = [
+  base_classes,
+  size_classes[resolved_size]|default(size_classes['medium']),
+  variant_classes[resolved_variant]|default(variant_classes['default'])
+] %}
+{% if class %}
+  {% set class_list = class_list|merge([class]) %}
+{% endif %}
+{% set all_classes = class_list|join(' ') %}
+
+<a href="{{ resolved_url }}" class="{{ all_classes }}" {{ attributes|default(create_attribute()) }}>
+  {{ resolved_text }}
+</a>

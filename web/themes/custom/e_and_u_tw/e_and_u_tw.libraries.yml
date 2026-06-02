@@ -1,0 +1,11 @@
+global-styling:
+  css:
+    base:
+      dist/tailwind.css: {}
+
+alpine:
+  js:
+    dist/js/alpine.min.js:
+      minified: true
+      attributes:
+        defer: true

@@ -14,6 +14,6 @@ features:
   node_user_picture: true
   slogan: true
 logo:
-  path: 'sites/default/files/E&U_logo.png'
+  path: themes/custom/e_and_u_tw/logo.svg
   url: null
   use_default: true

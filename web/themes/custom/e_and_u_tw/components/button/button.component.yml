@@ -1,0 +1,47 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/11.x/core/modules/sdc/src/component.schema.json
+name: Button
+status: stable
+description: A customizable button component with Tailwind CSS styling
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Button Text
+      description: The text displayed on the button
+      examples:
+        - "Button"
+    url:
+      type: string
+      title: URL
+      description: The link URL
+      examples:
+        - "#"
+    variant:
+      type: string
+      title: Variant
+      description: The button style variant
+      enum:
+        - default
+        - primary
+        - outline
+        - bare
+      examples:
+        - default
+    size:
+      type: string
+      title: Size
+      description: The button size
+      enum:
+        - small
+        - medium
+        - large
+      examples:
+        - medium
+    attributes:
+      type: Drupal\Core\Template\Attribute
+      title: Additional attributes
+    class:
+      type: string
+      title: Custom CSS classes
+      description: Additional CSS classes to apply to the button

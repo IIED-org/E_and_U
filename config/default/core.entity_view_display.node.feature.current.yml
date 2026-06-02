@@ -1,0 +1,69 @@
+uuid: eb1ca3f9-2291-4a54-8d30-8b34745e4b64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.current
+    - field.field.node.feature.body
+    - field.field.node.feature.comment_node_feature
+    - field.field.node.feature.field_date_issue_published
+    - field.field.node.feature.field_featured_image
+    - field.field.node.feature.field_glossary
+    - field.field.node.feature.field_link_to_sage
+    - field.field.node.feature.field_links
+    - field.field.node.feature.field_standfirst
+    - field.field.node.feature.layout_builder__layout
+    - field.field.node.feature.taxonomy_vocabulary_15
+    - node.type.feature
+  module:
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.feature.current
+targetEntityType: node
+bundle: feature
+mode: current
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_featured_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link_to_sage:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_standfirst:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  comment_node_feature: true
+  field_date_issue_published: true
+  field_glossary: true
+  field_links: true
+  layout_builder__layout: true
+  links: true
+  published_at: true
+  taxonomy_vocabulary_15: true

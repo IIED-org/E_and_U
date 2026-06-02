@@ -1,0 +1,14 @@
+uuid: ad203a98-986c-4aef-be83-876e2a7faa54
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.call_out
+id: node_type_call_out
+entity_type_id: node_type
+entity_id: call_out
+action: page_not_found
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

@@ -57,6 +57,7 @@
         "drupal/session_limit": "^2.0",
         "drupal/session_management": "^1.0",
         "drupal/stage_file_proxy": "^3.1",
+        "drupal/tailwindcss": "^5.0",
         "drupal/tfa": "^1.12",
         "drupal/token_filter": "^2.2",
         "drupal/webform": "@beta",

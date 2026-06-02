@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+  * Theme override to display a card of the journal issue (feature) content type.
+ */
+#}
+<article{{ attributes.addClass('node', 'h-full') }}>
+
+<div class="flex items-start h-full gap-6 p-6 mx-auto border border-evergreen-300 rounded-3xl">
+<div class="w-1/3 md:w-1/4 lg:w-1/5 shrink-0">
+         
+                <div class="">
+                    {{ content.field_featured_image }}
+                </div>
+            
+        </div>
+        <div class="flex-1">
+          {{ title_prefix }}
+            <h2{{ title_attributes.addClass('mb-4', 'text-xl', 'font-bold', 'md:text-2xl', 'md:mb-6', 'mt-4') }}>
+              {{ label }}
+            </h2>
+              {{ title_suffix }}
+            <div class="mb-4 prose prose-lg">
+                {{ content.field_standfirst }}
+            </div>
+            <div class="flex items-center gap-2 font-bold prose prose-lg text-green-700">
+                {{ content.field_link_to_sage }}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z" clip-rule="evenodd" />
+</svg>
+
+            </div>
+        </div>
+</div>
+
+</article>

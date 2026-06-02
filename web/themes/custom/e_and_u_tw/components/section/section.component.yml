@@ -1,0 +1,54 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Section
+status: stable
+group: Content
+description: Universal centered content container. Renders as <main> for page content or <section> for page sections, with optional background tint.
+props:
+  type: object
+  properties:
+    container:
+      type: string
+      title: Container width
+      description: Choose narrow (max-w-4xl) for content pages or normal (max-w-7xl) for wider layouts.
+      enum:
+        - normal
+        - narrow
+      default: normal
+    tag:
+      type: string
+      title: HTML tag
+      description: Outer wrapper element — main for page content, section for page sections.
+      enum:
+        - main
+        - section
+        - header
+      default: main
+    padding:
+      type: string
+      title: Vertical padding
+      enum:
+        - compact
+        - normal
+        - spacious
+      default: normal
+    background:
+      type: string
+      title: Background
+      description: Optional translucent background tint.
+      enum:
+        - transparent
+        - tint
+        - dark
+      default: transparent
+    id:
+      type: string
+      title: ID
+      description: Optional HTML id attribute for the outer wrapper element.
+    class:
+      type: string
+      title: Additional classes
+      description: Optional extra CSS classes for the outer wrapper element (e.g. min-h-screen).
+slots:
+  children:
+    title: Children
+    description: Nested content rendered inside the centered container.

@@ -1,0 +1,22 @@
+uuid: d1449b6d-17db-4c03-8b2f-79b4aa7261a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - e_and_u_tw
+_core:
+  default_config_hash: G4iNGvy_k2yNIEH_FJmbkvgBBar1etJIhKJYuygT7hU
+id: e_and_u_tw_iied_system_main
+theme: e_and_u_tw
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }
