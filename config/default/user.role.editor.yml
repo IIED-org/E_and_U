@@ -3,16 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.advanced_html
-    - filter.format.filtered_html
-    - filter.format.full_html
-    - filter.format.php_code
+    - dashboard.dashboard.welcome
+    - filter.format.content_format
     - node.type.article
     - node.type.blog
     - node.type.book_note
     - node.type.feature
     - node.type.page
   module:
+    - dashboard
     - filter
     - node
     - path
@@ -49,8 +48,7 @@ permissions:
   - 'edit own book_note content'
   - 'edit own page content'
   - 'notify of path changes'
-  - 'use text format advanced_html'
-  - 'use text format filtered_html'
-  - 'use text format full_html'
-  - 'use text format php_code'
+  - 'use text format content_format'
   - 'view own unpublished content'
+  - 'view the administration theme'
+  - 'view welcome dashboard'
