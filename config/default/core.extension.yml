@@ -65,6 +65,7 @@ module:
   linkit: 0
   login_emailusername: 0
   mailsystem: 0
+  masquerade: 0
   media: 0
   media_library: 0
   menu_link_attributes: 0
@@ -95,6 +96,7 @@ module:
   real_aes: 0
   redirect: 0
   redirect_404: 0
+  remove_reset_password: 0
   responsive_image: 0
   rh_node: 0
   rh_taxonomy: 0

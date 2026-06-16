@@ -2,10 +2,7 @@ uuid: 877dfb85-2419-457d-92e1-6b93b81fb6de
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.filtered_html
   module:
-    - filter
     - klaro
     - media
     - printable
@@ -21,6 +18,5 @@ permissions:
   - 'access content'
   - 'access sitemap'
   - 'use klaro'
-  - 'use text format filtered_html'
   - 'view media'
   - 'view printer friendly versions'

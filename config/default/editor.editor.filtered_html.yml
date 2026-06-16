@@ -44,7 +44,5 @@ settings:
         - '<dd>'
         - '<a hreflang>'
         - '<blockquote cite>'
-    linkit_extension:
-      linkit_enabled: false
 image_upload:
   status: false

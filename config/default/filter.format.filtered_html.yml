@@ -18,7 +18,7 @@ filters:
     status: true
     weight: 1
     settings:
-      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type reversed start> <strong> <em> <code> <li>'
+      allowed_html: '<br> <p> <h2> <h3> <h4> <h5> <h6> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <strong> <em> <code> <ul type> <ol type reversed start> <li>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
