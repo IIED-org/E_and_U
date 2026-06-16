@@ -1195,7 +1195,7 @@ display:
     display_plugin: block
     position: 1
     display_options:
-      title: 'Current issue'
+      title: 'Current and previous editions'
       fields:
         nothing_1:
           id: nothing_1
