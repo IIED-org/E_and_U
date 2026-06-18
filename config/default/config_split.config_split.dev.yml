@@ -11,7 +11,14 @@ no_patching: false
 storage: folder
 folder: ../config/splits/dev
 module:
+  purge: 0
+  purge_processor_cron: 0
+  purge_queuer_coretags: 0
+  purge_tokens: 0
+  purge_ui: 0
   stage_file_proxy: 0
+  varnish_purge_tags: 0
+  varnish_purger: 0
   dblog: 0
   field_ui: 0
   views_ui: 0
