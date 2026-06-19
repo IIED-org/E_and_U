@@ -158,3 +158,12 @@ unset($settings['migrate_field_mapping']);
 
 // Set up proper field mapping
 $settings['migrate_field_mapping']['d7_node_complete']['blog']['body'] = 'body';
+
+/**
+ * Config split.
+ */
+$config['config_split.config_split.local']['status'] = TRUE;
+$config['config_split.config_split.dev']['status'] = FALSE;
+$config['config_split.config_split.stage']['status'] = FALSE;
+$config['config_split.config_split.prod']['status'] = FALSE;
+
