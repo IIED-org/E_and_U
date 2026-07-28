@@ -38,6 +38,7 @@
         "drupal/drupal_cms_project": "~1.1.0",
         "drupal/drupal_cms_seo_tools": "~1.1.0",
         "drupal/drupal_cms_starter": "~1.1.0",
+        "drupal/eca": "^2.1",
         "drupal/feeds": "^3.0",
         "drupal/feeds_ex": "^1.0@beta",
         "drupal/field_group": "^3.6",
@@ -58,7 +59,7 @@
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/remove_reset_password": "^1.0",
         "drupal/session_limit": "^2.0",
-        "drupal/session_management": "^1.0",
+        "drupal/session_management": "^1.2",
         "drupal/simple_menu_icons": "^3.1",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/tailwindcss": "^5.0",
@@ -78,7 +79,8 @@
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "symfony/runtime": true
         },
         "bin-dir": "./bin",
         "sort-packages": true,
