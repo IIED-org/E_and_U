@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "33249d0c8a63512eb9a0e994d2420688",
+    "content-hash": "8fabcf09b4b5cd28c669f728b256c0a2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8925,17 +8925,17 @@
         },
         {
             "name": "drupal/session_management",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/session_management.git",
-                "reference": "1.1.0"
+                "reference": "1.2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/session_management-1.1.0.zip",
-                "reference": "1.1.0",
-                "shasum": "051fe57dee4673effdfb8734647d672fc4987170"
+                "url": "https://ftp.drupal.org/files/projects/session_management-1.2.0.zip",
+                "reference": "1.2.0",
+                "shasum": "d7a0defaa63a4eb9de701461ef1d59828a8b6860"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10 || ^11"
@@ -8943,8 +8943,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.1.0",
-                    "datestamp": "1775125870",
+                    "version": "1.2.0",
+                    "datestamp": "1783503617",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8981,7 +8981,7 @@
                     "homepage": "https://www.drupal.org/user/3723916"
                 }
             ],
-            "description": "Allows administrators to control user sessions while enabling users to inspect and manage their own sessions. Features include simultaneous session limitation and detailed login/logout reports and many more. <a href=\"https://plugins.miniorange.com/drupal-session-management\" target=\"_blank\">Know more</a>",
+            "description": "A miniOrange module that allows administrators to control user sessions while enabling users to inspect and manage their own sessions. Features include simultaneous session limitation and detailed login/logout reports and many more. <a href=\"https://plugins.miniorange.com/drupal-login-access-security\" target=\"_blank\">Know more</a>",
             "homepage": "https://www.drupal.org/project/session_management",
             "support": {
                 "source": "https://git.drupalcode.org/project/session_management"

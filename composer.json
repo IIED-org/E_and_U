@@ -59,7 +59,7 @@
         "drupal/recipe_installer_kit": "^1-alpha3@alpha",
         "drupal/remove_reset_password": "^1.0",
         "drupal/session_limit": "^2.0",
-        "drupal/session_management": "^1.0",
+        "drupal/session_management": "^1.2",
         "drupal/simple_menu_icons": "^3.1",
         "drupal/stage_file_proxy": "^3.1",
         "drupal/tailwindcss": "^5.0",
