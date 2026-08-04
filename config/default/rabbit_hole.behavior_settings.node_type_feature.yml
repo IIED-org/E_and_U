@@ -1,0 +1,14 @@
+uuid: 47ccbdef-6107-4c8b-9bea-2f41215cc4a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.feature
+id: node_type_feature
+entity_type_id: node_type
+entity_id: feature
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

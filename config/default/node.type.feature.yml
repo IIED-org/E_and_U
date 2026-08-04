@@ -23,7 +23,7 @@ third_party_settings:
     unpublish_enable: false
     unpublish_required: false
     unpublish_revision: false
-name: 'Journal edition'
+name: 'Journal issue'
 type: feature
 description: 'Use this content type to add the most recent issue of the journal'
 help: null
