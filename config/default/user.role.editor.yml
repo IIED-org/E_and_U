@@ -8,14 +8,18 @@ dependencies:
     - node.type.article
     - node.type.blog
     - node.type.book_note
+    - node.type.booknotes
     - node.type.feature
-    - node.type.page
+    - workflows.workflow.basic_editorial
   module:
+    - content_moderation
     - dashboard
     - filter
+    - media
     - node
     - path
     - pathauto
+    - publication_date
     - system
     - toolbar
 id: editor
@@ -27,28 +31,36 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access toolbar'
+  - 'administer node published status'
   - 'create blog content'
   - 'create book_note content'
   - 'create url aliases'
   - 'delete any article content'
   - 'delete any blog content'
   - 'delete any book_note content'
-  - 'delete any page content'
+  - 'delete any booknotes content'
+  - 'delete booknotes revisions'
   - 'delete own article content'
   - 'delete own blog content'
   - 'delete own book_note content'
-  - 'delete own page content'
   - 'edit any article content'
   - 'edit any blog content'
   - 'edit any book_note content'
+  - 'edit any booknotes content'
   - 'edit any feature content'
-  - 'edit any page content'
   - 'edit own article content'
   - 'edit own blog content'
   - 'edit own book_note content'
-  - 'edit own page content'
+  - 'edit own booknotes content'
   - 'notify of path changes'
+  - 'revert booknotes revisions'
+  - 'use basic_editorial transition publish'
+  - 'use basic_editorial transition unpublish'
   - 'use text format content_format'
+  - 'view any unpublished content'
+  - 'view booknotes published on date'
+  - 'view booknotes revisions'
   - 'view own unpublished content'
+  - 'view own unpublished media'
   - 'view the administration theme'
   - 'view welcome dashboard'

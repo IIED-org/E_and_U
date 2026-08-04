@@ -15,7 +15,6 @@ dependencies:
     - node.type.booknotes
     - node.type.call_out
     - node.type.feature
-    - node.type.page
     - workflows.workflow.basic_editorial
   module:
     - content_moderation
@@ -28,6 +27,7 @@ dependencies:
     - node
     - path
     - printable
+    - publication_date
     - redirect
     - scheduler
     - system
@@ -48,6 +48,7 @@ permissions:
   - 'access navigation'
   - 'access toolbar'
   - 'access trash'
+  - 'administer node published status'
   - 'administer redirects'
   - 'administer url aliases'
   - 'create article content'
@@ -73,19 +74,21 @@ permissions:
   - 'delete any svg_image media'
   - 'delete blog revisions'
   - 'delete book_note revisions'
+  - 'delete booknotes revisions'
   - 'delete call_out revisions'
   - 'delete feature revisions'
   - 'delete own files'
-  - 'delete page revisions'
   - 'edit any article content'
   - 'edit any blog content'
   - 'edit any book_note content'
+  - 'edit any booknotes content'
   - 'edit any call_out content'
   - 'edit any document media'
   - 'edit any feature content'
   - 'edit any image media'
   - 'edit any remote_video media'
   - 'edit any svg_image media'
+  - 'edit own booknotes content'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'revert blog revisions'
@@ -104,6 +107,7 @@ permissions:
   - 'view article revisions'
   - 'view blog revisions'
   - 'view book_note revisions'
+  - 'view booknotes published on date'
   - 'view booknotes revisions'
   - 'view call_out revisions'
   - 'view feature revisions'

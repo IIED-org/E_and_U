@@ -15,7 +15,6 @@ dependencies:
     - field.field.node.feature.taxonomy_vocabulary_15
     - node.type.feature
   module:
-    - content_moderation
     - datetime
     - media_library
     - path

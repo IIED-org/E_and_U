@@ -11,11 +11,12 @@ no_patching: false
 storage: folder
 folder: ../config/splits/local
 module:
-  stage_file_proxy: 0
   dblog: 0
   field_ui: 0
+  stage_file_proxy: 0
   views_ui: 0
 theme: {  }
-complete_list: {  }
+complete_list:
+  - clamav.settings
 partial_list:
   - tfa.settings
