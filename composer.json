@@ -51,7 +51,7 @@
         "drupal/password_policy": "^4.0",
         "drupal/password_policy_extras": "^4.0",
         "drupal/printable": "^3.1",
-        "drupal/project_browser": "@beta",
+        "drupal/project_browser": "^2.1",
         "drupal/publication_date": "^3.1",
         "drupal/purge": "^3.6",
         "drupal/rabbit_hole": "^1.1",
