@@ -4,7 +4,10 @@ status: true
 dependencies:
   config:
     - dashboard.dashboard.welcome
+    - filter.format.advanced_html
     - filter.format.content_format
+    - filter.format.filtered_html
+    - filter.format.full_html
     - media.type.document
     - media.type.image
     - media.type.remote_video
@@ -36,8 +39,8 @@ dependencies:
 _core:
   default_config_hash: g-zSnaBXJnH7VoimReFb6KcLjIgHCU-hisiShtZ9hjQ
 id: content_editor
-label: 'Content editor'
-weight: -8
+label: 'content manager'
+weight: -7
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -101,7 +104,10 @@ permissions:
   - 'use basic_editorial transition create_new_draft'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'
+  - 'use text format advanced_html'
   - 'use text format content_format'
+  - 'use text format filtered_html'
+  - 'use text format full_html'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view article revisions'
