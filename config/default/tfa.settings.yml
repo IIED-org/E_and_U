@@ -4,8 +4,8 @@ langcode: en
 enabled: true
 required_roles:
   authenticated: authenticated
-  content_editor: content_editor
   editor: editor
+  content_editor: content_editor
   megauser: megauser
   administrator: administrator
 send_plugins: {  }
@@ -17,15 +17,10 @@ login_plugin_settings:
     cookie_expiration: 30
     cookie_name: tfa-trusted-browser
 allowed_validation_plugins:
-  tfa_totp: tfa_totp
   tfa_recovery_code: tfa_recovery_code
+  tfa_totp: tfa_totp
 default_validation_plugin: tfa_totp
 validation_plugin_settings:
-  tfa_totp:
-    time_skew: 4
-    site_name_prefix: 1
-    name_prefix: TFA
-    issuer: EandU
   tfa_hotp:
     counter_window: 10
     site_name_prefix: 1
@@ -33,6 +28,11 @@ validation_plugin_settings:
     issuer: Drupal
   tfa_recovery_code:
     recovery_codes_amount: 10
+  tfa_totp:
+    time_skew: 4
+    site_name_prefix: 1
+    name_prefix: TFA
+    issuer: EandU
 validation_skip: 3
 users_without_tfa_redirect: true
 reset_pass_skip_enabled: true
