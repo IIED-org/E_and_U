@@ -22,6 +22,7 @@ dependencies:
     - pathauto
     - publication_date
     - system
+    - tfa
     - toolbar
 id: editor
 label: editor
@@ -55,6 +56,7 @@ permissions:
   - 'edit own booknotes content'
   - 'notify of path changes'
   - 'revert booknotes revisions'
+  - 'setup own tfa'
   - 'use basic_editorial transition publish'
   - 'use basic_editorial transition unpublish'
   - 'use text format advanced_html'

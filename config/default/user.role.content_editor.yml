@@ -34,6 +34,7 @@ dependencies:
     - redirect
     - scheduler
     - system
+    - tfa
     - toolbar
     - trash
 _core:
@@ -100,6 +101,7 @@ permissions:
   - 'revert call_out revisions'
   - 'revert feature revisions'
   - 'schedule publishing of nodes'
+  - 'setup own tfa'
   - 'update any media'
   - 'use basic_editorial transition create_new_draft'
   - 'use basic_editorial transition publish'
