@@ -27,6 +27,6 @@ name: 'Journal issue'
 type: feature
 description: 'Use this content type to add the most recent issue of the journal'
 help: null
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false
