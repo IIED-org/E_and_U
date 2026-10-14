@@ -16,7 +16,6 @@ dependencies:
     - node.type.article
   module:
     - comment
-    - content_moderation
     - focal_point
     - media_library
     - path

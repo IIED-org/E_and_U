@@ -25,7 +25,6 @@ dependencies:
     - node.type.book_note
   module:
     - comment
-    - content_moderation
     - focal_point
     - path
     - publication_date

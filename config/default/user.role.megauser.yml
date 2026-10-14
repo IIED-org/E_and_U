@@ -7,6 +7,7 @@ dependencies:
     - filter
     - node
     - system
+    - tfa
     - toolbar
 id: megauser
 label: megauser
@@ -36,5 +37,6 @@ permissions:
   - 'change own username'
   - 'rebuild node access permissions'
   - 'select account cancellation method'
+  - 'setup own tfa'
   - 'view own unpublished content'
   - 'view the administration theme'
